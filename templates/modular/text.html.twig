@@ -1,0 +1,13 @@
+<div class="modular-row callout">
+    {{ content }}
+    <div class="notebooks">
+        {% for portfolio in page.header.portfolio %}
+            <div class="notebook">
+                <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
+                <div class='keyboard'></div>
+                <h4>{{ portfolio.description }}</h4>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="callout-line"></div>
+</div>

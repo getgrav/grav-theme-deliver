@@ -1,0 +1,111 @@
+// Modular Showcase styling
+.modular {
+
+    // special case for header
+    &.header-image {
+
+        #header {
+            background-color: rgba(255,255,255,0);
+            box-shadow: none;
+
+            #logo h3 {
+                color: $header-text;
+            }
+            #navbar a {
+                color: $header-text;
+            }
+        }
+    }
+
+    .slideme {
+    height:  $header-height + 5rem !important;
+    }
+
+    .showcase {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 10rem;
+        background-color: #666;
+        background-size: cover;
+        background-position: center;
+
+        text-align: center;
+        color: $header-text;
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            @include breakpoint(tablet-range) {
+                font-size: 3rem;
+            }
+            @include breakpoint(mobile-only) {
+                font-size: 2.5rem;
+                line-height: 1.2;
+                margin-bottom: 2.5rem;
+            }
+            strong {
+                color: $core-accent;
+            }
+        }
+        h2 {
+            text-transform: none;
+        }
+        .button {
+            @extend .default-animation;
+            color: $header-text;
+            font-family: $font-family-header;
+            padding: 0.3rem 1rem;
+            background: rgba(255,255,255,0);
+            border: 2px solid $header-text;
+            border-radius: $border-radius;
+            box-shadow: none;
+            font-size: $core-font-size;
+
+            &:hover {
+                background: rgba(255,255,255,0.2);
+            }
+        }
+    }
+    // Slideshow Arrows and Pagination
+    .slideme_container {
+        .arrow {
+            @extend .default-animation;
+            position: absolute;display: block;width: 3.7rem;height: 3.7rem;cursor: pointer;z-index: 50;text-align: center;line-height: 3.8rem;background: $white;top: 10%;border-radius: 100%;font-size: 2.5rem;opacity: 0.5;color: $black;
+            &:hover {opacity: 1;}
+            &.prev {left: 4rem;}
+            &.next {right: 4rem;}
+            &:disabled {opacity: 0.1}
+        }
+        .arrow.next:before {content: '\f054';font-family: FontAwesome;margin-left: 0.4rem;}
+        .arrow.prev:before {content: '\f053';font-family: FontAwesome;margin-right: 0.5rem;}
+
+        .pagination {
+            text-align: center;
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            right: 0;
+            vertical-align: middle;
+            bottom: 0;
+            .numbers {
+                li {
+                    @extend .default-animation;
+                    @include transition-duration(0.2s);
+                    background: $white;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    display: inline-block;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    margin: 0 0.2rem;
+                    vertical-align: middle;
+
+                    &.current {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

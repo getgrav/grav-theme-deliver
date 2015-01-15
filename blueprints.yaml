@@ -1,0 +1,17 @@
+name: Deliver
+version: 1.2.7
+description: "Deliver is the default theme included with **Grav**"
+icon: empire
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-deliver
+demo: http://demo.getgrav.org/blog-skeleton
+keywords: deliver, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-deliver/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
