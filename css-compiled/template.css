@@ -42,8 +42,7 @@ b, strong, label, th {
 
 #body {
   background: #fff;
-  padding-top: 15rem;
-  padding-bottom: 11rem; }
+  padding-top: 15rem; }
 
 .left {
   float: left; }
@@ -829,7 +828,8 @@ ul.pagination {
         padding: 0; }
 
 .modular .bottom {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 4rem; }
   .modular .bottom:after {
     content: "";
     display: table;
@@ -988,9 +988,6 @@ ul.pagination {
     margin: 0.4375rem 0 0 -0.625rem;
     z-index: -1;
     border-radius: 100%; }
-
-.modular .modular-row:last-child {
-  margin-bottom: 2rem; }
 
 .logo {
   border-bottom: 1px solid #eaeaea; }

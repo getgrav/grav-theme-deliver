@@ -3,6 +3,7 @@
     .bottom {
         text-align: center;
         @include clearfix;
+        padding-bottom: 4rem;
 
         h2 {
             padding-top: 3rem;
