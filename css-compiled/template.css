@@ -214,7 +214,8 @@ b, strong, label, th {
   bottom: 0;
   left: 0;
   color: #999;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   #footer a:hover {
     color: #fff; }
   #footer .totop {
@@ -888,6 +889,30 @@ ul.pagination {
         font-size: 1.2rem; }
       .modular .features.big .feature-content p {
         padding: 0; }
+
+.modular .bottom {
+  text-align: center; }
+  .modular .bottom:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .modular .bottom h2 {
+    padding-top: 3rem;
+    margin: 0;
+    line-height: 100%;
+    color: #656161; }
+  .modular .bottom p {
+    margin: 1rem 0; }
+    @media only all and (max-width: 47.938em) {
+      .modular .bottom p {
+        font-size: 1rem; } }
+  .modular .bottom .button {
+    background-color: #87b672;
+    color: #FFFFFF;
+    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem; }
 
 .callout {
   background: #EEEEEE;
