@@ -13,6 +13,7 @@
         h4 {
             line-height: 2rem;
             margin-top: 0;
+            text-align: left;
         }
         .footer-items {
             margin-top: 2rem;
@@ -22,10 +23,14 @@
             @include clearfix;
         }
         .footer-module {
+            &.large {
+               width: 40%; 
+            }
             display:block;
             float: left;
-            width: 25%;
+            width: 20%;
             vertical-align: top;
+            padding-right: 2rem;
             @include breakpoint(large-mobile-range) {
                 margin-top: 1rem;
                 width: 50%;
@@ -33,6 +38,12 @@
             @include breakpoint(small-mobile-range) {
                 margin-top: 1rem;
                 width: 100%;
+            }
+            span {
+                @include clearfix;
+            }
+            strong {
+                color: $white;
             }
         }
         .logo {
