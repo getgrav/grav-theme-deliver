@@ -10,54 +10,20 @@
 	box-shadow: 0 0.05rem 1rem rgba(0,0,0, 0.15);
 
 	// set heights for vertical centering
-	> .grid, #logo, #navbar, .social-navigation {
+	> .grid, .logo, #navbar, .social-navigation {
 		height: 50%;
 	}
+    .fa {
+        color: $black;
+    }
 
-	#logo {
-		h3 {
-			@extend .default-animation;
-			@extend %vertical-align;
-			font-size: 2.5rem;
-            font-family: $font-family-logo;
-			line-height: 2rem;
-			margin: 0;
-            float: left;
-			a {
-				color: $core-text;
-			}
-		}
-        border-bottom: 1px solid $body-border;
-
+    .logo {
+        h3 {
+            @extend %vertical-align;
+        }
         ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-
             &.social-icons {
                 @extend %vertical-align;
-                float: right;
-                line-height: 2rem;
-                margin: 0;
-
-                li {
-                    @extend .default-animation;
-                    float: left;
-                    width: 2.1rem;
-                    height: 2.1rem;
-                    background: $white;
-                    border-radius: 100%;
-                    text-align: center;
-                    margin-right: 0.8rem;
-                    a {
-                        color: $black;
-                        display: block;
-                        margin-top: 0.1rem;
-                    }
-                    &:hover {
-                        background: transparentize($white, 0.5);
-                    }
-                }
             }
         }
     }

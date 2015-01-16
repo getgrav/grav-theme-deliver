@@ -1,0 +1,45 @@
+// Modular Showcase styling
+.modular {
+    .footer {
+        background: #333;
+        width: 100%;
+        @extend .padding-horiz;
+        padding-top: 4rem;
+        @include clearfix;
+        a, a:hover, h4 {
+            color: $white;
+
+        }
+        h4 {
+            line-height: 2rem;
+            margin-top: 0;
+        }
+        .footer-items {
+            margin-top: 2rem;
+            @supports not (flex-wrap: wrap) {
+                overflow: hidden;
+            }
+            @include clearfix;
+        }
+        .footer-module {
+            display:block;
+            float: left;
+            width: 25%;
+            vertical-align: top;
+            @include breakpoint(large-mobile-range) {
+                margin-top: 1rem;
+                width: 50%;
+            }
+            @include breakpoint(small-mobile-range) {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+        .logo {
+            border-bottom: 0 none;
+            @include clearfix;
+            color: $white;
+        }
+        hr {}
+    }
+}

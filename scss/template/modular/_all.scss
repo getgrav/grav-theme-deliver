@@ -1,10 +1,57 @@
 @import "showcase";
 @import "features";
 @import "bottom";
+@import "footer";
 @import "text";
 
 .modular {
     .modular-row:last-child {
     	margin-bottom: 2rem;
+    }
+}
+
+.logo {
+    h3 {
+        @extend .default-animation;
+        font-size: 2.5rem;
+        font-family: $font-family-logo;
+        line-height: 2rem;
+        margin: 0;
+        float: left;
+        a {
+            color: $core-text;
+        }
+    }
+    border-bottom: 1px solid $body-border;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &.social-icons {
+            float: right;
+            line-height: 2rem;
+            margin: 0;
+
+            li {
+                @extend .default-animation;
+                float: left;
+                width: 2.1rem;
+                height: 2.1rem;
+                background: $white;
+                border-radius: 100%;
+                text-align: center;
+                margin-right: 0.8rem;
+                a {
+                    color: $black;
+                    display: block;
+                    margin-top: 0.1rem;
+                }
+                &:hover {
+                    background: transparentize($white, 0.5);
+                }
+            }
+        }
     }
 }
