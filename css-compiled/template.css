@@ -904,6 +904,44 @@ ul.pagination {
       content: "";
       display: table;
       clear: both; }
+  .modular .footer .quickmenu {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .modular .footer .quickmenu i {
+      padding-right: 0.5rem;
+      color: #fff; }
+    .modular .footer .quickmenu li a {
+      color: #9A9898; }
+  .modular .footer .footer-modules {
+    display: block;
+    padding-bottom: 1.5rem; }
+    .modular .footer .footer-modules:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .modular .footer .footer-copyright {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    text-align: left; }
+  .modular .footer .footer-menu {
+    float: right;
+    display: inline-block;
+    width: 50%;
+    text-align: right; }
+    .modular .footer .footer-menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .modular .footer .footer-menu ul li {
+        display: inline-block; }
+        .modular .footer .footer-menu ul li:after {
+          content: "/";
+          margin: 0 0.5rem;
+          display: inline-block; }
+        .modular .footer .footer-menu ul li:last-child:after {
+          display: none; }
 
 .callout {
   background: #EEEEEE;

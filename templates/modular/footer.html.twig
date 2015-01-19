@@ -1,42 +1,48 @@
 <div class="modular-row footer {{ page.header.class}}">
     <div class="footer-items">
-    <div class="footer-module large">
-        <div class="logo">
-            <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h3>
-            {% block social %}
-                {% include 'partials/social.html.twig' %}
-            {% endblock %}
+        <div class="footer-module large">
+            <div class="logo">
+                <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h3>
+                {% block social %}
+                    {% include 'partials/social.html.twig' %}
+                {% endblock %}
+            </div>
+            {% if page.header.description %}
+                <p>{{ page.header.description }}</p>
+            {% endif %}
         </div>
-        {% if page.header.description %}
-        <p>{{ page.header.description }}</p>
-        {% endif %}
-    </div>
-    <div class="footer-module"><h4>{{ page.header.contact_title }}</h4>
-        <p>
-            {% for item in site.contact.address %}
-                <span>{{ item.line }}</span>
-            {% endfor %}
-        </p>
-        <p>{{ site.author.email }}</p>
-        <p><strong>{{ site.contact.gps }}</strong></p>
-    </div>
-    <div class="footer-module"><h4>{{ page.header.links_title }}</h4>
+        <div class="footer-module"><h4>{{ page.header.contact_title }}</h4>
+            <p>
+                {% for item in site.contact.address %}
+                    <span>{{ item.line }}</span>
+                {% endfor %}
+            </p>
+            <p>{{ site.author.email }}</p>
+            <p><strong>{{ site.contact.gps }}</strong></p>
+        </div>
+        <div class="footer-module"><h4>{{ page.header.links_title }}</h4>
          <ul class="quickmenu">
-    
-        {% for module in page.collection() %}
-            <li><i class="fa fa-chevron-right"></i><a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
-        {% endfor %}
-
-
-    </ul>
-
+            {% for module in site.quicklinks %}
+                <li><i class="fa fa-chevron-right"></i><a href="#{{ module.url }}">{{  module.text }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
     <div class="footer-module">
         <h4>{{ page.header.newsletter_title }}</h4>
         <p>{{ page.header.newsletter_description }}</p>
     </div>
+</div>
+{{ content }}
+<div class="footer-modules">
+    <div class="footer-copyright">
+        {{ site.author.copyright }}
     </div>
-
-    {{ content }}
+    <div class="footer-menu">
+    <ul class="othermenu">
+    {% for module in site.othermenu %}
+       <li><a href="#{{ module.url }}">{{  module.text }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
 </div>
 </div>

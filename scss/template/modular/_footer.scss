@@ -25,32 +25,79 @@
         .footer-module {
             &.large {
                width: 40%; 
-            }
-            display:block;
-            float: left;
-            width: 20%;
-            vertical-align: top;
-            padding-right: 2rem;
-            @include breakpoint(large-mobile-range) {
-                margin-top: 1rem;
-                width: 50%;
-            }
-            @include breakpoint(small-mobile-range) {
-                margin-top: 1rem;
-                width: 100%;
-            }
-            span {
-                @include clearfix;
-            }
-            strong {
-                color: $white;
-            }
+           }
+           display:block;
+           float: left;
+           width: 20%;
+           vertical-align: top;
+           padding-right: 2rem;
+           @include breakpoint(large-mobile-range) {
+            margin-top: 1rem;
+            width: 50%;
         }
-        .logo {
-            border-bottom: 0 none;
+        @include breakpoint(small-mobile-range) {
+            margin-top: 1rem;
+            width: 100%;
+        }
+        span {
             @include clearfix;
+        }
+        strong {
             color: $white;
         }
-        hr {}
     }
+    .logo {
+        border-bottom: 0 none;
+        @include clearfix;
+        color: $white;
+    }
+    .quickmenu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        i {
+            padding-right: 0.5rem;
+            color: $white;
+        }
+        li a {
+            color: $core-text;
+        }
+    }
+    .footer-modules {
+     @include clearfix;
+     display: block;
+     padding-bottom: 1.5rem;
+ }
+ .footer-copyright {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+.footer-menu {
+    float: right;
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            &:after {
+                content: "/";
+                margin: 0 0.5rem;
+                display: inline-block;
+            }
+            &:last-child {
+               &:after {
+                display: none;
+            }
+        }
+    }
+}
+}
+}
 }
