@@ -69,9 +69,7 @@
         }
 
         &.big {
-
             text-align: center;
-
             .feature {
                 width: 33.33%;
                 @include breakpoint(small-mobile-range) {

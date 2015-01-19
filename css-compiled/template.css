@@ -860,12 +860,15 @@ ul.pagination {
     content: "";
     display: table;
     clear: both; }
-  .modular .footer a, .modular .footer a:hover, .modular .footer h4 {
-    color: #fff; }
+  .modular .footer a {
+    color: #9A9898; }
   .modular .footer h4 {
     line-height: 2rem;
     margin-top: 0;
-    text-align: left; }
+    text-align: left;
+    color: #fff; }
+  .modular .footer hr {
+    border-color: rgba(154, 152, 152, 0.5); }
   .modular .footer .footer-items {
     margin-top: 2rem; }
     @supports not (flex-wrap: wrap) {
@@ -904,15 +907,17 @@ ul.pagination {
       content: "";
       display: table;
       clear: both; }
+    .modular .footer .logo h3 a {
+      color: #fff; }
   .modular .footer .quickmenu {
     margin: 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
     .modular .footer .quickmenu i {
       padding-right: 0.5rem;
-      color: #fff; }
-    .modular .footer .quickmenu li a {
-      color: #9A9898; }
+      color: #fff;
+      font-size: 0.7rem; }
   .modular .footer .footer-modules {
     display: block;
     padding-bottom: 1.5rem; }
@@ -922,14 +927,18 @@ ul.pagination {
       clear: both; }
   .modular .footer .footer-copyright {
     width: 50%;
+    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     display: inline-block;
     float: left;
-    text-align: left; }
+    text-align: left;
+    text-transform: uppercase; }
   .modular .footer .footer-menu {
     float: right;
     display: inline-block;
     width: 50%;
-    text-align: right; }
+    text-align: right;
+    text-transform: uppercase;
+    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
     .modular .footer .footer-menu ul {
       margin: 0;
       padding: 0;
