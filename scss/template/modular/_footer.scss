@@ -108,5 +108,22 @@
         }
       }
     }
+    .newsletter {
+      input {
+        display: inline-block;
+        height: 2.5rem;
+        border: 0 none;
+      }
+      input[type=text] {
+        background-color: transparentize($header-text, 0.8);
+        color: $white;
+      }
+      input[type=submit] {
+        background-color: transparentize($header-text, 0.5);
+        color: $white;
+        padding: 0 1.2rem;
+        vertical-align: top;
+      }
+    } 
   }
 }

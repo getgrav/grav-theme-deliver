@@ -996,6 +996,18 @@ ul.pagination {
           display: inline-block; }
         .modular .footer .footer-menu ul li:last-child:after {
           display: none; }
+  .modular .footer .newsletter input {
+    display: inline-block;
+    height: 2.5rem;
+    border: 0 none; }
+  .modular .footer .newsletter input[type=text] {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff; }
+  .modular .footer .newsletter input[type=submit] {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding: 0 1.2rem;
+    vertical-align: top; }
 
 .callout {
   background: #EEEEEE;
