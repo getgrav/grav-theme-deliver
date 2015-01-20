@@ -1,6 +1,8 @@
 // Modular Showcase styling
 .modular {
   .footer {
+    font-size:  $core-font-size - 0.1rem;
+
     background: #333;
     width: 100%;
     @extend .padding-horiz;
@@ -61,7 +63,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      font-family: $font-family-header;
       i {
         padding-right: 0.5rem;
         color: $white;

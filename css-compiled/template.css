@@ -157,7 +157,7 @@ b, strong, label, th {
 .header-image .listing-row:last-child {
   margin-bottom: 2rem; }
 .header-image #body .flush-top {
-  margin-top: -16.5rem;
+  margin-top: -15.5rem;
   padding-top: 16rem; }
 .header-image #breadcrumbs {
   margin-top: 1rem; }
@@ -176,7 +176,7 @@ b, strong, label, th {
       color: #558042; }
 
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -193,7 +193,8 @@ h1 {
 
 h2 {
   font-weight: normal;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 1.4rem; }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h2 {
       font-size: -1rem; } }
@@ -233,7 +234,7 @@ h1 + h2 {
   font-size: 1.4rem;
   line-height: 1;
   text-align: center;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h1 + h2 {
@@ -247,7 +248,7 @@ h2 + h3 {
   font-size: 1.3rem;
   line-height: 1;
   text-align: center;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal; }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h2 + h3 {
@@ -674,8 +675,9 @@ ul.pagination {
   text-align: center;
   color: #FFFFFF; }
   .modular .showcase h1 {
-    font-size: 2.5rem;
-    margin-top: 0; }
+    font-size: 2.2rem;
+    margin-top: 0;
+    text-transform: uppercase; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .modular .showcase h1 {
         font-size: 3rem; } }
@@ -766,6 +768,8 @@ ul.pagination {
     margin: 0;
     line-height: 100%;
     color: #656161; }
+  .modular .features hr {
+    margin-top: 4rem; }
   .modular .features p {
     margin: 1rem 0; }
     @media only all and (max-width: 47.938em) {
@@ -853,6 +857,7 @@ ul.pagination {
     font-size: 1rem; }
 
 .modular .footer {
+  font-size: 0.9rem;
   background: #333;
   width: 100%;
   padding-top: 4rem; }
@@ -912,8 +917,7 @@ ul.pagination {
   .modular .footer .quickmenu {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    list-style: none; }
     .modular .footer .quickmenu i {
       padding-right: 0.5rem;
       color: #fff;
