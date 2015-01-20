@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Montserrat:400|Raleway:300,400,600|Inconsolata|Pacifico);
-#header .logo h3, #header .logo ul.social-icons, #header #navbar ul.navigation, #header #navbar .panel-activation {
+#header .logo h3, #header .logo ul.social-icons, #header .search-box, #header #navbar ul.navigation, #header #navbar .panel-activation {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -96,6 +96,47 @@ b, strong, label, th {
     height: 50%; }
   #header .fa {
     color: #000; }
+  #header .search-box {
+    display: block;
+    float: right;
+    text-align: right; }
+    #header .search-box i {
+      color: #FFFFFF;
+      position: absolute;
+      top: 0.5rem;
+      right: 0.6rem;
+      z-index: -1;
+      cursor: pointer; }
+    #header .search-box input::-webkit-search-decoration,
+    #header .search-box input::-webkit-search-cancel-button {
+      display: none; }
+    #header .search-box input[type=search] {
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: textfield;
+      -webkit-box-sizing: content-box;
+      font-family: inherit;
+      font-size: 100%;
+      border: 0 none;
+      box-shadow: none;
+      color: transparent;
+      background: transparent;
+      width: 4rem;
+      height: 1.3rem;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s; }
+      #header .search-box input[type=search]:focus {
+        width: 10rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: auto;
+        color: #FFFFFF; }
+    #header .search-box input:-moz-placeholder {
+      color: transparent; }
+    #header .search-box input::-webkit-input-placeholder {
+      color: transparent; }
   #header #navbar {
     font-size: 1.1rem; }
     #header #navbar ul {
