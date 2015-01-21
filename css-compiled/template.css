@@ -76,10 +76,18 @@ b, strong, label, th {
 .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .modular .footer {
   padding-left: 14rem;
   padding-right: 14rem; }
+  @media only all and (min-width: 60em) and (max-width: 74.938em) {
+    .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .modular .footer {
+      padding-left: 7rem;
+      padding-right: 7rem; } }
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .modular .footer {
+      padding-left: 7rem;
+      padding-right: 7rem; } }
   @media only all and (max-width: 47.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .modular .footer {
-      padding-left: 8rem;
-      padding-right: 8rem; } }
+      padding-left: 5rem;
+      padding-right: 5rem; } }
 
 .padding-vert {
   padding-top: 3rem;
@@ -96,6 +104,9 @@ b, strong, label, th {
     height: 50%; }
   #header .fa {
     color: #000; }
+  @media only all and (max-width: 47.938em) {
+    #header .logo h3 {
+      font-size: 1.9rem; } }
   #header .search-box {
     display: block;
     float: right;
@@ -137,6 +148,16 @@ b, strong, label, th {
       color: transparent; }
     #header .search-box input::-webkit-input-placeholder {
       color: transparent; }
+    @media only all and (max-width: 47.938em) {
+      #header .search-box {
+        float: left;
+        text-align: left; }
+        #header .search-box i {
+          left: 0.6rem; }
+        #header .search-box input[type=search] {
+          padding-left: 2rem; }
+          #header .search-box input[type=search]:focus {
+            width: 8rem; } }
   #header #navbar {
     font-size: 1.1rem; }
     #header #navbar ul {
@@ -182,12 +203,18 @@ b, strong, label, th {
             #header #navbar ul.navigation li:hover li.active > a {
               background: #87b672;
               color: #fff; }
+        @media only all and (max-width: 59.938em) {
+          #header #navbar ul.navigation {
+            display: none; } }
     #header #navbar .panel-activation {
       padding: 1rem;
       display: none;
       font-size: 1.8rem;
       cursor: pointer;
       float: right; }
+      @media only all and (max-width: 59.938em) {
+        #header #navbar .panel-activation {
+          display: inline-block; } }
 
 .header-image.fullwidth #body {
   padding-left: 0;
@@ -279,10 +306,10 @@ h1 + h2 {
   font-weight: 300; }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
     h1 + h2 {
-      font-size: 1.6rem; } }
+      font-size: 1.3rem; } }
   @media only all and (max-width: 47.938em) {
     h1 + h2 {
-      font-size: 1.5rem; } }
+      font-size: 1rem; } }
 
 h2 + h3 {
   margin: 0.5rem 0 2rem 0;
@@ -500,7 +527,8 @@ td {
   color: #ddd; }
   #panel .navigation {
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    margin-left: 0; }
     #panel .navigation li {
       border-bottom: 1px solid #3d3d3d; }
       #panel .navigation li a {
@@ -704,8 +732,12 @@ ul.pagination {
     color: #FFFFFF; }
   .modular.header-image #header #navbar a {
     color: #FFFFFF; }
-.modular .slideme {
+.modular .slideme, .modular .slideme_container {
   height: 17rem !important; }
+  .modular .slideme:after, .modular .slideme_container:after {
+    content: "";
+    display: table;
+    clear: both; }
 .modular .showcase {
   position: relative;
   z-index: 1;
@@ -718,19 +750,32 @@ ul.pagination {
   .modular .showcase h1 {
     font-size: 2.2rem;
     margin-top: 0;
+    padding-left: 14rem;
+    padding-right: 14rem;
     text-transform: uppercase; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .modular .showcase h1 {
-        font-size: 3rem; } }
+        font-size: 1.5rem; } }
     @media only all and (max-width: 47.938em) {
       .modular .showcase h1 {
-        font-size: 2.5rem;
+        font-size: 1.3rem;
         line-height: 1.2;
-        margin-bottom: 2.5rem; } }
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 4rem;
+        margin-right: 4rem; } }
     .modular .showcase h1 strong, .modular .showcase h1 label, .modular .showcase h1 th {
       color: #87b672; }
   .modular .showcase h2 {
-    text-transform: none; }
+    text-transform: none;
+    padding-left: 14rem;
+    padding-right: 14rem; }
+    @media only all and (max-width: 47.938em) {
+      .modular .showcase h2 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 4rem;
+        margin-right: 4rem; } }
   .modular .showcase .button {
     color: #FFFFFF;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -757,14 +802,28 @@ ul.pagination {
   font-size: 2.5rem;
   opacity: 0.5;
   color: #000; }
+  @media only all and (max-width: 47.938em) {
+    .modular .slideme_container .arrow {
+      font-size: 1.5rem;
+      line-height: 2.8rem; } }
   .modular .slideme_container .arrow:hover {
     opacity: 1; }
   .modular .slideme_container .arrow.prev {
     left: 4rem; }
+    @media only all and (max-width: 47.938em) {
+      .modular .slideme_container .arrow.prev {
+        left: 1rem; } }
   .modular .slideme_container .arrow.next {
     right: 4rem; }
+    @media only all and (max-width: 47.938em) {
+      .modular .slideme_container .arrow.next {
+        right: 1rem; } }
   .modular .slideme_container .arrow:disabled {
     opacity: 0.1; }
+  @media only all and (max-width: 47.938em) {
+    .modular .slideme_container .arrow {
+      width: 2.7rem;
+      height: 2.7rem; } }
 .modular .slideme_container .arrow.next:before {
   content: '\f054';
   font-family: FontAwesome;
@@ -1021,6 +1080,9 @@ ul.pagination {
   overflow: hidden;
   clear: both;
   position: relative; }
+  @media only all and (max-width: 59.938em) {
+    .callout {
+      text-align: center; } }
   .callout .callout-line {
     background: #fff;
     width: 100%;

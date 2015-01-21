@@ -9,7 +9,6 @@
     background-color: rgba(255,255,255,0.90);
     box-shadow: 0 0.05rem 1rem rgba(0,0,0, 0.15);
 
-    // set heights for vertical centering
     > .grid, .logo, #navbar, .social-navigation {
         height: 50%;
     }
@@ -20,6 +19,10 @@
     .logo {
         h3 {
             @extend %vertical-align;
+
+            @include breakpoint(mobile-only) {
+                font-size: 1.9rem;
+            }
         }
         ul {
             &.social-icons {
@@ -76,6 +79,21 @@
         input::-webkit-input-placeholder {
             color: transparent;
         }
+
+        @include breakpoint(mobile-only) {
+            float: left;
+            text-align: left;
+            i {
+                left: 0.6rem;
+            }
+            input[type=search] {
+                padding-left: 2rem;
+                &:focus {
+                    width: 8rem;
+                }
+            }
+        }
+
     }
 
     #navbar {
@@ -108,73 +126,69 @@
                         padding-left: 0;
                     }
 
-// Dropdown Menu Styles
-ul {
-    display: none;
-    padding: 0;
-    box-shadow: 0 0.05rem 1rem rgba(0,0,0, 0.15) !important;
-}
+                    ul {
+                        display: none;
+                        padding: 0;
+                        box-shadow: 0 0.05rem 1rem rgba(0,0,0, 0.15) !important;
+                    }
 
-ul ul {
-    left: 100%;
-    top: 0;
-}	
+                    ul ul {
+                        left: 100%;
+                        top: 0;
+                    }	
 
 
-&:hover {
-    & > ul {
-        display: block;
-        position: absolute;
-        background: rgba($white, 0.9);
-        width: 10rem;
-    }
+                    &:hover {
+                        & > ul {
+                            display: block;
+                            position: absolute;
+                            background: rgba($white, 0.9);
+                            width: 10rem;
+                        }
 
-    li {
-        float: none;
-        margin: 0;
-        padding: 0;
+                        li {
+                            float: none;
+                            margin: 0;
+                            padding: 0;
 
-        a {
-            padding: 0.5rem 0.8rem;
-            display: block;
+                            a {
+                                padding: 0.5rem 0.8rem;
+                                display: block;
 
-            &:before, &:after {
-                display: none;
-            }
+                                &:before, &:after {
+                                    display: none;
+                                }
+                            }
+
+                            &.active {
+                                & > a {
+                                    background: $core-accent;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                @include breakpoint(desktop-only) {
+                    display: none;
+                }
+            }	
         }
 
-        &.active {
-            & > a {
-                background: $core-accent;
-                color: $white;
+        .panel-activation {
+            @extend %vertical-align;
+            padding: 1rem;
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            float: right;
+            @include breakpoint(desktop-only) {
+                display: inline-block;
             }
         }
     }
 }
-}
-@include breakpoint(desktop-only) {
-    display: none;
-}
-}	
-}
 
-.panel-activation {
-    @extend %vertical-align;
-    padding: 1rem;
-    display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    float: right;
-    @include breakpoint(desktop-only) {
-        display: inline-block;
-    }
-}
-
-}
-
-}
-
-// Header Image
 .header-image {
     &.fullwidth {
         #body {

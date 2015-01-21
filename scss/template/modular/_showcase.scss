@@ -15,11 +15,10 @@
         }
     }
 }
-
-.slideme {
+.slideme, .slideme_container {
     height:  $header-height + 5rem !important;
+     @include clearfix;
 }
-
 .showcase {
     position: relative;
     z-index: 1;
@@ -33,13 +32,18 @@
     h1 {
         font-size: 2.2rem;
         margin-top: 0;
+        padding-left: $padding-horiz;
+        padding-right: $padding-horiz;
         @include breakpoint(tablet-range) {
-            font-size: 3rem;
+            font-size: 1.5rem;
         }
         @include breakpoint(mobile-only) {
-            font-size: 2.5rem;
+            font-size: 1.3rem;
             line-height: 1.2;
-            margin-bottom: 2.5rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 4rem;
+            margin-right: 4rem;
         }
         strong {
             color: $core-accent;
@@ -48,6 +52,14 @@
     }
     h2 {
         text-transform: none;
+        padding-left: $padding-horiz;
+        padding-right: $padding-horiz;
+        @include breakpoint(mobile-only) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
     }
     .button {
         @extend .default-animation;
@@ -69,11 +81,42 @@
 .slideme_container {
     .arrow {
         @extend .default-animation;
-        position: absolute;display: block;width: 3.7rem;height: 3.7rem;cursor: pointer;z-index: 50;text-align: center;line-height: 3.8rem;background: $white;top: 10%;border-radius: 100%;font-size: 2.5rem;opacity: 0.5;color: $black;
+        position: absolute;
+        display: block;
+        width: 3.7rem;
+        height: 3.7rem;
+        cursor: pointer;
+        z-index: 50;
+        text-align: center;
+        line-height: 3.8rem;
+        background: $white;
+        top: 10%;
+        border-radius: 100%;
+        font-size: 2.5rem;
+        opacity: 0.5;
+        color: $black;
+        @include breakpoint(mobile-only) { 
+            font-size: 1.5rem;
+            line-height: 2.8rem;
+        }
         &:hover {opacity: 1;}
-        &.prev {left: 4rem;}
-        &.next {right: 4rem;}
+        &.prev {
+            left: 4rem;
+             @include breakpoint(mobile-only) {
+                left: 1rem;
+             }
+        }
+        &.next {
+            right: 4rem;
+            @include breakpoint(mobile-only) {
+                right: 1rem;
+             }
+        }
         &:disabled {opacity: 0.1}
+        @include breakpoint(mobile-only) { 
+            width: 2.7rem;
+            height: 2.7rem;
+        }
     }
     .arrow.next:before {content: '\f054';font-family: FontAwesome;margin-left: 0.4rem;}
     .arrow.prev:before {content: '\f053';font-family: FontAwesome;margin-right: 0.5rem;}

@@ -5,14 +5,17 @@
 .padding-horiz {
 	padding-left: $padding-horiz;
 	padding-right: $padding-horiz;
-	@include breakpoint(desktop-only) {
-		padding-left: $padding-horiz - 3rem;
-		padding-right: $padding-horiz - 3rem;
+	@include breakpoint(desktop-range) {
+		padding-left: $padding-horiz - 7rem;
+		padding-right: $padding-horiz - 7rem;
 	}
-
+	@include breakpoint(tablet-range) {
+		padding-left: $padding-horiz - 7rem;
+		padding-right: $padding-horiz - 7rem;
+	}
 	@include breakpoint(mobile-only) {
-		padding-left: $padding-horiz - 6rem;
-		padding-right: $padding-horiz - 6rem;
+		padding-left: $padding-horiz - 9rem;
+		padding-right: $padding-horiz - 9rem;
 	}
 }
 
