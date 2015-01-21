@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .modular .showcase .button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .callout .notebook .screen .screen-content-hover, .logo h3, .logo ul.social-icons li {
+.default-animation, #body, .modular .showcase .button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .callout .notebook .screen .screen-content-hover, .logo h3, .logo ul.social-icons li {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -895,7 +895,10 @@ ul.pagination {
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     border-radius: 0;
     box-shadow: none;
-    font-size: 1rem; }
+    font-size: 1rem;
+    border: 0 none; }
+    .modular .bottom .button:hover {
+      background-color: #558042; }
 
 .modular .footer {
   font-size: 0.9rem;

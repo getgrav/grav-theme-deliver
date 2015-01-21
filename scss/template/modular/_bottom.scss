@@ -21,12 +21,17 @@
         }
 
         .button {
+            @extend .default-animation;
             background-color: $core-accent;
             color: $header-text;
             font-family: $font-family-header;
             border-radius: $border-radius;
             box-shadow: none;
             font-size: $core-font-size;
+            border: 0 none;
+            &:hover {
+                background-color: darken($core-accent, 20%);
+            }
         }
 
 
