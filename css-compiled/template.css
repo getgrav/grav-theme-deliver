@@ -1100,6 +1100,23 @@ ul.pagination {
     width: 33.33%;
     position: relative;
     z-index: 10; }
+    @media only all and (min-width: 60em) and (max-width: 74.938em) {
+      .callout .notebook {
+        width: 100%;
+        float: none; } }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      .callout .notebook {
+        width: 100%;
+        float: none; } }
+    @media only all and (max-width: 47.938em) {
+      .callout .notebook {
+        width: 100%;
+        float: none; } }
+    @media only all and (max-width: 30em) {
+      .callout .notebook {
+        width: 150%;
+        margin-left: -3.8rem;
+        float: none; } }
   .callout .notebook .screen:before {
     content: "";
     position: absolute;

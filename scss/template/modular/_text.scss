@@ -34,6 +34,25 @@ $image-margin:      2rem;
       width: 33.33%;
       position: relative;
       z-index: 10;
+
+      @include breakpoint(desktop-range) {
+        width: 100%;
+        float: none;
+      }
+      @include breakpoint(tablet-range) {
+        width: 100%;
+        float: none;
+      }
+      @include breakpoint(mobile-only) {
+        width: 100%;
+        float: none;
+      }
+       @include breakpoint(small-mobile-range) {
+        width: 150%;
+        margin-left: -3.8rem;
+        float: none;
+      }
+
   }
   .notebook .screen:before {
       content: "";
