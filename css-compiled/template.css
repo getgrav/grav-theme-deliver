@@ -980,8 +980,23 @@ ul.pagination {
     color: #fff; }
   .modular .footer hr {
     border-color: rgba(154, 152, 152, 0.5); }
+  @media only all and (max-width: 47.938em) {
+    .modular .footer .social-icons {
+      float: none;
+      clear: both;
+      width: 100%;
+      padding-top: 2rem; } }
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    .modular .footer .social-icons {
+      float: none;
+      clear: both;
+      width: 100%;
+      padding-top: 2rem; } }
   .modular .footer .footer-items {
     margin-top: 2rem; }
+    @media only all and (max-width: 47.938em) {
+      .modular .footer .footer-items {
+        margin-top: 0; } }
     @supports not (flex-wrap: wrap) {
       .modular .footer .footer-items {
         overflow: hidden; } }
@@ -1011,6 +1026,10 @@ ul.pagination {
       clear: both; }
     .modular .footer .footer-module strong, .modular .footer .footer-module label, .modular .footer .footer-module th {
       color: #fff; }
+    @media only all and (max-width: 47.938em) {
+      .modular .footer .footer-module {
+        width: 100% !important;
+        float: none; } }
   .modular .footer .logo {
     border-bottom: 0 none;
     color: #fff; }
@@ -1042,6 +1061,12 @@ ul.pagination {
     float: left;
     text-align: left;
     text-transform: uppercase; }
+    @media only all and (max-width: 47.938em) {
+      .modular .footer .footer-copyright {
+        width: 100%;
+        float: none;
+        text-align: left;
+        margin-bottom: 1rem; } }
   .modular .footer .footer-menu {
     float: right;
     display: inline-block;
@@ -1049,6 +1074,11 @@ ul.pagination {
     text-align: right;
     text-transform: uppercase;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    @media only all and (max-width: 47.938em) {
+      .modular .footer .footer-menu {
+        width: 100%;
+        float: none;
+        text-align: left; } }
     .modular .footer .footer-menu ul {
       margin: 0;
       padding: 0;
@@ -1095,9 +1125,9 @@ ul.pagination {
     bottom: 0;
     z-index: 0; }
   .callout .notebook {
-    float: left;
+    display: inline-block;
     text-align: left;
-    width: 33.33%;
+    min-width: 33%;
     position: relative;
     z-index: 10; }
     @media only all and (min-width: 60em) and (max-width: 74.938em) {

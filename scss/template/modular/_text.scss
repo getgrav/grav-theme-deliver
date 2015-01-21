@@ -29,9 +29,9 @@ $image-margin:      2rem;
 
    // macbook
    .notebook{
-      float: left;
+      display: inline-block;
       text-align: left;
-      width: 33.33%;
+      min-width: 33%;
       position: relative;
       z-index: 10;
 
