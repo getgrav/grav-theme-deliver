@@ -732,9 +732,12 @@ ul.pagination {
     color: #FFFFFF; }
   .modular.header-image #header #navbar a {
     color: #FFFFFF; }
-.modular .slideme, .modular .slideme_container {
-  height: 17rem !important; }
-  .modular .slideme:after, .modular .slideme_container:after {
+.modular .slideme_container {
+  overflow: hidden;
+  margin-top: -15rem;
+  padding-top: 15rem;
+  height: 34.7rem; }
+  .modular .slideme_container:after {
     content: "";
     display: table;
     clear: both; }
@@ -797,7 +800,7 @@ ul.pagination {
   text-align: center;
   line-height: 3.8rem;
   background: #fff;
-  top: 10%;
+  top: 50%;
   border-radius: 100%;
   font-size: 2.5rem;
   opacity: 0.5;
@@ -839,7 +842,7 @@ ul.pagination {
   left: 0;
   right: 0;
   vertical-align: middle;
-  bottom: 0; }
+  bottom: 5%; }
   .modular .slideme_container .pagination .numbers li {
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
@@ -857,7 +860,7 @@ ul.pagination {
       height: 1rem; }
 
 .modular .features {
-  padding: 6rem 0;
+  padding: 4rem 0;
   padding-bottom: 1rem;
   text-align: center; }
   .modular .features:after {

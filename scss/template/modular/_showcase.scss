@@ -15,9 +15,12 @@
         }
     }
 }
-.slideme, .slideme_container {
-    height:  $header-height + 5rem !important;
+.slideme_container {
      @include clearfix;
+     overflow: hidden;
+     margin-top: - $header-height - 3rem;
+     padding-top: $header-height + 3rem;
+     height: 34.7rem;
 }
 .showcase {
     position: relative;
@@ -90,7 +93,7 @@
         text-align: center;
         line-height: 3.8rem;
         background: $white;
-        top: 10%;
+        top: 50%;
         border-radius: 100%;
         font-size: 2.5rem;
         opacity: 0.5;
@@ -128,7 +131,7 @@
         left: 0;
         right: 0;
         vertical-align: middle;
-        bottom: 0;
+        bottom: 5%;
         .numbers {
             li {
                 @extend .default-animation;
