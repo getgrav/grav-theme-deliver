@@ -10,9 +10,9 @@
     {% if base_url == base_url_relative %}
         {% set feed_url = base_url~'/'~page.parent.slug %}
     {% endif  %}
-
+   
 	{% block content %}
-		{% include 'breadcrumbs.html.twig' %}
+        {% include 'partials/breadcrumbs.html.twig' %}
 		
 		<div class="blog-content-item grid pure-g-r">
 			<div id="item" class="block pure-u-2-3">

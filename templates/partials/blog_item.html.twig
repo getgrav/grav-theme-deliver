@@ -1,10 +1,6 @@
 <div class="list-item">
 
     <div class="list-blog-header">
-        <span class="list-blog-date">
-            <span>{{ page.date|date("d") }}</span>
-            <em>{{ page.date|date("M") }}</em>
-        </span>
         {% if page.header.link %}
             <h4>
                 {% if page.header.continue_link is not sameas(false) %}
@@ -16,13 +12,20 @@
             <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
         {% endif %}
 
-        {% if page.taxonomy.tag %}
+        <span class="list-blog-date">
+            <i class="fa fa-calendar"></i>
+            {{ page.date|date("d") }}, {{ page.date|date("M") }}
+        </span>
+       
+       {% if page.taxonomy.tag %}
         <span class="tags">
+            <i class="fa fa-tag"></i>
             {% for tag in page.taxonomy.tag %}
-            <a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a>
+            <a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a>, 
             {% endfor %}
         </span>
         {% endif %}
+        
         {% if big_header %}
             {{ page.media.images|first.cropResize(900,600).html }}
         {% else %}

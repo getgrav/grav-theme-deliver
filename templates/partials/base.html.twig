@@ -41,7 +41,6 @@
     <div id="sb-site">
         {% block header %}
         <header id="header">
-
                 <div class="logo">
                     <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h3>
                     {% block social %}
@@ -53,8 +52,8 @@
                     {% block header_navigation %}
                     {% include 'partials/navigation.html.twig' %}
                     {% endblock %}
+                    {% include 'partials/search.html.twig' %}
                 </div>
-
         </header>
         {% endblock %}
 

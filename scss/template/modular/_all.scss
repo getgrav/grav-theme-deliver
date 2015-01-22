@@ -38,6 +38,7 @@
                 text-align: center;
                 margin-right: 0.8rem;
                 a {
+                    @extend .default-animation;
                     color: $black;
                     display: block;
                     margin-top: 0.1rem;

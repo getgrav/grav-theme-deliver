@@ -1,21 +1,59 @@
+.blogstyling {
+    #body {
+        padding-top: 12rem;
+    }
+    #header {
+        color: $light-gray;
+        a {
+            color: $light-gray;
+        }
+        .search-box {
+            i {
+                color: $light-gray;
+            }
+            input[type=search] {
+                &:focus {
+                    background-color: transparentize($light-gray, 0.8);
+                }
+            }
+        }
+        li.active a {
+            color: $core-accent;
+        }
+        .logo ul.social-icons li {
+            background: transparentize($light-gray, 0.8);
+            .fa {
+                color: white;
+            }
+            &:hover {
+                .fa {
+                    color: $light-gray;
+                }
+            }
+        }
+    }
+}
 .blog-header {
 
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem;
+    margin-top: 0 !important;
 
     &.blog-header-image {
-        background-size: cover;
-        background-position: center;
+        background-size: cover !important;
 
         h1, h2 {
             color: $header-text;
+            text-align: left;
         }
 
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-top: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
         @include breakpoint(tablet-range) {
             font-size: 3rem;
         }
@@ -44,7 +82,7 @@
     .list-blog-header {
         position: relative;
         h4 {
-
+            text-align: left;
             margin-bottom: 0.5rem;
             a {
                 color: $core-text;
@@ -62,19 +100,16 @@
     }
 
     .list-blog-date {
-        float: right;
         text-align: center;
+        background-color: transparentize($light-gray, 0.9);
+        padding: 0.7rem 1rem;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
         span {
-            display: block;
-            font-size: 1.75rem;
-            font-weight: $font-weight-bold;
-            line-height: 110%;
-        }
-        em {
-            display: block;
-            border-top: 1px solid $border-color;
-            font-style: normal;
+            font-size: $core-font-size;
             text-transform: uppercase;
+            color: $core-text;
+            font-family: $font-family-header;
         }
     }
 }
@@ -88,14 +123,15 @@
 
 // Tags
 .tags {
+    background-color: transparentize($light-gray, 0.9);
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.2rem;
     a {
         display: inline-block;
-        font-size: $core-font-size - 0.2rem;
-        border: 1px solid $core-accent;
-        border-radius: $border-radius;
-        padding: 0.1rem 0.4rem;
-        margin-bottom: 0.2rem;
+        font-size: $core-font-size;
         text-transform: uppercase;
+        color: $core-text;
+        font-family: $font-family-header;
     }
 }
 
@@ -150,6 +186,7 @@ div#breadcrumbs {
     .sidebar-content {
         h4 {
             margin-bottom: 1rem;
+            text-align: left;
         }
         p, ul {
             margin-top: 1rem;
