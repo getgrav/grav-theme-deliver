@@ -147,12 +147,19 @@
 
 // Archives & Related-Pages
 .archives, .related-pages {
+    margin: 0;
     padding: 0;
     list-style: none;
     li {
         line-height: $core-font-size + 1rem;
         &:last-child {
             border-bottom: 0;
+        }
+    }
+    a {
+        color: $core-text;
+        &:hover {
+            color: $core-accent;
         }
     }
 }

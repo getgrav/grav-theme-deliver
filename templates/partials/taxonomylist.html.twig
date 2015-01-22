@@ -2,11 +2,11 @@
 
 {% if taxlist %}
 
-<span class="tags">
+<ul class="archives">
     {% for tax,value in taxlist[taxonomy] %}
-
-        <a href="{{ base_url }}/tag:{{ tax|e('url') }}">{{ tax }}</a>
-
+    <li>
+        <a href="{{ base_url }}/tag:{{ tax|e('url') }}">{{ tax }}  <span>({{ tax|length }})</span></a>
+    </li>
     {% endfor %}
-</span>
+</ul>
 {% endif %}

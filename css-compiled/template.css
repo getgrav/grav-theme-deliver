@@ -661,12 +661,17 @@ td {
       display: none; }
 
 .archives, .related-pages {
+  margin: 0;
   padding: 0;
   list-style: none; }
   .archives li, .related-pages li {
     line-height: 2rem; }
     .archives li:last-child, .related-pages li:last-child {
       border-bottom: 0; }
+  .archives a, .related-pages a {
+    color: #9A9898; }
+    .archives a:hover, .related-pages a:hover {
+      color: #87b672; }
 
 .related-pages li a {
   display: block; }
