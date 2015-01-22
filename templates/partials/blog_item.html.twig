@@ -18,12 +18,12 @@
         </span>
        
        {% if page.taxonomy.tag %}
-        <span class="tags">
+        <ul class="tags">
             <i class="fa fa-tag"></i>
             {% for tag in page.taxonomy.tag %}
-            <a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a>, 
+            <li><a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a></li>
             {% endfor %}
-        </span>
+        </ul>
         {% endif %}
         
         {% if big_header %}

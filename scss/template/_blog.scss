@@ -123,15 +123,27 @@
 
 // Tags
 .tags {
+    margin: 0;
+    padding: 0;
+    display: inline;
     background-color: transparentize($light-gray, 0.9);
     padding: 0.7rem 1rem;
     margin-bottom: 0.2rem;
-    a {
+    list-style: none;
+    li {
         display: inline-block;
         font-size: $core-font-size;
         text-transform: uppercase;
-        color: $core-text;
         font-family: $font-family-header;
+        a {
+            color: $core-text;
+            &:after {
+                content: ",";
+            }
+        }
+        &:last-child {
+           a:after {display: none;} 
+        }
     }
 }
 

@@ -642,15 +642,24 @@ td {
   font-size: 1.2rem; }
 
 .tags {
+  margin: 0;
+  padding: 0;
+  display: inline;
   background-color: rgba(101, 97, 97, 0.1);
   padding: 0.7rem 1rem;
-  margin-bottom: 0.2rem; }
-  .tags a {
+  margin-bottom: 0.2rem;
+  list-style: none; }
+  .tags li {
     display: inline-block;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #9A9898;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    .tags li a {
+      color: #9A9898; }
+      .tags li a:after {
+        content: ","; }
+    .tags li:last-child a:after {
+      display: none; }
 
 .archives, .related-pages {
   padding: 0;
