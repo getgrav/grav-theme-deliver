@@ -72,7 +72,7 @@
 // List Blog Item
 .list-item {
 
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid darken($border-color, 8%);
     margin-bottom: $padding-vert;
 
     &:last-child {
@@ -83,9 +83,9 @@
         position: relative;
         h4 {
             text-align: left;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
             a {
-                color: $core-text;
+                color: $light-gray;
                 &:hover {
                     color: $core-accent;
                 }
@@ -99,18 +99,16 @@
         }
     }
 
-    .list-blog-date {
+    .list-blog-date, .list-blog-author {
         text-align: center;
         background-color: transparentize($light-gray, 0.9);
         padding: 0.7rem 1rem;
         margin-bottom: 0.2rem;
         margin-right: 0.5rem;
-        span {
-            font-size: $core-font-size;
-            text-transform: uppercase;
-            color: $core-text;
-            font-family: $font-family-header;
-        }
+        font-size: $core-font-size;
+        text-transform: uppercase;
+        color: $core-text;
+        font-family: $font-family-header;
     }
 }
 
@@ -142,7 +140,7 @@
             }
         }
         &:last-child {
-           a:after {display: none;} 
+            a:after {display: none;} 
         }
     }
 }
@@ -152,7 +150,6 @@
     padding: 0;
     list-style: none;
     li {
-        border-bottom: 1px solid $border-color;
         line-height: $core-font-size + 1rem;
         &:last-child {
             border-bottom: 0;

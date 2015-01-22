@@ -1,6 +1,12 @@
 <div class="list-item">
 
     <div class="list-blog-header">
+        {% if big_header %}
+            {{ page.media.images|first.cropResize(900,600).html }}
+        {% else %}
+            {{ page.media.images|first.cropZoom(900,300).html }}
+        {% endif %}
+
         {% if page.header.link %}
             <h4>
                 {% if page.header.continue_link is not sameas(false) %}
@@ -16,6 +22,13 @@
             <i class="fa fa-calendar"></i>
             {{ page.date|date("d") }}, {{ page.date|date("M") }}
         </span>
+        
+        {% if page.header.author %}
+        <span class="list-blog-author">
+            <i class="fa fa-user"></i>
+            {{ page.header.author }}
+        </span>
+        {% endif %}
        
        {% if page.taxonomy.tag %}
         <ul class="tags">
@@ -26,12 +39,6 @@
         </ul>
         {% endif %}
         
-        {% if big_header %}
-            {{ page.media.images|first.cropResize(900,600).html }}
-        {% else %}
-            {{ page.media.images|first.cropZoom(900,300).html }}
-        {% endif %}
-
     </div>
 
     <div class="list-blog-padding">

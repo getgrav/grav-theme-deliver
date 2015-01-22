@@ -609,7 +609,7 @@ td {
     padding-top: 3rem; }
 
 .list-item {
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #dadada;
   margin-bottom: 3rem; }
   .list-item:last-child {
     border-bottom: 0; }
@@ -617,26 +617,25 @@ td {
     position: relative; }
     .list-item .list-blog-header h4 {
       text-align: left;
-      margin-bottom: 0.5rem; }
+      margin-bottom: 1.5rem; }
       .list-item .list-blog-header h4 a {
-        color: #9A9898; }
+        color: #656161; }
         .list-item .list-blog-header h4 a:hover {
           color: #87b672; }
     .list-item .list-blog-header img {
       display: block;
       margin-top: 1rem;
       border-radius: 0; }
-  .list-item .list-blog-date {
+  .list-item .list-blog-date, .list-item .list-blog-author {
     text-align: center;
     background-color: rgba(101, 97, 97, 0.1);
     padding: 0.7rem 1rem;
     margin-bottom: 0.2rem;
-    margin-right: 0.5rem; }
-    .list-item .list-blog-date span {
-      font-size: 1rem;
-      text-transform: uppercase;
-      color: #9A9898;
-      font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #9A9898;
+    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
 
 .blog-content-item .list-blog-padding > p:nth-child(2) {
   font-size: 1.2rem; }
@@ -665,7 +664,6 @@ td {
   padding: 0;
   list-style: none; }
   .archives li, .related-pages li {
-    border-bottom: 1px solid #EEEEEE;
     line-height: 2rem; }
     .archives li:last-child, .related-pages li:last-child {
       border-bottom: 0; }
