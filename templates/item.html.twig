@@ -12,6 +12,14 @@
     {% endif  %}
    
 	{% block content %}
+        {% set blog_image = page.parent.media.images|first %}
+        
+		{% if blog_image %}
+		<div class="flush-top blog-header blog-header-image" style="background: {{ page.parent.header.bg_color }} url({{ blog_image.url }}) no-repeat right;">
+            <h1>{{ page.title }}</h1>
+        </div>
+        {% endif %}
+    
         {% include 'partials/breadcrumbs.html.twig' %}
 		
 		<div class="blog-content-item g-grid pure-g-r">
