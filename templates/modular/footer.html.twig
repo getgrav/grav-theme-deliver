@@ -8,11 +8,11 @@
                 {% endblock %}
 
             </div>
-            {% if page.header.description %}
-                <p>{{ page.header.description }}</p>
+            {% if site.footer.description %}
+                <p>{{ site.footer.description }}</p>
             {% endif %}
         </div>
-        <div class="footer-module"><h4>{{ page.header.contact_title }}</h4>
+        <div class="footer-module"><h4>{{ site.footer.contact_title }}</h4>
             <p>
                 {% for item in site.contact.address %}
                     <span>{{ item.line }}</span>
@@ -21,7 +21,7 @@
             <p>{{ site.author.email }}</p>
             <p><strong>{{ site.contact.gps }}</strong></p>
         </div>
-        <div class="footer-module"><h4>{{ page.header.links_title }}</h4>
+        <div class="footer-module"><h4>{{ site.footer.links_title }}</h4>
          <ul class="quickmenu">
             {% for module in site.quicklinks %}
                 <li><i class="fa fa-chevron-right"></i><a href="#{{ module.url }}">{{  module.text }}</a></li>
@@ -29,8 +29,8 @@
         </ul>
     </div>
     <div class="footer-module">
-        <h4>{{ page.header.newsletter_title }}</h4>
-        <p>{{ page.header.newsletter_description }}</p>
+        <h4>{{ site.footer.newsletter_title }}</h4>
+        <p>{{ site.footer.newsletter_description }}</p>
 
         <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=karolorzel', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" class="newsletter">
         <input type="text" name="email" value="Email" onclick="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';"/>
@@ -40,7 +40,7 @@
         </form>
     </div>
 </div>
-{{ content }}
+<hr>
 <div class="footer-modules">
     <div class="footer-copyright">
         {{ site.author.copyright }}

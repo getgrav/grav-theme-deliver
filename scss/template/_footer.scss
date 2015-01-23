@@ -1,11 +1,9 @@
-// Modular Showcase styling
-.modular {
-  .footer {
+.footer {
     font-size:  $core-font-size - 0.1rem;
     background: #333;
     width: 100%;
     @extend .padding-horiz;
-    padding-top: 4rem;
+    padding-top: 2rem;
     @include clearfix;
     a {
       color: $core-text;
@@ -160,4 +158,3 @@
       }
     } 
   }
-}

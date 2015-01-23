@@ -62,6 +62,10 @@
         {% block body %}
         <section id="body" class="{{ class }}">
             {% block content %}{% endblock %}
+            
+            {% block footer %}
+            {% include 'modular/footer.html.twig' %}
+            {% endblock %}
         </section>
         {% endblock %}
         
