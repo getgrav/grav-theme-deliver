@@ -710,7 +710,7 @@ td {
   padding-top: 12rem; }
 .blogstyling #header {
   color: #656161; }
-  .blogstyling #header a {
+  .blogstyling #header a, .blogstyling #header .menu-btn {
     color: #656161; }
   .blogstyling #header .search-box i {
     color: #656161; }
@@ -741,12 +741,11 @@ td {
     text-transform: uppercase; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .blog-header h1 {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
     @media only all and (max-width: 47.938em) {
       .blog-header h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        margin-bottom: 2.5rem; } }
+        font-size: 1.5rem;
+        line-height: 1.2; } }
   .blog-header + .blog-content {
     padding-top: 3rem; }
 
@@ -778,6 +777,16 @@ td {
     text-transform: uppercase;
     color: #9A9898;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      .list-item .list-blog-date, .list-item .list-blog-author {
+        display: block;
+        width: 100%;
+        clear: both; } }
+    @media only all and (max-width: 47.938em) {
+      .list-item .list-blog-date, .list-item .list-blog-author {
+        display: block;
+        width: 100%;
+        clear: both; } }
 
 .blog-content-item .list-blog-padding > p:nth-child(2) {
   font-size: 1.2rem; }
@@ -789,7 +798,8 @@ td {
   background-color: rgba(101, 97, 97, 0.1);
   padding: 0.7rem 1rem;
   margin-bottom: 0.2rem;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
   .tags li {
     display: inline-block;
     font-size: 1rem;
@@ -801,6 +811,16 @@ td {
         content: ","; }
     .tags li:last-child a:after {
       display: none; }
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    .tags {
+      display: block;
+      width: 100%;
+      clear: both; } }
+  @media only all and (max-width: 47.938em) {
+    .tags {
+      display: block;
+      width: 100%;
+      clear: both; } }
 
 .archives, .related-pages {
   margin: 0;

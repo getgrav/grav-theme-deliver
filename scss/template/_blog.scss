@@ -4,7 +4,7 @@
     }
     #header {
         color: $light-gray;
-        a {
+        a, .menu-btn {
             color: $light-gray;
         }
         .search-box {
@@ -55,12 +55,11 @@
         margin-bottom: 0;
         text-transform: uppercase;
         @include breakpoint(tablet-range) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         @include breakpoint(mobile-only) {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             line-height: 1.2;
-            margin-bottom: 2.5rem;
         }
     }
 
@@ -78,7 +77,6 @@
     &:last-child {
         border-bottom: 0;
     }
-
     .list-blog-header {
         position: relative;
         h4 {
@@ -91,7 +89,6 @@
                 }
             }
         }
-
         img {
             display: block;
             margin-top: 1rem;
@@ -109,6 +106,17 @@
         text-transform: uppercase;
         color: $core-text;
         font-family: $font-family-header;
+
+        @include breakpoint(tablet-range) {
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+        @include breakpoint(mobile-only) {
+            display: block;
+            width: 100%;
+            clear: both;
+        }
     }
 }
 
@@ -128,6 +136,7 @@
     padding: 0.7rem 1rem;
     margin-bottom: 0.2rem;
     list-style: none;
+    text-align: center;
     li {
         display: inline-block;
         font-size: $core-font-size;
@@ -142,6 +151,16 @@
         &:last-child {
             a:after {display: none;} 
         }
+    }
+    @include breakpoint(tablet-range) {
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+    @include breakpoint(mobile-only) {
+        display: block;
+        width: 100%;
+        clear: both;
     }
 }
 
