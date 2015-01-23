@@ -589,24 +589,22 @@ td {
   border: 1px solid #d8d8d8; }
 
 .button {
-  background: #fff;
-  color: #87b672;
-  border: 1px solid #87b672;
-  border-radius: 3px; }
+  background: #87b672;
+  color: #fff;
+  border: 1px solid #87b672; }
   .button:hover {
-    background: #87b672;
-    color: #fff; }
+    background: #fff;
+    color: #87b672; }
   .button:active {
     box-shadow: 0 1px 0 #679b50; }
 
 .button-secondary {
-  background: #fff;
-  color: #F6635E;
-  border: 1px solid #F6635E;
-  border-radius: 3px; }
+  background: #F6635E;
+  color: #fff;
+  border: 1px solid #F6635E; }
   .button-secondary:hover {
-    background: #F6635E;
-    color: #fff; }
+    background: #fff;
+    color: #F6635E; }
   .button-secondary:active {
     box-shadow: 0 1px 0 #f32b24; }
 

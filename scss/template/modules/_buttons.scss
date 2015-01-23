@@ -10,13 +10,12 @@
 }
 
 @mixin button-color($color) {
-	background: $white;
-	color: $color;
+	background: $color;
+    color: $white;
 	border: 1px solid $color;
-	border-radius: 3px;
 	&:hover {
-		background: $color;
-		color: $white;
+		background: $white;
+        color: $color;
 	}
 	&:active {
 		box-shadow: 0 1px 0 darken($color, 12%);
