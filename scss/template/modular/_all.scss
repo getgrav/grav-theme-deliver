@@ -1,6 +1,7 @@
 @import "showcase";
 @import "features";
 @import "bottom";
+@import "contact";
 @import "text";
 
 .logo {
@@ -14,6 +15,9 @@
         a {
             color: $core-text;
         }
+    }
+    h4 {
+        text-align: left;
     }
     border-bottom: 1px solid $body-border;
 

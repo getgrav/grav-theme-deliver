@@ -1158,8 +1158,13 @@ ul.pagination {
     border: 0 none; }
     .modular .bottom .button:hover {
       background-color: #558042; }
-  .modular .bottom.borderbottom hr {
-    padding-top: 2rem; }
+  .modular .bottom.borderbottom {
+    padding-bottom: 0; }
+    .modular .bottom.borderbottom hr {
+      padding-top: 3rem; }
+
+.contact h4 {
+  text-align: left; }
 
 .callout {
   background: #EEEEEE;
@@ -1285,6 +1290,8 @@ ul.pagination {
     float: left; }
     .logo h3 a {
       color: #9A9898; }
+  .logo h4 {
+    text-align: left; }
   .logo ul {
     margin: 0;
     padding: 0;
