@@ -24,9 +24,15 @@
         }
     }
     input, textarea {
+        @extend .default-animation;
         border: 0 none;
         background: transparentize($core-text, 0.8);
         box-shadow: none;
+        &:focus {
+            border-radius: 0 !important;
+            box-shadow: none;
+            background: transparentize($core-text, 0.89);
+        }
     }
     label {
         @extend h4;
@@ -37,5 +43,14 @@
         @extend .default-animation;
         font-family: $font-family-header;
         text-transform: uppercase;
+    }
+    #simple_form-success, #simple_form-submit {
+        display: inline-block;
+        strong {
+            margin-left: 1rem;
+        }
+        .close {
+            display: none;
+        }
     }
 }

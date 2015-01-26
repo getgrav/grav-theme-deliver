@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact button, .callout .notebook .screen .screen-content-hover, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a {
+.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .notebook .screen .screen-content-hover, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -1217,11 +1217,21 @@ ul.pagination {
   border: 0 none;
   background: rgba(154, 152, 152, 0.2);
   box-shadow: none; }
+  .contact input:focus, .contact textarea:focus {
+    border-radius: 0 !important;
+    box-shadow: none;
+    background: rgba(154, 152, 152, 0.11); }
 .contact label {
   font-size: 1rem; }
 .contact button {
   font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   text-transform: uppercase; }
+.contact #simple_form-success, .contact #simple_form-submit {
+  display: inline-block; }
+  .contact #simple_form-success strong, .contact #simple_form-success label, .contact #simple_form-success th, .contact #simple_form-submit strong, .contact #simple_form-submit label, .contact #simple_form-submit th {
+    margin-left: 1rem; }
+  .contact #simple_form-success .close, .contact #simple_form-submit .close {
+    display: none; }
 
 .callout {
   background: #EEEEEE;
