@@ -5,8 +5,10 @@
 </div>
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+<div class="sidebar-content">
     <h4>Related Posts</h4>
     {% include 'partials/relatedpages.html.twig' %}
+</div>
 {% endif %}
 {% if config.plugins.random.enabled %}
 <div class="sidebar-content">
