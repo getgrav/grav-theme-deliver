@@ -1,6 +1,9 @@
-<div class="modular-row bottom {{ page.header.class}}">
+<div class="modular-row bottom {{ page.header.class }}">
     {{ content }}
     {% for button in page.header.buttons %}
         <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
     {% endfor %}
+    {% if page.header.class == 'borderbottom' %}
+    <hr>
+    {% endif %}
 </div>

@@ -1,40 +1,4 @@
-.blogstyling {
-    #body {
-        padding-top: 12rem;
-    }
-    #header {
-        color: $light-gray;
-        a, .menu-btn {
-            color: $light-gray;
-        }
-        .search-box {
-            i {
-                color: $light-gray;
-            }
-            input[type=search] {
-                &:focus {
-                    background-color: transparentize($light-gray, 0.8);
-                }
-            }
-        }
-        li.active a {
-            color: $core-accent;
-        }
-        .logo ul.social-icons li {
-            background: transparentize($light-gray, 0.8);
-            .fa {
-                color: white;
-            }
-            &:hover {
-                .fa {
-                    color: $light-gray;
-                }
-            }
-        }
-    }
-}
 .blog-header {
-
     padding-top: 1rem !important;
     padding-bottom: 1rem;
     margin-top: 0 !important;

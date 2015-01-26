@@ -33,8 +33,11 @@
                 background-color: darken($core-accent, 20%);
             }
         }
-
-
+        &.borderbottom {
+            hr {
+                padding-top: 2rem;
+            }
+        }
     }
 
 }
