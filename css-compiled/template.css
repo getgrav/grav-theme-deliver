@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .notebook .screen .screen-content-hover, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a {
+.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .notebook .screen .screen-content-hover, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -1346,6 +1346,55 @@ ul.pagination {
     margin: 0.4375rem 0 0 -0.625rem;
     z-index: -1;
     border-radius: 100%; }
+
+.team {
+  background: #EEEEEE;
+  padding: 4rem 0;
+  text-align: center; }
+  .team:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .team h2 {
+    color: #656161;
+    margin: 0;
+    line-height: 100%; }
+  .team p {
+    margin: 1rem 0; }
+  .team .members {
+    width: 100%;
+    text-align: left;
+    padding-top: 2rem; }
+    .team .members .member {
+      display: inline-block;
+      float: left;
+      width: 22%;
+      margin: 0 1rem; }
+      .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .contact label, .contact .team .members .member label {
+        text-align: left;
+        margin-bottom: 0; }
+      .team .members .member hr {
+        margin: 1rem 0; }
+    .team .members .social-icons {
+      line-height: 2rem;
+      margin: 0;
+      list-style: none; }
+      .team .members .social-icons li {
+        float: left;
+        width: 2.1rem;
+        height: 2.1rem;
+        background: #fff;
+        border-radius: 100%;
+        text-align: center;
+        margin-right: 0.8rem; }
+        .team .members .social-icons li a {
+          color: #000;
+          display: block;
+          margin-top: 0.1rem; }
+        .team .members .social-icons li:hover {
+          background: rgba(255, 255, 255, 0.5); }
+          .team .members .social-icons li:hover i {
+            color: #87b672; }
 
 .logo {
   border-bottom: 1px solid #eaeaea; }
