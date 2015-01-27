@@ -1,4 +1,4 @@
-// Modular Showcase styling
+// Modular Bottom styling
 .modular {
     .bottom {
         text-align: center;
@@ -46,7 +46,7 @@
                 @extend h4;
                 text-align: left; 
                 @include breakpoint(mobile-only) {
-                display: none;
+                    display: none;
                 }
             }
             td {
@@ -54,10 +54,14 @@
                 vertical-align: top;
                 border: 0 none;
                 @include breakpoint(mobile-only) {
-                display: block;
+                    display: block;
                 }
             }
         }
     }
-
+}
+.about {
+    hr {
+        margin: 3rem 0;
+    }
 }
