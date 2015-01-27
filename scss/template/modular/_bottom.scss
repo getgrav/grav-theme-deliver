@@ -58,6 +58,34 @@
                 }
             }
         }
+        .services {
+            padding-top: 2rem;
+            .service {
+                width: 50%;
+                text-align: left;
+                display: block;
+                float: left;
+                @include breakpoint(mobile-only) {
+                    width: 100%;
+                }
+                .fa {
+                    margin-top: 0.5rem;
+                    width: 7rem;
+                    height: 6rem;
+                    font-size: 6rem;
+                    float: left;
+                }
+                p {
+                    margin-left: 7rem;
+                    margin-top: 0.5rem;
+                    margin-right: 1rem;
+                }
+                h4 {
+                    text-align: left; 
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }
 .about {

@@ -142,16 +142,25 @@ $image-margin:      2rem;
         z-index: 10;
         @include clearfix;
         margin-top: 2rem;
-        min-height: 33rem;
+        min-height: 31rem;
+        text-align: center;
         .pricing-item {
             @extend .default-animation;
-            display: block;
-            float: left;
-            width: 24.5%;
+            display: inline-block;
+            width: 24.3%;
             margin-right: 0.3rem;
             margin-bottom: 2rem;
             vertical-align: middle;
             position: relative;
+            @include breakpoint(mobile-only) {
+                width: 100%;
+            }
+            @include breakpoint(tablet-range) {
+                 width: 100%;
+            }
+            @include breakpoint(desktop-range) {
+               width: 22.5%;
+            }
             &:hover {
                 margin-top: -1rem;
                 .name {

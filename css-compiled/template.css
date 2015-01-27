@@ -1207,6 +1207,29 @@ ul.pagination {
       @media only all and (max-width: 47.938em) {
         .modular .bottom table td {
           display: block; } }
+  .modular .bottom .services {
+    padding-top: 2rem; }
+    .modular .bottom .services .service {
+      width: 50%;
+      text-align: left;
+      display: block;
+      float: left; }
+      @media only all and (max-width: 47.938em) {
+        .modular .bottom .services .service {
+          width: 100%; } }
+      .modular .bottom .services .service .fa {
+        margin-top: 0.5rem;
+        width: 7rem;
+        height: 6rem;
+        font-size: 6rem;
+        float: left; }
+      .modular .bottom .services .service p {
+        margin-left: 7rem;
+        margin-top: 0.5rem;
+        margin-right: 1rem; }
+      .modular .bottom .services .service h4, .modular .bottom .services .service .archive-list label, .archive-list .modular .bottom .services .service label, .modular .bottom .services .service table th, .modular .bottom table .services .service th, .modular .bottom .services .service .contact label, .contact .modular .bottom .services .service label, .modular .bottom .services .service .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .bottom .services .service .name, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .bottom .services .service .button, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .bottom .services .service button, .modular .bottom .services .service .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .bottom .services .service button, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .bottom .services .service button, .modular .bottom .services .service .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .bottom .services .service button {
+        text-align: left;
+        margin-bottom: 0; }
 
 .about hr {
   margin: 3rem 0; }
@@ -1368,19 +1391,28 @@ ul.pagination {
     position: relative;
     z-index: 10;
     margin-top: 2rem;
-    min-height: 33rem; }
+    min-height: 31rem;
+    text-align: center; }
     .callout .pricing-container:after {
       content: "";
       display: table;
       clear: both; }
     .callout .pricing-container .pricing-item {
-      display: block;
-      float: left;
-      width: 24.5%;
+      display: inline-block;
+      width: 24.3%;
       margin-right: 0.3rem;
       margin-bottom: 2rem;
       vertical-align: middle;
       position: relative; }
+      @media only all and (max-width: 47.938em) {
+        .callout .pricing-container .pricing-item {
+          width: 100%; } }
+      @media only all and (min-width: 48em) and (max-width: 59.938em) {
+        .callout .pricing-container .pricing-item {
+          width: 100%; } }
+      @media only all and (min-width: 60em) and (max-width: 74.938em) {
+        .callout .pricing-container .pricing-item {
+          width: 22.5%; } }
       .callout .pricing-container .pricing-item:hover {
         margin-top: -1rem; }
         .callout .pricing-container .pricing-item:hover .name {
