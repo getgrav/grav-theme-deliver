@@ -1398,11 +1398,11 @@ ul.pagination {
       display: table;
       clear: both; }
     .callout .pricing-container .pricing-item {
+      -webkit-transform: translateZ(0);
       display: inline-block;
       width: 24.3%;
       margin-right: 0.3rem;
       margin-bottom: 2rem;
-      vertical-align: middle;
       position: relative; }
       @media only all and (max-width: 47.938em) {
         .callout .pricing-container .pricing-item {
@@ -1414,11 +1414,11 @@ ul.pagination {
         .callout .pricing-container .pricing-item {
           width: 22.5%; } }
       .callout .pricing-container .pricing-item:hover {
-        margin-top: -1rem; }
-        .callout .pricing-container .pricing-item:hover .name {
-          padding: 1rem 0; }
-        .callout .pricing-container .pricing-item:hover .foot {
-          padding: 1.5rem 0; }
+        -webkit-transform: scale(1, 1.08);
+        -moz-transform: scale(1, 1.08);
+        -ms-transform: scale(1, 1.08);
+        -o-transform: scale(1, 1.08);
+        transform: scale(1, 1.08); }
       .callout .pricing-container .pricing-item div {
         background: #f7f7f7; }
       .callout .pricing-container .pricing-item .name {

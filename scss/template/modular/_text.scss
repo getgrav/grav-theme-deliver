@@ -146,29 +146,27 @@ $image-margin:      2rem;
         text-align: center;
         .pricing-item {
             @extend .default-animation;
+            -webkit-transform:translateZ(0);
             display: inline-block;
             width: 24.3%;
             margin-right: 0.3rem;
             margin-bottom: 2rem;
-            vertical-align: middle;
             position: relative;
             @include breakpoint(mobile-only) {
                 width: 100%;
             }
             @include breakpoint(tablet-range) {
-                 width: 100%;
+                width: 100%;
             }
             @include breakpoint(desktop-range) {
-               width: 22.5%;
+                width: 22.5%;
             }
             &:hover {
-                margin-top: -1rem;
-                .name {
-                    padding: 1rem 0;
-                }
-                .foot {
-                    padding: 1.5rem 0;
-                }
+                -webkit-transform:scale(1,1.08);
+                -moz-transform:scale(1,1.08);
+                -ms-transform:scale(1,1.08);
+                -o-transform:scale(1,1.08);
+                transform:scale(1,1.08);
             }
             div {
                 background: $main-bg;
