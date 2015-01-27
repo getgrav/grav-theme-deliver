@@ -24,6 +24,7 @@ $module-bg:        #EEEEEE;
             float: left;
             width: 22%;
             margin: 0 1rem;
+            margin-bottom: 2rem;
             @include breakpoint(mobile-only) {
                 display: block;
                 width: 100%;

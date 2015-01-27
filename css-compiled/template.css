@@ -1384,7 +1384,8 @@ ul.pagination {
       display: inline-block;
       float: left;
       width: 22%;
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      margin-bottom: 2rem; }
       @media only all and (max-width: 47.938em) {
         .team .members .member {
           display: block;
