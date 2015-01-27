@@ -137,33 +137,60 @@ $image-margin:      2rem;
         z-index: -1;
         border-radius: 100%;
     }
-    table {
+    .pricing-container {
         position: relative;
-        z-index: 11;
-        td {
-            background: $main-bg;
-        }
-        th {
-            background: $core-accent;
-            @extend h4;
-            color: $white;
-        }
-        tr:first-child {
-            td {
+        z-index: 10;
+        @include clearfix;
+        margin-top: 2rem;
+        min-height: 33rem;
+        .pricing-item {
+            @extend .default-animation;
+            display: block;
+            float: left;
+            width: 24.5%;
+            margin-right: 0.3rem;
+            margin-bottom: 2rem;
+            vertical-align: middle;
+            position: relative;
+            &:hover {
+                margin-top: -1rem;
+                .name {
+                    padding: 1rem 0;
+                }
+                .foot {
+                    padding: 1.5rem 0;
+                }
+            }
+            div {
+                background: $main-bg;
+            }
+            .name {
+                @extend .default-animation;
+                background: $core-accent;
+                @extend h4;
+                color: $white;
+                padding: 0.5rem 0;
+            }
+            .info {
+                line-height: 3rem;
+                border-bottom: $border-color 1px solid;
+            }
+            .price {
                 font-weight: bold;
                 color: $light-gray;
                 font-size: 3.5rem;
                 font-family: $font-family-header;
                 font-weight: normal;
+                border-bottom: $border-color 1px solid;
+                line-height: 5rem;
             }
-        }
-        tr:last-child {
-            td {
+            .foot {
+                @extend .default-animation;
                 background: $core-accent;
                 color: $white;
                 text-align: center;
                 padding: 1rem 0;
-                a {
+                .button {
                     @extend h4;
                     @extend .default-animation;
                     margin: 0;
@@ -177,10 +204,11 @@ $image-margin:      2rem;
                     &:hover {
                         background: transparentize($white, 0.85);
                     }
-                    
                 }
+            }
+            sup {
+                font-size: 2rem;
             }
         }
     }
-
 }

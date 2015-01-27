@@ -1,13 +1,35 @@
 <div class="modular-row callout">
-    {{ content }}
+   {{ content }}
+    {% if page.header.pricing %}
+    <div class="pricing-container">
+        {% for item in page.header.pricing %}
+        <div class="pricing-item">
+            <div class="name">{{ item.name }}</div>
+            <div class="price">{{ item.price }}</div>
+            {% for line in item.options %}
+            <div class="info">
+                {{ line.line }}
+            </div>
+            {% endfor %}
+            <div class="foot">
+                <a class="button" href="{{ item.button_url }}">{{ item.button_text }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>    
+    {% endif %}
+    {% if page.header.portfolio %}
     <div class="notebooks">
         {% for portfolio in page.header.portfolio %}
-            <div class="notebook">
-                <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
-                <div class='keyboard'></div>
-                <h4>{{ portfolio.description }}</h4>
-            </div>
+        <div class="notebook">
+            <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
+            <div class='keyboard'></div>
+            <h4>{{ portfolio.description }}</h4>
+        </div>
         {% endfor %}
     </div>
+    {% endif %}
+
+
     <div class="callout-line"></div>
 </div>
