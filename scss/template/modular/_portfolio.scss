@@ -1,0 +1,35 @@
+// variables
+$text-bg:        #EEEEEE;
+$text-padding:   2rem;
+$image-margin:      2rem;
+
+
+// styling
+.portfolio {
+    padding: $text-padding $content-padding;
+    padding-top: $text-padding;
+    text-align: center;
+    @include breakpoint(desktop-only) {
+        text-align: center;
+    }
+    h2 {
+         color: $light-gray;
+    }
+    .notebooks {
+        .notebook {
+            width: 24%;
+            min-width: inherit;
+            h4 {
+                text-align: left;
+                margin-left: 2rem;
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 0;
+                margin-left: 2rem;
+                margin-right: 1rem;
+            }
+        }  
+    }
+}

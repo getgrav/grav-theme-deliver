@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .notebook .screen .screen-content-hover, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a {
+.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a, .notebook .screen .screen-content-hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -1294,99 +1294,6 @@ ul.pagination {
     left: 0;
     bottom: 0;
     z-index: 0; }
-  .callout .notebook {
-    display: inline-block;
-    text-align: left;
-    min-width: 33%;
-    position: relative;
-    z-index: 10; }
-    @media only all and (min-width: 60em) and (max-width: 74.938em) {
-      .callout .notebook {
-        width: 100%;
-        float: none; } }
-    @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      .callout .notebook {
-        width: 100%;
-        float: none; } }
-    @media only all and (max-width: 47.938em) {
-      .callout .notebook {
-        width: 100%;
-        float: none; } }
-    @media only all and (max-width: 30em) {
-      .callout .notebook {
-        width: 150%;
-        margin-left: -3.8rem;
-        float: none; } }
-  .callout .notebook .screen:before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: #E5EBED;
-    height: 0.25rem;
-    width: 0.25rem;
-    margin: 0.3125rem 0 0 8.625rem; }
-  .callout .notebook .screen {
-    background: #464C51;
-    border-radius: 0.5rem 0.5rem 0 0;
-    height: 11.72rem;
-    width: 18.28rem;
-    margin: 0 auto; }
-    .callout .notebook .screen .screen-content {
-      height: 10.1rem;
-      width: 16.73rem;
-      position: absolute;
-      z-index: 1;
-      margin-top: 0.8rem;
-      margin-left: 0.8rem;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    .callout .notebook .screen .screen-content-hover {
-      height: 10.1rem;
-      width: 16.73rem;
-      position: absolute;
-      z-index: 2;
-      opacity: 0;
-      margin-top: 0.8rem;
-      margin-left: 0.8rem;
-      background-color: #87b672; }
-      .callout .notebook .screen .screen-content-hover .fa-plus-square {
-        font-size: 5rem;
-        color: #464C51;
-        margin-top: 2.5rem;
-        margin-left: 5.9rem; }
-      .callout .notebook .screen .screen-content-hover:hover {
-        opacity: 0.8; }
-  .callout .notebook .screen:after {
-    content: "";
-    position: absolute;
-    background: #161B21;
-    height: 10rem;
-    width: 16.63rem;
-    border-radius: 0.125rem;
-    margin: 0.875rem 0 0 0.8125rem;
-    transition: background 1s ease-in-out; }
-  .callout .notebook .keyboard {
-    background: #DFDCDC;
-    border-radius: 0 0 0.3125rem 0.3125rem;
-    height: 1.25rem;
-    width: 21.88rem;
-    margin: 0 auto; }
-  .callout .notebook .keyboard:after {
-    content: "";
-    position: absolute;
-    background: #757979;
-    height: 0.375rem;
-    width: 3.125rem;
-    margin: 0 0 0 9.375rem;
-    border-radius: 0 0 0.5rem 0.5rem; }
-  .callout .keyboard:before {
-    content: "";
-    position: absolute;
-    height: 0.5rem;
-    width: 23.13rem;
-    margin: 0.4375rem 0 0 -0.625rem;
-    z-index: -1;
-    border-radius: 100%; }
   .callout .pricing-container {
     position: relative;
     z-index: 10;
@@ -1519,6 +1426,28 @@ ul.pagination {
           .team .members .social-icons li:hover i {
             color: #87b672; }
 
+.portfolio {
+  padding: 2rem 0.938rem;
+  padding-top: 2rem;
+  text-align: center; }
+  @media only all and (max-width: 59.938em) {
+    .portfolio {
+      text-align: center; } }
+  .portfolio h2 {
+    color: #656161; }
+  .portfolio .notebooks .notebook {
+    width: 24%;
+    min-width: inherit; }
+    .portfolio .notebooks .notebook h4, .portfolio .notebooks .notebook .archive-list label, .archive-list .portfolio .notebooks .notebook label, .portfolio .notebooks .notebook .modular .bottom table th, .modular .bottom table .portfolio .notebooks .notebook th, .portfolio .notebooks .notebook .contact label, .contact .portfolio .notebooks .notebook label, .portfolio .notebooks .notebook .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .portfolio .notebooks .notebook .name, .portfolio .notebooks .notebook .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook .button, .portfolio .notebooks .notebook .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .portfolio .notebooks .notebook button, .portfolio .notebooks .notebook .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook button, .portfolio .notebooks .notebook .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .portfolio .notebooks .notebook button, .portfolio .notebooks .notebook .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook button {
+      text-align: left;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      margin-bottom: 0; }
+    .portfolio .notebooks .notebook p {
+      margin-top: 0;
+      margin-left: 2rem;
+      margin-right: 1rem; }
+
 .logo {
   border-bottom: 1px solid #eaeaea; }
   .logo h3 {
@@ -1553,5 +1482,105 @@ ul.pagination {
           margin-top: 0.1rem; }
         .logo ul.social-icons li:hover {
           background: rgba(255, 255, 255, 0.5); }
+
+.notebook {
+  display: inline-block;
+  text-align: left;
+  min-width: 33%;
+  position: relative;
+  z-index: 10; }
+  @media only all and (min-width: 60em) and (max-width: 74.938em) {
+    .notebook {
+      width: 100%;
+      float: none; } }
+  @media only all and (min-width: 48em) and (max-width: 59.938em) {
+    .notebook {
+      width: 100%;
+      float: none; } }
+  @media only all and (max-width: 47.938em) {
+    .notebook {
+      width: 100%;
+      float: none; } }
+  @media only all and (max-width: 30em) {
+    .notebook {
+      width: 150%;
+      margin-left: -3.8rem;
+      float: none; } }
+
+.notebook .screen:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #E5EBED;
+  height: 0.25rem;
+  width: 0.25rem;
+  margin: 0.3125rem 0 0 8.625rem; }
+
+.notebook .screen {
+  background: #464C51;
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 11.72rem;
+  width: 18.28rem;
+  margin: 0 auto; }
+  .notebook .screen .screen-content {
+    height: 10.1rem;
+    width: 16.73rem;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0.8rem;
+    margin-left: 0.8rem;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .notebook .screen .screen-content-hover {
+    height: 10.1rem;
+    width: 16.73rem;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    margin-top: 0.8rem;
+    margin-left: 0.8rem;
+    background-color: #87b672; }
+    .notebook .screen .screen-content-hover .fa-plus-square {
+      font-size: 5rem;
+      color: #464C51;
+      margin-top: 2.5rem;
+      margin-left: 5.9rem; }
+    .notebook .screen .screen-content-hover:hover {
+      opacity: 0.8; }
+
+.notebook .screen:after {
+  content: "";
+  position: absolute;
+  background: #161B21;
+  height: 10rem;
+  width: 16.63rem;
+  border-radius: 0.125rem;
+  margin: 0.875rem 0 0 0.8125rem;
+  transition: background 1s ease-in-out; }
+
+.notebook .keyboard {
+  background: #DFDCDC;
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  height: 1.25rem;
+  width: 21.88rem;
+  margin: 0 auto; }
+
+.notebook .keyboard:after {
+  content: "";
+  position: absolute;
+  background: #757979;
+  height: 0.375rem;
+  width: 3.125rem;
+  margin: 0 0 0 9.375rem;
+  border-radius: 0 0 0.5rem 0.5rem; }
+
+.keyboard:before {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 23.13rem;
+  margin: 0.4375rem 0 0 -0.625rem;
+  z-index: -1;
+  border-radius: 100%; }
 
 /*# sourceMappingURL=template.css.map */
