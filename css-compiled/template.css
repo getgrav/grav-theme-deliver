@@ -274,7 +274,7 @@ b, strong, label, th {
     clear: both; }
   .footer a {
     color: #9A9898; }
-  .footer h4, .footer .archive-list label, .archive-list .footer label, .footer .contact label, .contact .footer label {
+  .footer h4, .footer .archive-list label, .archive-list .footer label, .footer .modular .bottom table th, .modular .bottom table .footer th, .footer .contact label, .contact .footer label {
     line-height: 2rem;
     margin-top: 0;
     text-align: left;
@@ -409,7 +409,7 @@ body {
   font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400; }
 
-h1, h2, h3, h4, .archive-list label, .contact label, h5, h6 {
+h1, h2, h3, h4, .archive-list label, .modular .bottom table th, .contact label, h5, h6 {
   font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   text-rendering: optimizeLegibility; }
 
@@ -439,17 +439,17 @@ h2 {
   h3 {
     font-size: -1rem; } }
 
-h4, .archive-list label, .contact label {
+h4, .archive-list label, .modular .bottom table th, .contact label {
   font-size: 1.2rem;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   color: #656161; }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
-    h4, .archive-list label, .contact label {
+    h4, .archive-list label, .modular .bottom table th, .contact label {
       font-size: 1.35rem; } }
   @media only all and (max-width: 47.938em) {
-    h4, .archive-list label, .contact label {
+    h4, .archive-list label, .modular .bottom table th, .contact label {
       font-size: 1.25rem; } }
 
 h1 {
@@ -755,12 +755,12 @@ td {
     border-bottom: 0; }
   .list-item .list-blog-header {
     position: relative; }
-    .list-item .list-blog-header h4, .list-item .list-blog-header .archive-list label, .archive-list .list-item .list-blog-header label, .list-item .list-blog-header .contact label, .contact .list-item .list-blog-header label {
+    .list-item .list-blog-header h4, .list-item .list-blog-header .archive-list label, .archive-list .list-item .list-blog-header label, .list-item .list-blog-header .modular .bottom table th, .modular .bottom table .list-item .list-blog-header th, .list-item .list-blog-header .contact label, .contact .list-item .list-blog-header label {
       text-align: left;
       margin-bottom: 1.5rem; }
-      .list-item .list-blog-header h4 a, .list-item .list-blog-header .archive-list label a, .archive-list .list-item .list-blog-header label a, .list-item .list-blog-header .contact label a, .contact .list-item .list-blog-header label a {
+      .list-item .list-blog-header h4 a, .list-item .list-blog-header .archive-list label a, .archive-list .list-item .list-blog-header label a, .list-item .list-blog-header .modular .bottom table th a, .modular .bottom table .list-item .list-blog-header th a, .list-item .list-blog-header .contact label a, .contact .list-item .list-blog-header label a {
         color: #656161; }
-        .list-item .list-blog-header h4 a:hover, .list-item .list-blog-header .archive-list label a:hover, .archive-list .list-item .list-blog-header label a:hover, .list-item .list-blog-header .contact label a:hover, .contact .list-item .list-blog-header label a:hover {
+        .list-item .list-blog-header h4 a:hover, .list-item .list-blog-header .archive-list label a:hover, .archive-list .list-item .list-blog-header label a:hover, .list-item .list-blog-header .modular .bottom table th a:hover, .modular .bottom table .list-item .list-blog-header th a:hover, .list-item .list-blog-header .contact label a:hover, .contact .list-item .list-blog-header label a:hover {
           color: #87b672; }
     .list-item .list-blog-header img {
       display: block;
@@ -858,7 +858,7 @@ div#breadcrumbs {
       padding-left: 0; } }
   #sidebar .sidebar-content {
     margin-bottom: 3rem; }
-    #sidebar .sidebar-content h4, #sidebar .sidebar-content .archive-list label, .archive-list #sidebar .sidebar-content label, #sidebar .sidebar-content .contact label, .contact #sidebar .sidebar-content label {
+    #sidebar .sidebar-content h4, #sidebar .sidebar-content .archive-list label, .archive-list #sidebar .sidebar-content label, #sidebar .sidebar-content .modular .bottom table th, .modular .bottom table #sidebar .sidebar-content th, #sidebar .sidebar-content .contact label, .contact #sidebar .sidebar-content label {
       margin-bottom: 1rem;
       text-align: left; }
     #sidebar .sidebar-content p, #sidebar .sidebar-content ul {
@@ -872,7 +872,7 @@ ul.pagination {
   margin-top: 5rem;
   text-align: center; }
 
-.archive-list h4, .archive-list label {
+.archive-list h4, .archive-list label, .archive-list .modular .bottom table th, .modular .bottom table .archive-list th {
   text-align: left; }
 .archive-list input {
   width: 50%;
@@ -1134,7 +1134,7 @@ ul.pagination {
         width: 100%; } }
     .modular .features .feature i.fa {
       font-size: 2rem; }
-    .modular .features .feature h4, .modular .features .feature .archive-list label, .archive-list .modular .features .feature label, .modular .features .feature .contact label, .contact .modular .features .feature label {
+    .modular .features .feature h4, .modular .features .feature .archive-list label, .archive-list .modular .features .feature label, .modular .features .feature .bottom table th, .modular .bottom table .features .feature th, .modular .features .feature .contact label, .contact .modular .features .feature label {
       margin: 0;
       font-size: 1.1rem; }
     .modular .features .feature p {
@@ -1156,7 +1156,7 @@ ul.pagination {
       padding-right: 2rem; }
       .modular .features.big .feature-content.icon-offset {
         margin-left: 1rem; }
-      .modular .features.big .feature-content h4, .modular .features.big .feature-content .archive-list label, .archive-list .modular .features.big .feature-content label, .modular .features.big .feature-content .contact label, .contact .modular .features.big .feature-content label {
+      .modular .features.big .feature-content h4, .modular .features.big .feature-content .archive-list label, .archive-list .modular .features.big .feature-content label, .modular .features.big .feature-content .bottom table th, .modular .bottom table .features.big .feature-content th, .modular .features.big .feature-content .contact label, .contact .modular .features.big .feature-content label {
         font-size: 1.2rem; }
       .modular .features.big .feature-content p {
         padding: 0; }
@@ -1192,8 +1192,23 @@ ul.pagination {
     padding-bottom: 0; }
     .modular .bottom.borderbottom hr {
       padding-top: 3rem; }
+  .modular .bottom table {
+    border: 0 none; }
+    .modular .bottom table th {
+      background: none;
+      text-align: left; }
+      @media only all and (max-width: 47.938em) {
+        .modular .bottom table th {
+          display: none; } }
+    .modular .bottom table td {
+      text-align: left;
+      vertical-align: top;
+      border: 0 none; }
+      @media only all and (max-width: 47.938em) {
+        .modular .bottom table td {
+          display: block; } }
 
-.contact h4, .contact label {
+.contact h4, .contact .modular .bottom table th, .modular .bottom table .contact th, .contact label {
   text-align: left; }
 .contact input {
   width: 50%;
@@ -1370,15 +1385,29 @@ ul.pagination {
       float: left;
       width: 22%;
       margin: 0 1rem; }
-      .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .contact label, .contact .team .members .member label {
+      @media only all and (max-width: 47.938em) {
+        .team .members .member {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          margin-bottom: 2rem; } }
+      .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label {
         text-align: left;
         margin-bottom: 0; }
+        @media only all and (max-width: 47.938em) {
+          .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label {
+            text-align: center; } }
       .team .members .member hr {
         margin: 1rem 0; }
     .team .members .social-icons {
       line-height: 2rem;
       margin: 0;
       list-style: none; }
+      @media only all and (max-width: 47.938em) {
+        .team .members .social-icons {
+          text-align: center;
+          display: inline-flex; } }
       .team .members .social-icons li {
         float: left;
         width: 2.1rem;
@@ -1406,7 +1435,7 @@ ul.pagination {
     float: left; }
     .logo h3 a {
       color: #9A9898; }
-  .logo h4, .logo .archive-list label, .archive-list .logo label, .logo .contact label, .contact .logo label {
+  .logo h4, .logo .archive-list label, .archive-list .logo label, .logo .modular .bottom table th, .modular .bottom table .logo th, .logo .contact label, .contact .logo label {
     text-align: left; }
   .logo ul {
     margin: 0;

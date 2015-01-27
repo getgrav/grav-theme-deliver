@@ -39,6 +39,25 @@
             }
             padding-bottom: 0;
         }
+        table {
+            border: 0 none;
+            th {
+                background: none;
+                @extend h4;
+                text-align: left; 
+                @include breakpoint(mobile-only) {
+                display: none;
+                }
+            }
+            td {
+                text-align: left;  
+                vertical-align: top;
+                border: 0 none;
+                @include breakpoint(mobile-only) {
+                display: block;
+                }
+            }
+        }
     }
 
 }

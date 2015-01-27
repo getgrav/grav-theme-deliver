@@ -24,9 +24,19 @@ $module-bg:        #EEEEEE;
             float: left;
             width: 22%;
             margin: 0 1rem;
+            @include breakpoint(mobile-only) {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                margin-bottom: 2rem;
+            }
             h4 {
                 text-align: left;
                 margin-bottom: 0;
+                @include breakpoint(mobile-only) {
+                    text-align: center;
+                }
             }
             hr {
                 margin: 1rem 0;
@@ -36,6 +46,10 @@ $module-bg:        #EEEEEE;
             line-height: 2rem;
             margin: 0;
             list-style: none;
+            @include breakpoint(mobile-only) {
+                text-align: center;
+                display: inline-flex;
+            }
 
             li {
                 @extend .default-animation;
