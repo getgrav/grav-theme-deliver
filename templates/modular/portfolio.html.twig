@@ -1,13 +1,19 @@
 <div class="modular-row portfolio">
-   {{ content }}
+    {{ content }}
     {% if page.header.portfolio %}
     <div class="notebooks">
-        {% for portfolio in page.header.portfolio %}
-        <div class="notebook">
-            <h4>{{ portfolio.title }}</h4>
-            <p>{{ portfolio.desc }}</p>
-            <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
-            <div class='keyboard'></div>
+        {% for row in page.header.portfolio|batch(4) %}
+        <div class="notebook-row">
+            {% for portfolio in row %}
+            <div class="notebook">
+                <div class="desc">
+                    <h4>{{ portfolio.title }}</h4>
+                    <p>{{ portfolio.desc }}</p>
+                </div>
+                <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
+                <div class='keyboard'></div>
+            </div>
+            {% endfor %}
         </div>
         {% endfor %}
     </div>
