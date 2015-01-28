@@ -32,7 +32,7 @@ $image-margin:      2rem;
                     width: 100%;
                 }
                 @include breakpoint(desktop-range) {
-                   min-width: 24%;
+                    min-width: 24%;
                     float: none;
                 }
                 h4 {
@@ -60,5 +60,50 @@ $image-margin:      2rem;
                 }
             } 
         }
+    }
+}
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 3rem;
+}
+.modal {
+    @extend .default-animation;
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background: $white;
+    text-align: center;
+    &.in {
+       opacity: 1; 
+    }
+    .client-details {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            strong {
+                color: $core-accent;
+                font-weight: normal;
+            }
+        }
+    }
+    .modal-content {
+        margin: 0 auto;
+        width: 35rem;
+        min-height: 100%;
+        margin-top: 10rem;
     }
 }

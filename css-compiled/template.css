@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a, .notebook .screen .screen-content-hover {
+.default-animation, #body, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .modal, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a, .notebook .screen .screen-content-hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -1475,6 +1475,45 @@ ul.pagination {
           @media only all and (min-width: 48em) and (max-width: 59.938em) {
             .portfolio .notebooks .notebook-row .notebook .desc {
               width: 100%; } }
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 3rem; }
+
+.modal {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background: #fff;
+  text-align: center; }
+  .modal.in {
+    opacity: 1; }
+  .modal .client-details {
+    list-style-type: none; }
+    .modal .client-details li {
+      display: inline-block; }
+      .modal .client-details li strong, .modal .client-details li label, .modal .client-details li th {
+        color: #87b672;
+        font-weight: normal; }
+  .modal .modal-content {
+    margin: 0 auto;
+    width: 35rem;
+    min-height: 100%;
+    margin-top: 10rem; }
 
 .logo {
   border-bottom: 1px solid #eaeaea; }
