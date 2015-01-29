@@ -24,7 +24,7 @@
         <div class="footer-module"><h4>{{ site.footer.links_title }}</h4>
          <ul class="quickmenu">
             {% for module in site.quicklinks %}
-                <li><i class="fa fa-chevron-right"></i><a href="#{{ module.url }}">{{  module.text }}</a></li>
+                <li><i class="fa fa-chevron-right"></i><a href="{{ module.url }}">{{  module.text }}</a></li>
             {% endfor %}
         </ul>
     </div>
@@ -48,7 +48,7 @@
     <div class="footer-menu">
     <ul class="othermenu">
     {% for module in site.othermenu %}
-       <li><a href="#{{ module.url }}">{{  module.text }}</a></li>
+       <li><a href="{{ module.url }}">{{  module.text }}</a></li>
     {% endfor %}
     </ul>
     </div>
