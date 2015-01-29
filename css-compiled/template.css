@@ -86,8 +86,8 @@ b, strong, label, th {
       padding-right: 7rem; } }
   @media only all and (max-width: 47.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .footer {
-      padding-left: 5rem;
-      padding-right: 5rem; } }
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .padding-vert {
   padding-top: 3rem;

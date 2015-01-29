@@ -14,8 +14,16 @@
 
 <script type="text/javascript">
 $('#content-slide').slideme({
-  arrows: true,
+  arrows: {{ site.header_options.arrows }},
+  autoslide: {{ site.header_options.autoslide }},
+  autoslideHoverStop: {{ site.header_options.autoslideHoverStop }},
+  interval: {{ site.header_options.interval }},
+  loop: {{ site.header_options.loop }},
   pagination: "numbers",
-  transition : 'zoom',
+  transition : '{{ site.header_options.transition }}',
+  itemsForSlide: {{ site.header_options.itemsForSlide }},
+  touch: {{ site.header_options.touch }},
+  swipe: {{ site.header_options.swipe }},
+
 });
 </script>
