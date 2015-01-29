@@ -9,6 +9,9 @@
     background-color: transparent;
     cursor: pointer;
     font-size: 3rem;
+    @include breakpoint(mobile-only) {
+        display: none;
+    }
 }
 .modal {
     @extend .default-animation;
@@ -25,6 +28,17 @@
     outline: 0;
     background: $white;
     text-align: center;
+    @include breakpoint(mobile-only) {
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        p, ul {
+            margin: 1rem 0;
+        }
+        ul {
+            margin-top: 0;
+        }
+    }
     &.in {
         opacity: 1; 
     }
@@ -47,7 +61,11 @@
             width: 100%;
         }
         @include breakpoint(mobile-only) {
+            margin-top: 0;
             width: 100%;
+        }
+        img {
+            max-height: 15rem;
         }
     }
 }

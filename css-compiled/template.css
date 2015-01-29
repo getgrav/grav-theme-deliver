@@ -733,6 +733,9 @@ td {
   background-color: transparent;
   cursor: pointer;
   font-size: 3rem; }
+  @media only all and (max-width: 47.938em) {
+    .portfolio-modal .close-modal {
+      display: none; } }
 
 .modal {
   display: none;
@@ -748,6 +751,13 @@ td {
   outline: 0;
   background: #fff;
   text-align: center; }
+  @media only all and (max-width: 47.938em) {
+    .modal h1 {
+      margin-bottom: 0.5rem; }
+    .modal p, .modal ul {
+      margin: 1rem 0; }
+    .modal ul {
+      margin-top: 0; } }
   .modal.in {
     opacity: 1; }
   .modal .client-details {
@@ -767,7 +777,10 @@ td {
         width: 100%; } }
     @media only all and (max-width: 47.938em) {
       .modal .modal-content {
+        margin-top: 0;
         width: 100%; } }
+    .modal .modal-content img {
+      max-height: 15rem; }
 
 .blog-header {
   padding-top: 1rem !important;
@@ -1494,6 +1507,10 @@ ul.pagination {
       padding-right: 14rem;
       background: #EEEEEE;
       padding-bottom: 2rem; }
+      @media only all and (max-width: 47.938em) {
+        .portfolio .notebooks .notebook-row {
+          margin-left: -10rem;
+          margin-right: -10rem; } }
       .portfolio .notebooks .notebook-row .notebook {
         min-width: 24%; }
         @media only all and (min-width: 48em) and (max-width: 59.938em) {
@@ -1503,6 +1520,10 @@ ul.pagination {
           .portfolio .notebooks .notebook-row .notebook {
             min-width: 24%;
             float: none; } }
+        @media only all and (max-width: 30em) {
+          .portfolio .notebooks .notebook-row .notebook {
+            width: 170%;
+            margin-left: -4.7rem; } }
         .portfolio .notebooks .notebook-row .notebook h4, .portfolio .notebooks .notebook-row .notebook .archive-list label, .archive-list .portfolio .notebooks .notebook-row .notebook label, .portfolio .notebooks .notebook-row .notebook .modular .bottom table th, .modular .bottom table .portfolio .notebooks .notebook-row .notebook th, .portfolio .notebooks .notebook-row .notebook .contact label, .contact .portfolio .notebooks .notebook-row .notebook label, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .portfolio .notebooks .notebook-row .notebook .name, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook .button, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook button {
           text-align: left;
           margin-bottom: 0; }
@@ -1580,7 +1601,7 @@ ul.pagination {
   @media only all and (max-width: 30em) {
     .notebook {
       width: 150%;
-      margin-left: -3.8rem;
+      margin-left: -5.1rem;
       float: none; } }
 
 .notebook .screen:before {

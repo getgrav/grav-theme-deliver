@@ -26,6 +26,12 @@ $image-margin:      2rem;
             padding-right: $padding-horiz;
             background: $text-bg;
             padding-bottom: 2rem;
+
+            @include breakpoint(mobile-only) {
+                margin-left: -$padding-horiz + 4rem;
+                margin-right: -$padding-horiz + 4rem ;
+            }
+
             .notebook {
                 min-width: 24%;
                 @include breakpoint(tablet-range) {
@@ -34,6 +40,10 @@ $image-margin:      2rem;
                 @include breakpoint(desktop-range) {
                     min-width: 24%;
                     float: none;
+                }
+                @include breakpoint(small-mobile-range) {
+                    width: 170%;
+                    margin-left: -4.7rem;
                 }
                 h4 {
                     text-align: left;
