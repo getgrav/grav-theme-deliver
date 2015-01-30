@@ -1,84 +1,79 @@
-# Deliver
-Deliver is the [Grav][grav] theme. Simple, fast and modern.
+# Deliver Theme for Grav
 
-## Installation
-To install this template, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`.  Then, rename the folder to `deliver`.
+![Deliver](assets/readme_1.png)
+
+Deliver theme is a port of the [Deliver](http://freebiesbug.com/psd-freebies/deliver-free-psd-theme/) by [Michael Reimer](http://www.bestpsdfreebies.com/). Whether you’re a creative looking to show off your portfolio, or a business looking to promote your company, this theme is for you.
+
+# Features
+
+* Fully responsive
+* Automatic and custom navigation menus included
+* Showcase section with stunning animated slideshow module
+* Services grid with custom FontAwesome icons.
+* Portfolio grid with modal window popup previews for portfolio item details. Both frontpage (minimal) and full featured versions included.
+* Footer section with Feedburner subscription (feedburner id customizable in site config), custom menus, contact info and more.
+* About layout with social icons module and custom styling
+* Services layout with FontAwesome icons and pricing tables
+* Archive layout with blog posts archives list
+* Full featured blog with support for custom authors and jscomments
+* Contact us layout with Simple Form plugin support.
+* SCSS files included for deeper customization options
+
+# Installation
+
+Installing the Deliver theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
+
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The [Deliver Site Skeleton](https://github.com/getgrav/grav-skeleton-deliver-site) is a self-contained repository for a complete sites which includes: sample content, configuration, theme, and plugins.
+
+## GPM Installation (Preferred)
+
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+
+    bin/gpm install deliver
+
+This will install the Deliver theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/deliver`.
+
+## Manual Installation
+
+To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `deliver`. You can find these files either on [GitHub](https://github.com/getgrav/grav-theme-deliver) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
 You should now have all the theme files under
 
-	/your/site/grav/user/themes/deliver
-	
-[grav]: http://github.com/getgrav/grav
-[afterburner2]: http://www.rockettheme.com/joomla-templates/afterburner2
+    /your/site/grav/user/themes/deliver
 
-## Features
+>> NOTE: This theme is a modular component for Grav which requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins.
 
-* Lightweight and minimal for optimal performance
-* Fully responsive with off-page mobile navigation
-* SCSS based CSS source files for easy customization
-* Built-in support for on-page navigation
-* Mutliple page template types
-* Fontawesome icon support
+# Updating
 
-### Supported Page Templates
+As development for the Deliver theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Deliver is easy, and can be done through Grav's GPM system, as well as manually.
 
-* Default view template
-* Blog view template
-* Error view template
-* Blog item vew template
-* Modular view templates:
-  * Features Modular view template
-  * Showcase Modular view template
-  * Text Modular view template
-* SnipCart view template
+## GPM Update (Preferred)
 
-### Menu Features
+The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
 
-##### Dropdown Menu
+    bin/gpm update deliver
 
-You can enable **dropdown menu** support by enabling it in the `deliver.yaml` configuration file. As per usual, copy this file to your `user/config/themes/` folder (create if required) and edit there.
+This command will check your Grav install to see if your Deliver theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
-```
-dropdown:
-  enabled: true
-```
+## Manual Update
 
-This will ensure that sub-pages show up as sub-menus in the navigation.
+Manually updating Deliver is pretty simple. Here is what you will need to do to get this done:
 
-##### Menu Text & Icons
+* Delete the `your/site/user/themes/deliver` directory.
+* Download the new version of the Deliver theme from either [GitHub](https://github.com/getgrav/grav-theme-deliver) or [GetGrav.org](http://getgrav.org/downloads/themes).
+* Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `deliver`.
+* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
-Each page shows up in the menu using the title by default, however you can set what displays in the menu directly by setting an explicit `menu:` option in the page header:
+> Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-```
-menu: My Menu
-```
+# Setup
 
-You can also provide an icon to show up in front of the menu item by providing an `icon:` option.  You need to use name of the FontAwesome icon without the `fa-` prefix.  Check out the full [list of current FontAwesome 4.2 icons](http://fortawesome.github.io/Font-Awesome/icons/):
+If you want to set Deliver as the default theme, you can do so by following these steps:
 
-```
-icon: bar-chart-o
-```
+* Navigate to `/your/site/grav/user/config`.
+* Open the **system.yaml** file.
+* Change the `theme:` setting to `theme: deliver`.
+* Save your changes.
+* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
 
-#### Custom Menu Items
-
-By default, Grav generates the menu from the page structure.  However, there are times when you may want to add custom menu items to the end of the menu.  This is now supported in Deliver by creating a menu list in your `site.yaml` file.  An example of this is as follows:
-
-```
-menu:
-    - text: Source
-      url: https://github.com/getgrav/grav
-    - icon: twitter
-      url: http://twitter.com/getgrav
-```
-
-The `url:` option is required, but you can provide **either** or **both** `text:` and/or `icon:`
-
-### Blog Features
-
-##### Daring Fireball Link Pages
-
-Deliver supports the ability for a page to have a `link:` header option.  This will then in turn create a **link page** where the title of the page will actually be linked to the link provided and a prefexid double angle `>>` will link to the page itself.  Simply provide the link in the page header:
-
-```
-link: http://getgrav.org/blog
-```
+Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **deliver** folder.
