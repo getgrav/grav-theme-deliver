@@ -32,6 +32,11 @@ $module-bg:        #EEEEEE;
                 margin: 0;
                 margin-bottom: 2rem;
             }
+            @include breakpoint(tablet-range) {
+                display: block;
+                width: 44%;
+                margin-bottom: 2rem;
+            }
             h4 {
                 text-align: left;
                 margin-bottom: 0;

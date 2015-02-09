@@ -1454,6 +1454,11 @@ ul.pagination {
           text-align: center;
           margin: 0;
           margin-bottom: 2rem; } }
+      @media only all and (min-width: 48em) and (max-width: 59.938em) {
+        .team .members .member {
+          display: block;
+          width: 44%;
+          margin-bottom: 2rem; } }
       .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label, .team .members .member .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .team .members .member .name, .team .members .member .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .team .members .member .button, .team .members .member .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .team .members .member button, .team .members .member .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .team .members .member button, .team .members .member .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .team .members .member button, .team .members .member .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .team .members .member button {
         text-align: left;
         margin-bottom: 0; }
