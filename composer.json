@@ -1,8 +1,8 @@
 {
     "name": "getgrav/grav-theme-deliver",
     "type": "grav-theme",
-    "description": "The default theme for the Grav flat-file CMS",
-    "keywords": ["theme","grav"],
+    "description": "Deliver theme is a port of the Michael Reimer's Deliver Free PSD theme.",
+    "keywords": ["theme","grav", "deliver"],
     "homepage": "http://getgrav.org",
     "license": "MIT",
     "support": {
