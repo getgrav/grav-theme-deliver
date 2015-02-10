@@ -1,0 +1,17 @@
+name: Deliver
+version: 1.0.1
+description: "Deliver theme is a port of the Michael Reimer's Deliver Free PSD theme."
+icon: newspaper-o
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-deliver
+demo: http://demo.getgrav.org/deliver-skeleton/
+keywords: deliver, theme, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-deliver/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
