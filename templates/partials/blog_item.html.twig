@@ -34,7 +34,7 @@
         <ul class="tags">
             <i class="fa fa-tag"></i>
             {% for tag in page.taxonomy.tag %}
-            <li><a href="{{ base_url }}/tag:{{ tag }}">{{ tag }}</a></li>
+            <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></li>
             {% endfor %}
         </ul>
         {% endif %}
