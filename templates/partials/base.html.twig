@@ -27,7 +27,7 @@
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('theme://js/jquery-2.1.1.min.js',101) %}
+        {% do assets.add('jquery', 101) %}
         {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
         {% do assets.addJs('theme://js/deliver.js') %}
         {% do assets.addJs('theme://js/slidebars.min.js') %}
@@ -42,7 +42,7 @@
         {% block header %}
         <header id="header">
                 <div class="logo">
-                    <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h3>
+                    <h3><a href="{{ base_url_absolute }}">{{ config.site.title }}</a></h3>
                     {% block social %}
                         {% include 'partials/social.html.twig' %}
                     {% endblock %}
