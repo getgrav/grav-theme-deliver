@@ -5,7 +5,7 @@
 <ul class="archives">
     {% for tax,value in taxlist[taxonomy] %}
     <li>
-        <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }}  <span>({{ tax|length }})</span></a>
+        <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax }} </a>
     </li>
     {% endfor %}
 </ul>
