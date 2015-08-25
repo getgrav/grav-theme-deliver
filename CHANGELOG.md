@@ -1,3 +1,11 @@
+# v1.1.0
+## 08/25/2015
+
+1. [](#improved)
+    * Added blueprints for Grav Admin plugin
+1. [](#bugfix)
+	* Taxonomy count fix
+
 # v1.0.4
 ## 05/09/2015
 
