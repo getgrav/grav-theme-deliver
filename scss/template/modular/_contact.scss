@@ -43,6 +43,7 @@
         @extend .default-animation;
         font-family: $font-family-header;
         text-transform: uppercase;
+        display: block;
     }
     #simple_form-success, #simple_form-submit {
         display: inline-block;

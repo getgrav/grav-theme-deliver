@@ -1327,7 +1327,8 @@ ul.pagination {
   font-size: 1rem; }
 .contact button {
   font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: block; }
 .contact #simple_form-success, .contact #simple_form-submit {
   display: inline-block; }
   .contact #simple_form-success strong, .contact #simple_form-success label, .contact #simple_form-success th, .contact #simple_form-submit strong, .contact #simple_form-submit label, .contact #simple_form-submit th {
