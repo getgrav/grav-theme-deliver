@@ -1,3 +1,11 @@
+# v1.1.1
+## 09/18/2015
+
+1. [](#improved)
+    * compatibility with newest Grav version.
+1. [](#bugfix)
+    * SimpleForm compatibility bugfixes.
+
 # v1.1.0
 ## 08/25/2015
 
