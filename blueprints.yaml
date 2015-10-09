@@ -11,18 +11,3 @@ demo: http://demo.getgrav.org/deliver-skeleton/
 keywords: deliver, theme, modern, fast, responsive, html5, css3
 bugs: https://github.com/getgrav/grav-theme-deliver/issues
 license: MIT
-
-form:
-  validation: loose
-  fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in navbar
-        highlight: 1
-        default: 0
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
-
