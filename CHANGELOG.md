@@ -1,3 +1,10 @@
+# v1.2.0
+## 09/18/2015
+
+1. [](#bugfix)
+    * Updated outdated blueprints
+    * Bugfix for pagination plugin
+
 # v1.1.1
 ## 09/18/2015
 
