@@ -1,3 +1,11 @@
+# v1.3.0
+## 11/18/2015
+
+1. [](#new)
+    * SimpleForm replaced with Forms plugin
+2. [](#bugfix)
+    * Admin plugin bugfixes
+
 # v1.2.0
 ## 09/18/2015
 

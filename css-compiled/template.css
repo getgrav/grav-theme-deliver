@@ -586,8 +586,8 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 .form-field .required {
   color: #F3443F;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   vertical-align: top;
   height: 1.5rem;
   display: inline-block; }
