@@ -1,3 +1,9 @@
+# v1.3.1
+## 12/18/2015
+
+2. [](#bugfix)
+    * Added nonce support to form template
+
 # v1.3.0
 ## 11/18/2015
 
