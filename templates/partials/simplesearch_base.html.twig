@@ -27,7 +27,7 @@
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('theme://js/jquery-2.1.1.min.js',101) %}
+        {% do assets.add('jquery', 101) %}
         {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
         {% do assets.addJs('theme://js/deliver.js') %}
         {% do assets.addJs('theme://js/slidebars.min.js') %}
@@ -63,13 +63,13 @@
         {% block body %}
         <section id="body" class="{{ class }}">
             {% block content %}{% endblock %}
-            
+
             {% block footer %}
             {% include 'modular/footer.html.twig' %}
             {% endblock %}
         </section>
         {% endblock %}
-        
+
     </div>
     <div class="sb-slidebar sb-left sb-width-thin">
         <div id="panel">
