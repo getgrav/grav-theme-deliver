@@ -1,3 +1,11 @@
+# v1.4.0
+## 01/06/2016
+
+1. [](#improved)
+    * Fontawesome updated to 4.5.0
+1. [](#bugfix)
+    * Searchbox in search results fix
+
 # v1.3.1
 ## 12/18/2015
 
