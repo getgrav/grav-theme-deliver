@@ -86,8 +86,10 @@
         @extend .default-animation;
         position: absolute;
         display: block;
-        width: 3.7rem;
-        height: 3.7rem;
+        padding-bottom: 0;
+padding-left: 0.8rem;
+padding-right: 0.8rem;
+padding-top: 0;
         cursor: pointer;
         z-index: 50;
         text-align: center;
@@ -98,7 +100,7 @@
         font-size: 2.5rem;
         opacity: 0.5;
         color: $black;
-        @include breakpoint(mobile-only) { 
+        @include breakpoint(mobile-only) {
             font-size: 1.5rem;
             line-height: 2.8rem;
         }
@@ -116,7 +118,7 @@
              }
         }
         &:disabled {opacity: 0.1}
-        @include breakpoint(mobile-only) { 
+        @include breakpoint(mobile-only) {
             width: 2.7rem;
             height: 2.7rem;
         }

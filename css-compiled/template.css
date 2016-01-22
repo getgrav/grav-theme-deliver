@@ -1081,8 +1081,10 @@ ul.pagination {
 .modular .slideme_container .arrow {
   position: absolute;
   display: block;
-  width: 3.7rem;
-  height: 3.7rem;
+  padding-bottom: 0;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0;
   cursor: pointer;
   z-index: 50;
   text-align: center;
