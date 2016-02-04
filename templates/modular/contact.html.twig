@@ -2,7 +2,7 @@
     <div class="g-grid pure-g-r">
         <div id="listing" class="g-block pure-u-2-3">
             {% if config.plugins.simple_form.enabled %}
-                {% set simple_form_config = page.header.simple_form ?: config.themes.deliver.simple_form %}
+                {% set simple_form_config = page.header.simple_form ?: theme_config.simple_form %}
                     {{ simple_form(simple_form_config) }}
                 {% endif %}
         </div>
