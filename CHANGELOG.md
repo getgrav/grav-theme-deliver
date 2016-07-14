@@ -1,3 +1,15 @@
+# v1.5.0
+## 07/14/2016
+
+1. [](#improved)
+    * Remove unneeded streams from Theme YAML
+    * Delete unused composer.json
+    * Add the `theme_config` twig var
+1. [](#bugfix)
+    * Fix missing fontawesome-webfont.woff2 file
+    * Fix slider buttons on tablet
+    * Fix setting the page language in the html tag
+    
 # v1.4.0
 ## 01/06/2016
 
