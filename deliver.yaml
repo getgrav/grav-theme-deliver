@@ -1,10 +1,3 @@
 enabled: true
 dropdown:
   enabled: false
-
-streams:
-  scheme:
-    theme:
-      type: ReadOnlyStream
-      paths:
-        - user/themes/deliver
