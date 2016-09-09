@@ -3,6 +3,8 @@
 
 1. [](#improved)
     * Invert order of previous and next button in the blog posts navigation
+1. [](#bugfix)
+    * Fix forms not working as expected. Drop the form twig overrides as they break the forms, and don't really customise the output
 
 # v1.5.0
 ## 07/14/2016
