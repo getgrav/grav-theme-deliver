@@ -25,6 +25,7 @@
         left: 0;
         width: 100%;
         opacity: 0.9;
+        box-shadow: 0 0px 20px 0px rgba(0,0,0,0.2);
     }
 
     .logo {
@@ -198,6 +199,10 @@
             }
         }
     }
+}
+
+.modular.header-image #header .fixed {
+    background: #666;
 }
 
 .header-image {
