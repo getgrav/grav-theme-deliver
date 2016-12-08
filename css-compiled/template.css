@@ -111,7 +111,8 @@ b, strong, label, th {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    opacity: 0.9; }
   @media only all and (max-width: 47.938em) {
     #header .logo h3 {
       font-size: 1.9rem; } }
