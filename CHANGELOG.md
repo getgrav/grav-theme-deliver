@@ -1,6 +1,8 @@
 # v1.x.x
 ## xx/xx/2016
 
+1. [](#new)
+    * Add an option to have a sticky menu. Also added blueprint configuration to turn in on from the admin. Disabled by default. Uses https://github.com/bigspotteddog/ScrollToFixed
 1. [](#improved)
     * Invert order of previous and next button in the blog posts navigation
 1. [](#bugfix)

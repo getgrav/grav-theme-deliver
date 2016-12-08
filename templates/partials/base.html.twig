@@ -33,6 +33,10 @@
         {% do assets.addJs('theme://js/deliver.js') %}
         {% do assets.addJs('theme://js/slidebars.min.js') %}
         {% do assets.addJs('theme://js/jquery.slideme2.js') %}
+        {% if theme_config.sticky_menu.enabled %}
+            {% do assets.addJs('theme://js/jquery-scrolltofixed-min.js') %}
+            {% do assets.addJs('theme://js/fixed-header.js') %}
+        {% endif %}
     {% endblock %}
     {{ assets.js() }}
 
