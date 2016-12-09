@@ -1,5 +1,5 @@
-# v1.x.x
-## xx/xx/2016
+# v1.6.0
+## 12/09/2016
 
 1. [](#new)
     * Add an option to have a sticky menu. Also added blueprint configuration to turn in on from the admin. Disabled by default. Uses https://github.com/bigspotteddog/ScrollToFixed
