@@ -1,3 +1,13 @@
+# v1.6.0
+## 12/09/2016
+
+1. [](#new)
+    * Add an option to have a sticky menu. Also added blueprint configuration to turn in on from the admin. Disabled by default. Uses https://github.com/bigspotteddog/ScrollToFixed
+1. [](#improved)
+    * Invert order of previous and next button in the blog posts navigation
+1. [](#bugfix)
+    * Fix forms not working as expected. Drop the form twig overrides as they break the forms, and don't really customise the output
+
 # v1.5.0
 ## 07/14/2016
 
@@ -9,7 +19,7 @@
     * Fix missing fontawesome-webfont.woff2 file
     * Fix slider buttons on tablet
     * Fix setting the page language in the html tag
-    
+
 # v1.4.0
 ## 01/06/2016
 
@@ -53,7 +63,7 @@
 1. [](#improved)
     * Added blueprints for Grav Admin plugin
 1. [](#bugfix)
-	* Taxonomy count fix
+    * Taxonomy count fix
 
 # v1.0.4
 ## 05/09/2015
@@ -71,7 +81,7 @@
 ## 02/19/2015
 
 2. [](#improved)
-	* Added SimpleSearch capability
+    * Added SimpleSearch capability
     * Implemented new `param_sep` variable from Grav 0.9.18
 
 # v1.0.1
