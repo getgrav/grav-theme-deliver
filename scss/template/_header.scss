@@ -26,6 +26,11 @@
         width: 100%;
         opacity: 0.9;
         box-shadow: 0 0px 20px 0px rgba(0,0,0,0.2);
+
+        @include breakpoint(mobile-only) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     .logo {
@@ -92,14 +97,19 @@
             color: transparent;
         }
 
-        @include breakpoint(mobile-only) {
-            float: left;
-            text-align: left;
+        @include breakpoint(desktop-only) {
+            text-align: right;
+            position: absolute;
+            right: 10px;
+
+            top: 50%;
+            @include transform(translateY(1rem));
+
             i {
                 left: 0.6rem;
             }
             input[type=search] {
-                padding-left: 2rem;
+                padding-right: 2rem;
                 &:focus {
                     width: 8rem;
                 }
@@ -108,8 +118,34 @@
 
     }
 
+    .fixed {
+        .search-box {
+            @include breakpoint(desktop-only) {
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+        }
+
+        .panel-activation {
+            @include breakpoint(desktop-only) {
+                top: 50% !important;
+                @include transform(translateY(-50%) !important);
+            }
+        }
+    }
+
     #navbar {
         font-size: $core-font-size + 0.1rem;
+
+        @include breakpoint(mobile-only) {
+            margin-left: -1rem;
+            margin-right: -1rem;
+
+            &.fixed {
+                margin: 0;
+            }
+        }
+
         ul {
 
             margin: 0;
@@ -196,6 +232,10 @@
             float: right;
             @include breakpoint(desktop-only) {
                 display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                @include transform(translateY(0));
             }
         }
     }
@@ -203,6 +243,7 @@
 
 .modular.header-image #header .fixed {
     background: #666;
+    @include transition(background 0.3s ease-in-out);
 }
 
 .header-image {
