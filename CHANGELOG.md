@@ -1,3 +1,11 @@
+# v1.6.1
+## 12/10/2016
+
+1. [](#improved)
+    * Added background animation when scrolling the menu in sticky mode
+1. [](#bugfix)
+    * Fixed some mobile alignments for hamburger and search icons in sticky mode
+
 # v1.6.0
 ## 12/09/2016
 

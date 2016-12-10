@@ -114,6 +114,10 @@ b, strong, label, th {
     width: 100%;
     opacity: 0.9;
     box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2); }
+    @media only all and (max-width: 47.938em) {
+      #header .fixed {
+        padding-left: 10px;
+        padding-right: 10px; } }
   @media only all and (max-width: 47.938em) {
     #header .logo h3 {
       font-size: 1.9rem; } }
@@ -158,18 +162,47 @@ b, strong, label, th {
       color: transparent; }
     #header .search-box input::-webkit-input-placeholder {
       color: transparent; }
-    @media only all and (max-width: 47.938em) {
+    @media only all and (max-width: 59.938em) {
       #header .search-box {
-        float: left;
-        text-align: left; }
+        text-align: right;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        -webkit-transform: translateY(1rem);
+        -moz-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+        -o-transform: translateY(1rem);
+        transform: translateY(1rem); }
         #header .search-box i {
           left: 0.6rem; }
         #header .search-box input[type=search] {
-          padding-left: 2rem; }
+          padding-right: 2rem; }
           #header .search-box input[type=search]:focus {
             width: 8rem; } }
+  @media only all and (max-width: 59.938em) {
+    #header .fixed .search-box {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); } }
+  @media only all and (max-width: 59.938em) {
+    #header .fixed .panel-activation {
+      top: 50% !important;
+      -webkit-transform: translateY(-50%) !important;
+      -moz-transform: translateY(-50%) !important;
+      -ms-transform: translateY(-50%) !important;
+      -o-transform: translateY(-50%) !important;
+      transform: translateY(-50%) !important; } }
   #header #navbar {
     font-size: 1.1rem; }
+    @media only all and (max-width: 47.938em) {
+      #header #navbar {
+        margin-left: -1rem;
+        margin-right: -1rem; }
+        #header #navbar.fixed {
+          margin: 0; } }
     #header #navbar ul {
       margin: 0;
       padding: 0;
@@ -224,10 +257,21 @@ b, strong, label, th {
       float: right; }
       @media only all and (max-width: 59.938em) {
         #header #navbar .panel-activation {
-          display: inline-block; } }
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+          transform: translateY(0); } }
 
 .modular.header-image #header .fixed {
-  background: #666; }
+  background: #666;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out; }
 
 .header-image.fullwidth #body {
   padding-left: 0;
