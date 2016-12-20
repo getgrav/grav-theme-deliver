@@ -1,3 +1,9 @@
+# v1.6.2
+## 12/20/2016
+
+1. [](#improved)
+    * Add bottom js call in bottom block
+
 # v1.6.1
 ## 12/10/2016
 
