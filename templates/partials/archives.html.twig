@@ -1,7 +1,7 @@
 <ul class="archives">
 {% for month,items in archives_data %}
     <li>
-    	<a href="{{ base_url }}/archives_month:{{ month|date('M_Y')|lower|e('url') }}">
+    	<a href="{{ base_url }}/archives_month{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
         <span class="archive_date">{{ month }}</span>
         {% if archives_show_count %}
         <span>({{ items|length }})</span>
