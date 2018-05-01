@@ -34,7 +34,7 @@
 
         <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri={{ site.footer.feedburner }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" class="newsletter">
         <input type="text" name="email" value="Email" onclick="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';"/>
-        <input type="hidden" value="karolorzel" name="uri"/>
+        <input type="hidden" value="{{ site.footer.feedburner }}" name="uri"/>
         <input type="hidden" name="loc" value="en_US"/>
         <input type="submit" value="OK" />
         </form>
