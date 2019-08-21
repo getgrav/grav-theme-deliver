@@ -4,7 +4,7 @@
        <div class="modular-row showcase flush-top" {% if page.media[slide.image] %}style="background-image: url({{ page.media[slide.image].url }});"{% endif %}>
           <h1>{{ slide.heading }}</h1>
           <h2>{{ slide.subheading }}</h2>
-          <a class="button" href="{{ slide.button_url }}">{{ slide.button_text }}</a>
+          <a {% if slide.button_url %}class="button" href="{{ slide.button_url }}"{% endif %}>{% if slide.button_text %}{{ slide.button_text }}{% endif %}</a>
       </div>
   {% endfor %}
 </div>
