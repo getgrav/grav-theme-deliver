@@ -2,7 +2,7 @@
 
 {% block content %}
   <div class="modular-row bottom ">
-    {{ content }}
+    {{ content|raw }}
 
     <h2>{{ form.message }}</h2>
     <p>Here is the summary of what you wrote to us:</p>

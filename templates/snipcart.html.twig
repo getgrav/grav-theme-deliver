@@ -6,7 +6,7 @@
     {{ parent() }}
 
     <div class="content-wrapper">
-        {{ page.content }}
+        {{ page.content|raw }}
 
         <div class="snipcart-categories">
         {% for child in page.collection() %}

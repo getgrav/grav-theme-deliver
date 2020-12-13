@@ -1,4 +1,4 @@
-<div class="modular-row contact {{ page.header.class }}">    
+<div class="modular-row contact {{ page.header.class }}">
     <div class="g-grid pure-g-r">
         <div id="listing" class="g-block pure-u-2-3">
             {% if config.plugins.simple_form.enabled %}
@@ -7,7 +7,7 @@
                 {% endif %}
         </div>
         <div id="sidebar" class="g-block size-1-3 pure-u-1-3">
-            {{ content }}
+            {{ content|raw }}
         </div>
     </div>
 </div>

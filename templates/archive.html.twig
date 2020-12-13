@@ -10,7 +10,7 @@
     {% if base_url == base_url_relative %}
         {% set feed_url = base_url~'/'~page.slug %}
     {% endif  %}
-    
+
 	{% block content %}
 		{% set blog_image = page.media.images|first %}
         {% if blog_image %}
@@ -18,15 +18,15 @@
         <h1>{{ page.title }}</h1>
         </div>
         {% endif %}
-        
+
 		<div class="content-wrapper archive-list g-grid pure-g-r">
 			<div id="listing" class="g-block pure-u-2-3">
-            {{ page.content }}
+            {{ page.content|raw }}
 			  {% if config.plugins.taxonomylist.enabled %}
              <h4>Archives by tags</h4>
              {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
              {% endif  %}
-             
+
              {% if config.plugins.archives.enabled %}
              <h4>Archives by month</h4>
 	         {% include 'partials/archives.html.twig' %}
