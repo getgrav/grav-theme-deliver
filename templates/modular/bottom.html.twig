@@ -1,5 +1,5 @@
 <div class="modular-row bottom {{ page.header.class }}">
-    {{ content }}
+    {{ content|raw }}
     {% for button in page.header.buttons %}
     <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
     {% endfor %}
@@ -13,8 +13,8 @@
             <i class="fa fa-{{ service.icon }}"></i>
             <h4>{{ service.title }}</h4>
             <p>{{ service.desc }}</p>
-        </div>    
+        </div>
         {% endfor %}
-    </div>  
+    </div>
     {% endif %}
 </div>

@@ -2,9 +2,9 @@
 
     <div class="list-blog-header">
         {% if big_header %}
-            {{ page.media.images|first.cropResize(900,600).html }}
+            {{ page.media.images|first.cropResize(900,600).html|raw }}
         {% else %}
-            {{ page.media.images|first.cropZoom(900,300).html }}
+            {{ page.media.images|first.cropZoom(900,300).html|raw }}
         {% endif %}
 
         {% if page.header.link %}
@@ -42,18 +42,18 @@
     <div class="list-blog-padding">
 
     {% if page.header.continue_link is sameas(false) %}
-        <p>{{ page.content }}</p>
+        <p>{{ page.content|raw }}</p>
         {% if not truncate %}
         {% set show_prev_next = true %}
         {% endif %}
     {% elseif truncate and page.summary != page.content %}
-        <p>{{ page.summary }}</p>
+        <p>{{ page.summary|raw }}</p>
         <p><a href="{{ page.url }}">Continue Reading...</a></p>
     {% elseif truncate %}
         <p>{{ page.content|truncate(550) }}</p>
         <p><a href="{{ page.url }}">Continue Reading...</a></p>
     {% else %}
-        <p>{{ page.content }}</p>
+        <p>{{ page.content|raw }}</p>
         {% set show_prev_next = true %}
     {% endif %}
 

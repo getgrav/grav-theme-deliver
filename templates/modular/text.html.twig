@@ -1,11 +1,11 @@
 <div class="modular-row callout">
- {{ content }}
+ {{ content|raw }}
  {% if page.header.pricing %}
     <div class="pricing-container">
         {% for item in page.header.pricing %}
             <div class="pricing-item">
                 <div class="name">{{ item.name }}</div>
-                <div class="price">{{ item.price }}</div>
+                <div class="price">{{ item.price|raw }}</div>
                 {% for line in item.options %}
                     <div class="info">
                         {{ line.line }}
@@ -16,7 +16,7 @@
                 </div>
             </div>
         {% endfor %}
-    </div>    
+    </div>
 {% endif %}
 {% if page.header.portfolio %}
     <div class="notebooks">

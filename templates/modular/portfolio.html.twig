@@ -1,5 +1,5 @@
 <div class="modular-row portfolio">
-    {{ content }}
+    {{ content|raw }}
     {% if page.header.portfolio %}
         <div class="notebooks">
             {% for row in page.header.portfolio|batch(4) %}
