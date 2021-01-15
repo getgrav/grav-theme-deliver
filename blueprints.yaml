@@ -1,5 +1,7 @@
 name: Deliver
-version: 1.7.0
+slug: deliver
+type: theme
+version: 1.7.1
 description: "Deliver theme is a port of the Michael Reimer's Deliver Free PSD theme."
 icon: newspaper-o
 author:
