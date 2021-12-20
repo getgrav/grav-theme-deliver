@@ -24,7 +24,7 @@
             {% do assets.addCss('theme://js/html5shiv-printshiv.min.js') %}
         {% endif %}
     {% endblock %}
-    {{ assets.css() }}
+    {{ assets.css()|raw }}
 
     {% block javascripts %}
         {% do assets.add('jquery', 101) %}
@@ -33,7 +33,7 @@
         {% do assets.addJs('theme://js/slidebars.min.js') %}
         {% do assets.addJs('theme://js/jquery.slideme2.js') %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 
 {% endblock head%}
 </head>

@@ -1,3 +1,9 @@
+# v1.7.2
+## mm/dd/2021
+
+1. [](#bugfix)
+    * Fixed missing `|raw` filters in `simplesearch_base.html.twig` [#39](https://github.com/getgrav/grav-theme-deliver/issues/39)
+
 # v1.7.1
 ## 01/15/2021
 
