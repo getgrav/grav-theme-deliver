@@ -1,7 +1,7 @@
 <ul class="social-icons">
     {% for social in site.social %}
         <li>
-            <a href="{{ social.url }}">
+            <a href="{{ social.url }}" target="_blank">
                 {% if social.icon %}<i class="fa fa-{{ social.icon }}"></i>{% endif %}
             </a>
         </li>
