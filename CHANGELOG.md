@@ -19,7 +19,7 @@
    * Updated Fontawesome to version 4.7
    * Option to add custom social media icons in the Team template
    * Removed asset support for Internet Explorer
-   * * `singlePageNav.js` library replaced by `simple-scrollspy.js`
+   * `singlePageNav.js` library replaced by `simple-scrollspy.js`
    * Updated taxonomylist template according to the latest plugin version
    * Removed code for Feedburner-based Newsletter
 
