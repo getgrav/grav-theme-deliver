@@ -1,0 +1,49 @@
+%button {
+	@extend .default-animation;
+	display: inline-block;
+	padding: 7px 20px;
+	background-color: $core-accent;
+	color: $header-text;
+	font-family: $font-family-header;
+	border-radius: $border-radius;
+	box-shadow: none;
+	font-size: $core-font-size;
+	border: 0 none;
+	&:hover {
+		background-color: darken($core-accent, 12%);
+	}
+
+    &.button-small {
+        padding: 3px 10px;
+        font-size: $core-font-size - 0.1rem;
+    }
+
+}
+
+@mixin button-color($color) {
+	background: $color;
+    color: $white;
+	border: 1px solid $color;
+	&:hover {
+		background: darken($color, 12%);
+		border: 1px solid darken($color, 12%);
+        color: $white;
+	}
+	&:active {
+		box-shadow: 0 1px 0 darken($color, 12%);
+	}
+}
+
+@mixin button-outline($color) {
+	background: transparent;
+	color: $color;
+	border: 1px solid $color;
+
+	&:hover {
+		background: $color;
+		color: $white;
+	}
+	&:active {
+		box-shadow: 0 1px 0 darken($color, 12%);
+	}
+}

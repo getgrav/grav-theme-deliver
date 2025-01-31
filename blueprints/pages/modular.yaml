@@ -1,0 +1,65 @@
+title: PLUGIN_ADMIN.MODULE
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _Content_Section:
+              unset@: true
+            _ContentOptions:
+              unset@: true
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              unset@: true
+            modular_title:
+              type: spacer
+              title: PLUGIN_ADMIN.MODULE_SETUP
+            
+            header.onpage_menu:
+              type: toggle
+              style: vertical
+              label: DELIVER.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU
+              help: DELIVER.ADMIN.MODULAR.COMMON.SHOW_ONPAGE_MENU_HELP
+              default: 0
+              highlight: 0
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+
+            header.content.items:
+              type: text
+              label: PLUGIN_ADMIN.ITEMS
+              default: '@self.modular'
+              size: medium
+
+            header.content.order.by:
+              type: text
+              label: PLUGIN_ADMIN.ORDER_BY
+              placeholder: date
+              help:
+              size: small
+
+            header.content.order.dir:
+              type: text
+              label: PLUGIN_ADMIN.ORDER
+              help: '"desc" or "asc" are valid values'
+              placeholder: desc
+              size: small

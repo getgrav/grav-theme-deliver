@@ -1,0 +1,28 @@
+title: Form Data
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              unset@: true

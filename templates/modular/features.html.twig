@@ -1,7 +1,7 @@
-<div class="modular-row features {{ page.header.class}}">
+<div class="modular-row features {{ page.header.module_classes}}">
     {{ content|raw }}
     {% for button in page.header.buttons %}
-        <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
+        <a {% if button.style != 'none' %}class="{{ button.style }}"{% endif %} href="{{ button.url }}">{{ button.text }}</a>
     {% endfor %}
     <div class="feature-items">
     {% for feature in page.header.features %}
@@ -17,7 +17,7 @@
             {% endif %}
             {% if feature.text %}
             <p>{{ feature.text }}</p>
-            <p><a href="{{ feature.linkurl }}">{{ feature.linktext }}</a></p>
+            <p><a href="{{ feature.linkurl }}" {% if feature.linkstyle != 'none' %}class="{{ feature.linkstyle }}"{% endif %}>{{ feature.linktext }}</a></p>
             {% endif %}
             </div>
         </div>

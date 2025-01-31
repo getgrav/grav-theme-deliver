@@ -1,0 +1,294 @@
+en:
+  DELIVER:
+    ADMIN:
+      THEME:
+        SETTINGS: 
+          TAB: Theme Settings
+          THEME_CONFIG: Theme Options
+          DROPDOWN_MENU: Dropdown in navbar
+          PRODUCTION_MODE: Production mode
+          PRODUCTION_MODE_HELP: When enabled, DELIVER will render with minified CSS
+          STICKY_MENU: Sticky Menu
+          BACK_TO_TOP_BUTTON: '<strong>Back to Top</strong> button'
+          BACK_TO_TOP_BUTTON_HELP: Enable `Back to Top` button when scroll page.
+          CUSTOM_CSS: Load custom CSS
+          CUSTOM_CSS_HELP: Loads custom CSS styles from theme://assets/css/custom.css
+          CUSTOM_JS: Load custom JS
+          CUSTOM_JS_HELP: Loads custom JS from theme://assets/css/custom.js
+          FAVICON: Choose your own favicon
+          FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
+          LOGO:
+            TITLE: Logo Options
+            ENABLED: Enabled Logo
+            HEIGHT: Logo Height
+            DESKTOP: Logo
+            DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+            MOBILE: Mobile Logo
+            TYPE_LOGO_HEADER: 'Show logo/text in header'
+            TYPE_LOGO_HEADER_HELP: Choose how to display the logo in the header
+            TYPE_LOGO_HEADER_IMAGE: Image
+            TYPE_LOGO_HEADER_TEXT: Text
+            TYPE_LOGO_HEADER_BOTH: Both
+        HEADER:
+          TAB: Header
+          CUSTOM_MENU:
+            SECTION_TITLE: 'Custom Menu Items'
+            ENABLE: 'Enable Custom Menu Items'
+            ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
+            ITEMS:
+              LABEL: Menu Items
+              TEXT: 'Text'
+              TEXT_DESCRIPTION: 'Text label for menu item.'
+              ICON: 'Icon'
+              ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
+              URL: 'URL'
+              URL_DESCRIPTION: 'URL for menu item.'
+              TARGET:
+                LABEL: Target
+                SELF: 'Open in the same frame as clicked'
+                BLANK: 'Open in a new window'
+        FOOTER:
+          TAB: Footer
+          ABOUT:
+            TITLE: About Info
+            DESCRIPTION: About Description
+          QUICK_LINKS:
+            SECTION_TITLE: Quick Links
+            LABEL: Links Section Title
+            ITEMS:
+              LABEL: Quick Links
+              TEXT: Quick Link Text
+              URL: Quick Link URL
+              TARGET:
+                LABEL: Target
+                SELF: 'Open in the same frame as clicked'
+                BLANK: 'Open in a new window'
+          OTHER_MENU:
+            SECTION_TITLE: Other menu
+            COPYRIGHT_TEXT: Copyright Text
+            ITEMS:
+              LABEL: Menu Items
+              TEXT: Menu item text
+              URL: Menu item URL
+              TARGET:
+                LABEL: Target
+                SELF: 'Open in the same frame as clicked'
+                BLANK: 'Open in a new window'
+          CONTACT:
+            SECTION_TITLE: Contact Information
+            LABEL: Contact Section Title
+            ADDRESS:
+              LABEL: Lines for the address
+              LINE: Line for address
+            GPS: 
+              LABEL: GPS Location
+              SUBLABEL: '(in Google Maps format, eg: 40.65258514990599, -73.78125222264696)'
+
+        MEDIA:
+          TAB: Social Media
+          SECTION_TITLE: Social Media Icons
+          SECTION_TEXT: Include the full URLs of your various social media profiles. An icon or link will appear at the top of the page and in the footer for each respective platform.
+          ENABLED: Enable Social Media Icons
+          ICONS: 
+            LABEL: Social Media Icons
+            ITEMS:
+              NAME: Social Media Name
+              URL: URL Link to Social Media
+              TARGET:
+                LABEL: Target
+                SELF: 'Open in the same frame as clicked'
+                BLANK: 'Open in a new window'
+              ICON: Icon for Social Media
+      DEFAULT:
+        TITLE_SECTION: Title options
+        SHOW_TITLE: Show Title
+        SHOW_TITLE_HELP: Show or hide the page title
+        TITLE_BG_CHOICE:
+          LABEL: Title Background Choice
+          HELP: Select the option to display the title background format
+          COLOR: Background Color
+          IMAGE: Background Image
+        CONTENT_SECTION: Content
+        FEATURED_IMAGE_LABEL: Featured Image
+        FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
+        IMAGE_OPTIONS: Image options
+        BIG_HEADER: Big Image in Blog
+        BIG_HEADER_HELP: Display featured image in 900 x 600px
+        FEATURED_IMAGE: 
+          LABEL: Featured image
+          HELP: Select a featured image to display at the top of the page
+          WIDTH: Width
+          HEIGHT: Height
+        SHOW_FEATURED_IMAGE: Show Featured Image
+        SHOW_FEATURED_IMAGE_HELP: Show featured image if it is defined or the first image of the media page.
+        BODY_CLASSSES_CONTENT: |
+            CSS classes available in the Deliver theme (space-separated):<br />
+            > For **Default** page templates (separated by spaces): **`header-lite` `fullwidth`**<br />
+            > For **Item** page templates (separated by spaces): **`header-lite` `fullwidth` `blogstyling`**<br />
+            > For **Modular alt** page templates (separated by spaces): **`modular` `header-lite` `fullwidth`**<br />
+            > Additionally, on modular alt type pages, you can add **`services`** or **`about`** if your page is some of these types.
+      MODULAR:
+        COMMON:
+          SHOW_ONPAGE_MENU: Show navigation on one-page sites
+          SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
+          BUTTONS_SECTION:
+            TITLE: Buttons
+            LABEL: Buttons List
+            ITEMS: 
+              TEXT: Button text
+              URL: URL button
+              STYLES:
+                LABEL: Button Style
+                NONE: None
+                PRIMARY: Primary
+                SECONDARY: Secondary
+                WARNING: Warning
+                INFO: Info
+                OUTLINE: Outline Primary
+                OUTLINE_SECONDARY: Outline Secondary
+                OUTLINE_WARNING: Outline Warning
+                OUTLINE_INFO: Outline Info
+          SERVICES_SECTION:
+            TITLE: Services
+            LABEL: Services List
+            ITEMS:
+              ICON: Icon
+              TITLE: Title
+              DESC: Description
+        TEAM_SECTION:
+          LABEL: Members
+          ITEMS:
+            NAME: Member Name
+            IMAGE: Profile Image
+            WEBSITE: Member Website
+            INFO: Member Description (in Markdown format)
+            SOCIAL_MEDIA:
+              LABEL: Social media
+              HELP: The template allows a maximum of 6 icons for each member. 
+              NAME: Social name
+              NAME_HELP: You only have to write the name of the social network here (eg, Facebook, Twitter, etc)
+              URL: Social URL
+        FEATURES_SECTION:
+          TITLE: Features
+          LABEL: Features List
+          ITEMS:
+            ICON: Icon
+            ICON_DESCRIPTION: 'Icons from <a href="https://fontawesome.com/v4/icons/" target="_blank">Fontawesome V4</a>.You have to write only the name of icon.<br /><span>Example, <strong>comment-o</strong></span>' 
+            HEADER: Header
+            TEXT: Description
+            LINK_TEXT: Link Text
+            LINK_URL: Link URL
+        SHOWCASE: 
+          TAB: Showcase
+          SLIDES: 
+            LABEL: Slides
+            DESCRIPTION: Showcase is a modular page that uses images uploaded in the Page Media box below
+            IMAGE: Image
+            IMAGE_SELECT: Select a image for showcase
+            BLEND: Blend
+            BACKCOLOR: Color Background
+            HEADING: Heading
+            SUBHEADING: Subheading
+            BUTTON_TEXT: Button Text
+            BUTTON_URL: Button URL
+          SLIDES_SETTINGS:
+            SECTION_TITLE: Slides Settings
+            ARROWS: Arrows
+            ARROWS_HELP: Show arrows for navigating slides
+            AUTOSLIDE: Autoslide
+            AUTOSLIDE_HELP: Automatically switch slides after a set interval
+            AUTOSLIDE_HOVER: Auto Slide Hover Stop
+            AUTOSLIDE_HOVER_HELP: Pause auto-slide when hovering over a slide
+            LOOP: Loop
+            LOOP_HELP: Repeat slides in a continuous loop
+            TOUCH: Touch
+            TOUCH_HELP: Enable touch gestures to navigate slides
+            SWIPE: Swipe
+            SWIPE_HELP: Enable swipe gestures to navigate slides
+            INTERVAL: Interval (in milliseconds)
+            INTERVAL_HELP: Set the time (in milliseconds) between slides during auto-slide
+            ITEMS: Items for Slide
+            ITEMS_HELP: Specify the number of items per slide
+            TRANSITIONS: 
+              LABEL: Select the transition effect
+              HELP: Choose the transition effect between slides
+              FADE: Fade
+              ZOOM: Zoom 
+        PORTFOLIO:
+          LABEL: Portfolio
+          DESCRIPTION: Portfolio is a modular page that uses images uploaded in the Page Media box
+          ITEMS:
+            IMAGE_LABEL: Image
+            IMAGE_DESCRIPTION: Select one image from list
+            TITLE_LABEL: Image Title
+            DESC_LABEL: Image Description
+            MODALID_LABEL: Modal ID
+            MODALID_DESCRIPTION: Unique identifier for the modal (e.g., 13)
+            CLIENT_LABEL: Client
+            CLIENT_DESCRIPTION: The client for the project
+            URL_LABEL: URL
+            URL_DESCRIPTION: The project's URL (optional)
+            DATE_LABEL: Date
+            DATE_DESCRIPTION: Date of completion
+            CATEGORY_LABEL: Category
+            CATEGORY_DESCRIPTION: The category of the project (e.g., Web Development)
+      BLOG:
+        TAB: Blog Config
+        CONFIGURATION:
+          LABEL: Configuration
+          BLOG_ROUTE: Blog Route
+          BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+          SHOW_BREADCRUMBS: Show Breadcrumbs
+          SIDEBAR_SETTINGS: Sidebar settings
+          SHOW_SIDEBAR: Show Sidebar
+          SHOW_FEATURED_POSTS: Show Featured Posts
+          SHOW_CATEGORIES: Show Categories
+        CONTENT:
+          LABEL: Content Definition
+          ITEMS: 
+            LABEL: Items
+            LIMIT: Max Item Count
+            ORDER:
+              BY: Order By
+              BY_DATE: Date
+              BY_TITLE: Title
+              BY_FOLDER: Folder
+              BY_DEFAULT: Default
+              DIR: Direction
+              DIR_ASC: Ascending
+              DIR_DESC: Descending
+            PAGINATION: Pagination
+            URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+      ITEM:
+        TAB: Blog Item
+        AUTHOR_OPTIONS:
+          LABEL: Author options
+          NAME: Author name
+          AVATAR: Avatar Image
+          BIOGRAPHY: Author biography
+          TWITTER: Author Twitter URL
+        CONFIGURATION:
+          STICKY: Sticky post
+          STICKY_HELP: Mark this post to show as sticky
+        CONTENT:
+          SUMMARY:
+            LABEL: Summary Item
+            SHOW: Show summary on page
+            SHOW_HELP: Show summary on the page, below the subtitle. This is separate from the summary in the blog list.
+            ENABLED: Enabled Summary
+            FORMAT: 
+              LABEL: Summary Format
+              SHORT: Use the first occurence of delimter or size
+              LONG: Summary delimiter will be ignored
+            SIZE: Size
+            DELIMITER: Summary Delimiter
+      COMMON:
+        TEXT_COLOR: Text Color
+        TEXT_COLOR_HELP: Text color for Title
+        TITLE_BG_COLOR: Background Color for Title
+        MODULE_CLASSES: CSS Classes for Module
+        MODULE_CLASSES_HELP: Additional CSS classes for Module
+    MISC:
+      BACK_TO_TOP: Back to top
+      GPS_LOCATION: GPS Address
+    

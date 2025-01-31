@@ -1,0 +1,99 @@
+// Modular Bottom styling
+.modular {
+    .bottom {
+        text-align: center;
+        @include clearfix;
+        padding-bottom: 4rem;
+
+        h2 {
+            padding-top: 3rem;
+            margin: 0;
+            line-height: 100%;
+            color: $light-gray; 
+        }
+
+        p {
+            margin: 1rem 0;
+
+            @include breakpoint(mobile-only) {
+                font-size: $core-font-size;
+            }
+        }
+        &.borderbottom {
+            hr {
+                padding-top: 3rem;
+            }
+            padding-bottom: 0;
+        }
+
+        table {
+            border: 0 none;
+            th {
+                background: none;
+                @extend h4;
+                text-align: left; 
+                @include breakpoint(mobile-only) {
+                    display: none;
+                }
+            }
+            td {
+                text-align: left;  
+                vertical-align: top;
+                border: 0 none;
+                @include breakpoint(mobile-only) {
+                    display: block;
+                }
+            }
+        }
+
+        .services {
+            padding-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+
+            .service {
+                flex: 0 0 33.333%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+
+                @include breakpoint(mobile-only) {
+                    flex: 0 0 100%;
+                }
+
+                .fa {
+                    margin-bottom: 0.5rem;
+                    width: 7rem;
+                    height: 6rem;
+                    font-size: 6rem;
+
+                    @include breakpoint(mobile-only) {
+                        margin-bottom: 1rem;
+                        width: 5rem;
+                        height: 4rem;
+                    }
+                }
+
+                p {
+                    margin-top: 0.5rem;
+
+                    @include breakpoint(mobile-only) {
+                        margin-top: 1rem;
+                    }
+                }
+
+                h4 {
+                    margin-bottom: 0;
+                }
+            }
+        }        
+    }
+}
+
+.about {
+    hr {
+        margin: 3rem 0;
+    }
+}

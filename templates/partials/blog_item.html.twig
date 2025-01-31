@@ -1,15 +1,17 @@
 <div class="list-item">
 
     <div class="list-blog-header">
-        {% if big_header %}
-            {{ page.media.images|first.cropResize(900,600).html|raw }}
-        {% else %}
-            {{ page.media.images|first.cropZoom(900,300).html|raw }}
+        {% if showImage and image %}
+            {% if big_header %}
+                {{ image.cropResize(900,600).loading('lazy').decoding('async').html(page_title,page_title,'')|raw }}
+            {% else %}
+                {{ page.media.images|first.cropZoom(900,300).html|raw }}
+            {% endif %}
         {% endif %}
 
         {% if page.header.link %}
             <h4>
-                {% if page.header.continue_link is not sameas(false) %}
+                {% if page.header.continue_link is not same as(false) %}
                 <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
                 {% endif %}
                 <a href="{{ page.header.link }}">{{ page.title }}</a>
@@ -41,19 +43,19 @@
 
     <div class="list-blog-padding">
 
-    {% if page.header.continue_link is sameas(false) %}
-        <p>{{ page.content|raw }}</p>
+    {% if page.header.continue_link is same as(false) %}
+        {{ page.content|raw }}
         {% if not truncate %}
         {% set show_prev_next = true %}
         {% endif %}
     {% elseif truncate and page.summary != page.content %}
-        <p>{{ page.summary|raw }}</p>
-        <p><a href="{{ page.url }}">Continue Reading...</a></p>
+        {{ page.summary|raw }}
+        <p><a href="{{ page.url }}" class="button-outline">Continue Reading...</a></p>
     {% elseif truncate %}
-        <p>{{ page.content|truncate(550) }}</p>
-        <p><a href="{{ page.url }}">Continue Reading...</a></p>
+        {{ page.content|truncate(550)|raw }}
+        <p><a href="{{ page.url }}" class="button-outline">Continue Reading...</a></p>
     {% else %}
-        <p>{{ page.content|raw }}</p>
+        {{ page.content|raw }}
         {% set show_prev_next = true %}
     {% endif %}
 

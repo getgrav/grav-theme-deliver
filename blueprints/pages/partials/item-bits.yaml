@@ -1,0 +1,29 @@
+form:
+  fields:
+
+    _togglesTitle:
+      type: spacer
+      title:  DELIVER.ADMIN.BLOG.CONFIGURATION.LABEL
+      
+    header.show_sidebar:
+      type: toggle
+      toggleable: true
+      label: DELIVER.ADMIN.BLOG.CONFIGURATION.SHOW_SIDEBAR
+      highlight: 1
+      defautl: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    header.show_breadcrumbs:
+      type: toggle
+      toggleable: true
+      label: DELIVER.ADMIN.BLOG.CONFIGURATION.SHOW_BREADCRUMBS
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

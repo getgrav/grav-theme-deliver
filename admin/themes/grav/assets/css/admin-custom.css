@@ -1,0 +1,135 @@
+#deliver {
+  --primary-bg: #628553;
+  --secondary-bg: #62855354;
+  --hover-bg: #729263;
+  --highlight-bg: #87b6727a;
+  --active-bg: #4c723ada;
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(59, 59, 59);
+  --bold-color: #1d2f14;
+  --input-checked: #6f7b8a;
+}
+#admin-main {
+  --list-items: #7e909010;
+  --list-item: #414147;
+  --border-color: #d8e1e1;
+}
+
+#deliver .admin_options {
+  background-color: var(--highlight-bg);
+}
+
+#deliver .admin_section,
+#deliver .admin-block h1,
+#deliver .gpm-item-info {
+  border: 1px solid var(--highlight-bg) !important;
+}
+
+#deliver .colum-admin {
+  margin: 0.5em;
+}
+
+#deliver .switch-grav.switch-toggle input.highlight:checked + label,
+#deliver .form-field .button,
+#deliver .button-small,
+#deliver .remove-times,
+#deliver .form-tabs .tabs-nav a {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+#deliver .switch-grav.switch-toggle input:checked + label {
+  color: var(--input-checked);
+  background: var(--secondary-bg);
+}
+
+#deliver .form-field .button:hover,
+#deliver .button-small:hover {
+  background-color: var(--hover-bg);
+}
+
+#deliver .form-tabs .tabs-nav a {
+  background-color: var(--highlight-bg) !important;
+  color: var(--secondary-color) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+#deliver .form-tabs .tabs-nav a.active,
+#deliver .form-tabs .tabs-nav a:hover,
+#deliver .admin-block .button {
+  background-color: var(--active-bg) !important;
+  color: var(--primary-color) !important;
+}
+
+#deliver .admin-block {
+  padding: 1em;
+}
+
+#deliver .admin-block h1 {
+  background-color: var(--secondary-bg);
+  font-size: 2rem;
+}
+
+#deliver .admin-block h1,
+#deliver .admin-block h2,
+#deliver .admin-block h3,
+#deliver .admin-block h4,
+#deliver .admin-block h5,
+#deliver .admin-block h6 {
+  padding: 0.8rem !important;
+  margin: 0 0 1rem !important;
+}
+
+#deliver .bold {
+  font-weight: 600;
+  color: var(--bold-color);
+}
+
+#deliver .bold-light {
+  font-weight: 600;
+}
+
+#deliver .form-list-wrapper .collection-actions {
+  margin: 1em 0;
+}
+
+#admin-main .admin-block h2,
+#admin-main .admin-block h3,
+#admin-main .admin-block h4,
+#admin-main .admin-block h5,
+#admin-main .admin-block h6 {
+  padding: 0 1.5rem 0.5rem;
+  margin: 0 0 1rem;
+}
+
+#admin-main .admin-block .list-title {
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-size: 1.25rem;
+  color: var(--list-item);
+}
+#admin-main .admin-block .list-item {
+  text-rendering: optimizeLegibility;
+  font-weight: 600;
+  color: var(--list-item);
+}
+
+#admin-main .admin-block .form-list-wrapper ul[data-collection-holder] > li {
+  background: var(--list-items);
+  border-color: var(--border-color);
+}
+#admin-main .admin-block .form-list-wrapper .collection-sort {
+  background: var(--border-color);
+}
+#admin-main .admin-block .form-list-wrapper .collection-actions {
+  margin-top: 1em;
+}
+
+#admin-main .admin-block .admin_section {
+  border: 1px solid var(--border-color) !important;
+}
+
+#admin-main .admin-block .colum-admin {
+  margin: 0.5em;
+}

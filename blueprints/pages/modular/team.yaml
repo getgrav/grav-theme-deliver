@@ -1,0 +1,89 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          fields:
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _Content_Section:
+              type: section
+              underline: true
+              title: DELIVER.ADMIN.DEFAULT.CONTENT_SECTION
+            _ContentOptions:
+              type: column
+              fields:
+                content:
+                  type: markdown
+                  validate:
+                    type: textarea
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              unset@: true
+
+            header.members:
+              name: members
+              type: list
+              style: vertical
+              collapsed: true
+              label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.LABEL
+              fields:
+                .name:
+                    type: text
+                    label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.NAME
+                .image:
+                    type: pagemediaselect
+                    label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.IMAGE
+                .website:
+                    type: text
+                    label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.WEBSITE
+                .info:
+                    type: textarea
+                    label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.INFO
+                    markdown: true
+                    rows: 5
+                .social_media:
+                  type: list
+                  label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.SOCIAL_MEDIA.LABEL
+                  help: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.SOCIAL_MEDIA.HELP
+                  collapsed: true
+                  max: 6
+                  fields:
+                    .name:
+                      type: text
+                      size: small
+                      label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.SOCIAL_MEDIA.NAME
+                      help: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.SOCIAL_MEDIA.NAME_HELP
+                    .url:
+                      type: text
+                      size: small
+                      label: DELIVER.ADMIN.MODULAR.TEAM_SECTION.ITEMS.SOCIAL_MEDIA.URL
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    _body_classes_help:
+                      unset@: true
+                    header.module_classes:
+                      type: text
+                      markdown: true
+                      label: DELIVER.ADMIN.COMMON.MODULE_CLASSES
+                      help: DELIVER.ADMIN.COMMON.MODULE_CLASSES_HELP

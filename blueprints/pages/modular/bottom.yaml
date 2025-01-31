@@ -1,0 +1,109 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          fields:
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _Content_Section:
+              type: section
+              underline: true
+              title: DELIVER.ADMIN.DEFAULT.CONTENT_SECTION
+            _ContentOptions:
+              type: column
+              fields:
+                content:
+                  type: markdown
+                  validate:
+                    type: textarea
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              unset@: true
+
+            service_columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+                    header.buttons_section:
+                      type: section
+                      title: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.TITLE
+                      fields:
+                        header.buttons:
+                          type: list
+                          style: vertical
+                          label: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.LABEL
+                          fields:
+                            .text:
+                              type: text
+                              label: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.TEXT
+                            .url:
+                              type: text
+                              label: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.URL
+                            .style:
+                              type: select
+                              label: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.LABEL
+                              default: primary
+                              options:
+                                none: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.NONE
+                                button: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.PRIMARY
+                                button-secondary: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.SECONDARY
+                                button-warning: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.WARNING
+                                button-info: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.INFO
+                                button-outline: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.OUTLINE
+                                button-outline-secondary: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.OUTLINE_SECONDARY
+                                button-outline-warning: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.OUTLINE_WARNING
+                                button-outline-info: DELIVER.ADMIN.MODULAR.COMMON.BUTTONS_SECTION.ITEMS.STYLES.OUTLINE_INFO
+                column2:
+                  type: column
+                  fields:
+                    header.services_description:
+                      type: section
+                      title: DELIVER.ADMIN.MODULAR.COMMON.SERVICES_SECTION.TITLE
+                      fields:
+                        header.services:
+                          type: list
+                          label: DELIVER.ADMIN.MODULAR.COMMON.SERVICES_SECTION.LABEL
+                          style: vertical
+                          fields:
+                            .icon:
+                              type: iconpicker
+                              label: DELIVER.ADMIN.MODULAR.COMMON.SERVICES_SECTION.ITEMS.ICON
+                            .title:
+                              type: text
+                              label: DELIVER.ADMIN.MODULAR.COMMON.SERVICES_SECTION.ITEMS.TITLE
+                            .desc:
+                              type: textarea
+                              label: DELIVER.ADMIN.MODULAR.COMMON.SERVICES_SECTION.ITEMS.DESC
+                              rows: 10
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    _body_classes_help:
+                      unset@: true
+                    header.module_classes:
+                      type: text
+                      markdown: true
+                      label: DELIVER.ADMIN.COMMON.MODULE_CLASSES
+                      help: DELIVER.ADMIN.COMMON.MODULE_CLASSES_HELP 

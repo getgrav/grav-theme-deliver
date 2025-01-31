@@ -1,92 +1,58 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% import 'macros/macros.html.twig' as nav_macros %}
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-
-{% block javascripts %}
-    {% if show_onpage_menu %}
-        {% do assets.add('theme://js/singlePageNav.min.js') %}
-    {% endif %}
-    {{ parent() }}
-{% endblock %}
-
 
 {% block bottom %}
     {{ parent() }}
-    {% if show_onpage_menu %}
-        <script>
-        // singlePageNav initialization & configuration
-        $('#navbar').singlePageNav({
-            offset: $('#header').outerHeight(),
-            filter: ':not(.external)',
-            updateHash: true,
-            currentClass: 'active'
-        });
-        </script>
+    {% if show_onpage_menu == true %}
+    <script defer>
+        
+        window.onload = function () {
+            scrollSpy('#navbar', {
+              sectionClass: '.scrollspy',
+              menuActiveTarget: 'li > a.menu-item',
+              offset: 100,
+              // smooth scroll
+              smoothScroll: true,
+              smoothScrollBehavior: function(element) {
+                element.scrollIntoView({ behavior: 'smooth' }) // default behavior
+              }
+            })
+          }
+    
+      </script>
     {% endif %}
 {% endblock %}
 
 
 {% block header_navigation %}
-    {% if show_onpage_menu %}
+    {% if show_onpage_menu == true %}
         <ul class="navigation">
-
-        {% macro loop(page) %}
-        {% for p in page.children %}
-            {% if p.visible %}
-                {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-                <li class="{{ current_page }}">
-                    <a href="{{ p.url }}" class="external">
-                        {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                        {{ p.menu }}
-                    </a>
-                    {% if p.children.count > 0 %}
-                        <ul>
-                            {{ _self.loop(p) }}
-                        </ul>
-                    {% endif %}
-                </li>
-            {% endif %}
-        {% endfor %}
-        {% endmacro %}
-
-
-        {% if theme_config.dropdown.enabled %}
-            {{ _self.loop(pages) }}
-        {% else %}
-            {% for page in pages.children %}
-                {% if page.visible %}
-                    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                    <li class="{{ current_page }}">
-                        <a href="{{ page.url }}" class="external">
-                            {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
-                            {{ page.menu }}
+            {% for module in page.collection() %}
+                {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+                <li class="{{ current_module }}"><a class="menu-item" href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
+            {% endfor %}
+            {% if theme_var('custommenus.enabled') %}
+                {% for mitem in theme_var('custommenu') %}
+                    <li>
+                        <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+                        {% if mitem.icon %}
+                            <i class="fa fa-{{ mitem.icon }}"></i>
+                        {% endif %}
+                        {{ mitem.text|raw }}
                         </a>
                     </li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-        {% for mitem in site.menu %}
-            <li>
-                <a href="{{ mitem.url }}">
-                    {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
-                    {{ mitem.text }}
-                </a>
-            </li>
-        {% endfor %}
-
-        {% for module in page.collection() %}
-            {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li class="{{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
-        {% endfor %}
-         </ul>
+                {% endfor %}
+            {% endif %}
+        </ul>
     {% else %}
-        {{  parent() }}
+        {{ parent() }}
     {% endif %}
 {% endblock %}
 
+
 {% block content %}
-    {{ page.content|raw }}
     {% for module in page.collection() %}
         <div id="{{ _self.pageLinkName(module.menu) }}"></div>
         {{ module.content|raw }}

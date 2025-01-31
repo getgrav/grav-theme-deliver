@@ -1,0 +1,55 @@
+#deliver .footer_options {
+  background-color: #87b6727a;
+}
+#deliver .footer_section {
+  border: 1px solid #87b6727a;
+  margin-bottom: 1rem;
+}
+#deliver .colum-admin {
+  margin: 0.5em 0.5em;
+}
+
+#deliver .switch-grav.switch-toggle input.highlight:checked + label,
+#deliver .form-field .button,
+#deliver .button-small {
+  background-color: #628553;
+  color: rgb(255, 255, 255);
+}
+#deliver .form-field .button:hover,
+#deliver .button-small:hover {
+  background-color: #729263;
+}
+#deliver .switch-grav.switch-toggle input:checked + label {
+  color: #6f7b8a;
+  background: #62855354;
+}
+#deliver .remove-times,
+#deliver .form-tabs .tabs-nav a {
+  background-color: #628553;
+}
+
+#deliver .form-tabs .tabs-nav a.active,
+#deliver .form-tabs .tabs-nav a:hover,
+#deliver .admin-block .button {
+  background-color: #4c723ada !important;
+  color: rgb(255, 255, 255) !important;
+}
+#deliver .form-tabs .tabs-nav a {
+  background-color: #7ca7689d !important;
+  color: rgb(59, 59, 59) !important;
+}
+
+#deliver .admin-block h1,
+#deliver .gpm-item-info  {
+  border: 1px solid #87b6727a !important;
+}
+
+#deliver .admin-block h1 {
+  background-color: #62855354;
+  padding: 0.8rem;
+  font-size: 2rem;
+}
+#deliver .admin-block h2 {
+  padding: 0.8rem !important;
+  margin: 0 0 1rem 0 !important;
+}

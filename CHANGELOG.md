@@ -1,3 +1,28 @@
+# v2.0.0
+## 01/31/2025
+
+1. [](#new)
+   * Added translations for English and Spanish.
+   * Customization of styles and templates in the theme admin panel
+   * Automatic loading of `custom.css` and `custom.js` files if they exist
+   * New blueprints for all theme templates
+   * Added new button types and colors
+   * Added colored alert boxes
+   * Added option to choose the type of title on the page
+   * Added options to select the main image of the page and its display.
+   * Added option to choose favicon
+   * Added Back to top button
+   * New options to improve the SEO
+   * Support for displaying the date of the posts with the `translate-date` and `twig-extensions` plugins
+2. [](#improved)
+   * Restructured the theme styles folders.
+   * Updated Fontawesome to version 4.7
+   * Option to add custom social media icons in the Team template
+   * Removed asset support for Internet Explorer
+   * * `singlePageNav.js` library replaced by `simple-scrollspy.js`
+   * Updated taxonomylist template according to the latest plugin version
+   * Removed code for Feedburner-based Newsletter
+
 # v1.7.2
 ## 12/20/2021
 

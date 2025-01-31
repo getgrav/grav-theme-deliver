@@ -1,5 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<p>{{ page.content|raw }}</p>
+	
+{% if title_choice == 'image' and show_featured_image %}
+	<div class="flush-top blog-header blog-header-image" style="background: {{ title_bg_color }} url({{ featured_image.url }}) no-repeat right;">
+{% else %}
+	<div class="flush-top blog-header" style="background-color: {{ title_bg_color }};">
+{% endif %}
+	<h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
+	</div>
+	<div class="content-wrapper" itemprop="articleBody">
+		{{ page.content|raw }}
+	</div>
 {% endblock %}

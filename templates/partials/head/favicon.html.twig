@@ -1,0 +1,7 @@
+{# Favicon = favicon_file_url #}
+{% set favicon = theme_var('favicon') %}
+
+{% if favicon %}
+{% set favicon_file = (favicon|first).name %}
+<link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+{% endif %}

@@ -1,0 +1,96 @@
+extends@: default
+child_type: item
+
+rules:
+  slug:
+    pattern: "[a-z][a-z0-9_-]+"
+    min: 2
+    max: 80
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.child_type:
+                  default: item
+        blog:
+          type: tab
+          title: DELIVER.ADMIN.BLOG.TAB
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages
+
+          fields:
+
+            _contentTitle:
+              type: section
+              title: DELIVER.ADMIN.BLOG.CONTENT.LABEL
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.LABEL
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.LIMIT
+              default: 5
+              size: small
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY
+              default: date
+              size: medium
+              options:
+                folder: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_FOLDER
+                title: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_TITLE
+                date: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_DATE
+                default: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR
+              default: desc
+              size: medium
+              options:
+                asc: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR_ASC
+                desc: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR_DESC
+
+            header.content.pagination:
+              type: toggle
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.PAGINATION
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: DELIVER.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_FILTERS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+

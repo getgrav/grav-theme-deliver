@@ -4,9 +4,9 @@
 	<div id="error">
 		<div>
 			<h1>Error {{ page.header.http_response_code }}</h1>
-			<p>
-				{{ page.content|raw }}
-			</p>
+
+			{{ page.content|raw }}
+			
 		</div>
 	</div>
 {% endblock %}

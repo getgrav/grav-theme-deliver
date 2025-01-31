@@ -1,0 +1,49 @@
+// Variables for common styles
+$background-color: rgba(0, 0, 0, 0.7);
+$background-color-hover: rgba(0, 0, 0, 0.9);
+$size: 50px;
+$transition-duration: 0.3s;
+
+// Styles for "Return to Top" button
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $background-color;
+  width: $size;
+  height: $size;
+  text-decoration: none;
+  border-radius: 100%;
+  display: none;
+  transition: all $transition-duration ease;
+
+  & i,
+  & svg {
+    color: $white;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    font-size: 19px;
+    transition: all $transition-duration ease;
+  }
+
+  & i {
+    top: 13px;
+  }
+
+  & svg {
+    top: 18px;
+  }
+
+  &:hover {
+    background: $background-color-hover;
+
+    i {
+      top: 5px;
+    }
+
+    svg {
+      top: 10px;
+    }
+  }
+}

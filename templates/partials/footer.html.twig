@@ -1,0 +1,53 @@
+<div class="modular-row footer {{ page.header.class}}">
+    <div class="footer-items">
+        <div class="footer-module large">
+            <div class="logo">
+                <h3><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title|raw }}</a></h3>
+                {% if social %}
+                    {% block social %}
+                        {% include 'partials/social.html.twig' %}
+                    {% endblock %}
+                {% endif %}
+
+            </div>
+            {% if theme_config.footer.about.description %}
+                {{ theme_config.footer.about.description|markdown|raw }}
+            {% endif %}
+
+        </div>
+        <div class="footer-module"><h4>{{ theme_config.footer.contact_section_label|raw }}</h4>
+            <p>
+                {% for item in theme_config.footer.address %}
+                    <span>{{ item.line|raw }}</span>
+                {% endfor %}
+            </p>
+            {% if site.author.email %}<p><strong>E-mail: </strong><a href="mailto:{{ site.author.email|safe_email }}">{{ site.author.email|safe_email }}</a></p>{% endif %}
+            {% if theme_config.footer.gps %}<p><strong>
+                {{ 'DELIVER.MISC.GPS_LOCATION'|t }}<br>
+                <a href="
+                https://www.google.com/maps/search/?api=1&query={{ theme_config.gps }}">{{ theme_config.footer.gps }}</a></strong></p>{% endif %}
+        </div>
+        
+        <div class="footer-module"><h4>{{ theme_config.footer.quick_links_label }}</h4>
+         <ul class="quickmenu">
+            {% for quicklink in theme_config.footer.quick_links_items %}
+                <li><i class="fa fa-chevron-right"></i><a href="{{ base_url_absolute }}/{{quicklink.url}}" target="{{ quicklink.target}}">{{  quicklink.text }}</a></li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+<hr>
+<div class="footer-modules">
+    <div class="footer-copyright">
+        {{ theme_config.footer.copyright_text|raw }}
+    </div>
+    <div class="footer-menu">
+    <ul class="othermenu">
+    {% for item in theme_config.footer.other_menu %}
+       <li><a href="{{ base_url_absolute }}/{{ item.url }}">{{  item.text }}</a></li>
+    {% endfor %}
+    </ul>
+    </div>
+</div>
+
+</div>

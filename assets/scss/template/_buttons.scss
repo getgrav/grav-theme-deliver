@@ -1,0 +1,39 @@
+.button {
+	@extend %button;
+	@include button-color($core-accent);
+}
+
+.button-secondary {
+	@extend %button;
+	@include button-color($secondary-link);
+}
+
+.button-warning {
+	@extend %button;
+	@include button-color($core-warning);
+}
+
+.button-info {
+	@extend %button;
+	@include button-color($core-info);
+}
+
+.button-outline {
+	@extend %button;
+	@include button-outline($core-accent);
+}
+
+.button-outline-secondary {
+	@extend %button;
+	@include button-outline($secondary-link);
+}
+
+.button-outline-warning {
+	@extend %button;
+	@include button-outline($core-warning);
+}
+
+.button-outline-info {
+	@extend %button;
+	@include button-outline($core-info);
+}

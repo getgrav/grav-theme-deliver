@@ -1,25 +1,8 @@
-{% macro loop(page) %}
-    {% for p in page.children %}
-        {% if p.visible %}
-            {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-            <li class="{{ current_page }}">
-                <a href="{{ p.url }}">
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                    {{ p.menu }}
-                </a>
-                {% if p.children.count > 0 %}
-                    <ul>
-                        {{ _self.loop(p) }}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endif %}
-    {% endfor %}
-{% endmacro %}
+{% import 'macros/macros.html.twig' as nav_macros %}
 
 <ul class="navigation">
     {% if theme_config.dropdown.enabled %}
-        {{ _self.loop(pages) }}
+        {{ nav_macros.nav_loop(pages) }}
     {% else %}
         {% for page in pages.children %}
             {% if page.visible %}
@@ -33,12 +16,17 @@
             {% endif %}
         {% endfor %}
     {% endif %}
-    {% for mitem in site.menu %}
+    
+    {% if theme_var('custommenus.enabled') %}
+        {% for mitem in theme_var('custommenu') %}
         <li>
-            <a href="{{ mitem.url }}">
-                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
-                {{ mitem.text }}
+            <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+            {% if mitem.icon %}
+                <i class="fa fa-{{ mitem.icon }}"></i>
+            {% endif %}
+            {{ mitem.text|raw }}
             </a>
         </li>
-    {% endfor %}
+        {% endfor %}
+    {% endif %}
 </ul>           

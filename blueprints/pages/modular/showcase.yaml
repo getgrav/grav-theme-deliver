@@ -1,0 +1,225 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          fields:
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              fields:
+                _ImageOptions:
+                  unset@: true
+
+            carousel_columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  classes: colum-admin
+                  fields:
+                    header.slides_settings:
+                      type: section
+                      title: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.SECTION_TITLE
+                      outerclasses: footer_section
+                      fields:
+                        header.slide_settings.arrows:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.ARROWS
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.ARROWS_HELP
+
+                        header.slide_settings.autoslide:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.AUTOSLIDE
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.AUTOSLIDE_HELP
+
+                        header.slide_settings.autoslideHoverStop:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.AUTOSLIDE_HOVER
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.AUTOSLIDE_HOVER_STOP
+
+                        header.slide_settings.loop:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.LOOP
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.LOOP_HELP
+
+                        header.slide_settings.touch:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TOUCH
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TOUCH_HELP
+
+                        header.slide_settings.swipe:
+                          type: toggle
+                          highlight: 'true'
+                          default: 'true'
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.SWIPE
+                          labelclasses: list-item
+                          options:
+                            'true': PLUGIN_ADMIN.YES
+                            'false': PLUGIN_ADMIN.NO
+                          validate:
+                            type: string
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.SWIPE_HELP
+
+                        header.slide_settings.interval:
+                          type: number
+                          size: small
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.INTERVAL
+                          labelclasses: list-item
+                          placeholder: 2000
+                          validate:
+                            min: 500
+                            max: 15000
+                            step: 100
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.INTERVAL_HELP
+
+                        header.slide_settings.itemsForSlide:
+                          type: number
+                          size: small
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.ITEMS
+                          labelclasses: list-item
+                          placeholder: 0
+                          validate:
+                            min: 0
+                            max: 3
+                            step: 1
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.ITEMS_HELP
+
+                        header.slide_settings.transition:
+                          type: select
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.LABEL
+                          labelclasses: list-item
+                          options:
+                            fade: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.FADE
+                            zoom: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.ZOOM
+                          help: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.HELP
+
+                column2:
+                  type: column
+                  classes: colum-admin
+                  fields:
+                     
+                     header.slides_items:
+                      type: section
+                      outerclasses: footer_section
+                      fields:
+                        header.slides:
+                          name: slides
+                          description: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.DESCRIPTION
+                          type: list
+                          style: vertical
+                          label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.LABEL
+                          labelclasses: list-title
+                          collapsed: true
+                          collapsible: true
+                          fields:
+                            .image:
+                              type: pagemediaselect
+                              label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.IMAGE
+                              description: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.IMAGE_SELECT
+                              labelclasses: list-item
+                            .blend:
+                              type: select
+                              label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.BLEND
+                              labelclasses: list-item
+                              options:
+                                normal: normal
+                                multiply: multiply
+                                screen: screen
+                                overlay: overlay
+                                darken: darken
+                                luminosity: luminosity
+                                color: color
+                                saturation: saturation
+                                lighten: lighten
+                                color-dodge: color-dodge
+                            .backcolor:
+                                type: colorpicker
+                                label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.BACKCOLOR
+                                labelclasses: list-item
+                            .heading:
+                                type: text
+                                label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.HEADING
+                                labelclasses: list-item
+                            .subheading:
+                                type: text
+                                label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.SUBHEADING
+                                labelclasses: list-item
+                            .button_text:
+                                type: text
+                                label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.BUTTON_TEXT
+                                labelclasses: list-item
+                            .button_url:
+                                type: text
+                                label: DELIVER.ADMIN.MODULAR.SHOWCASE.SLIDES.BUTTON_URL
+                                labelclasses: list-item
+          advanced:
+            fields:
+              columns:
+                fields:
+                  column1:
+                    fields:
+                      header.body_classes:
+                        unset@: true
+                      _body_classes_help:
+                        unset@: true
+                      header.module_classes:
+                        type: text
+                        markdown: true
+                        label: DELIVER.ADMIN.COMMON.MODULE_CLASSES
+                        help: DELIVER.ADMIN.COMMON.MODULE_CLASSES_HELP

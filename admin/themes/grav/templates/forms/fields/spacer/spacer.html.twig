@@ -1,0 +1,31 @@
+{% extends "forms/field.html.twig" %}
+
+{% block field %}
+{# Backwards compatibility with field.outer_classes instead of field.outerclasses #}
+{% set outerclasses = field.outerclasses ?? field.outer_classes %}
+
+{% if outerclasses %}
+<div class="{{ outerclasses }}">
+{% endif %}
+
+<div class="form-spacer {{ field.classes }}">
+    {% if field.title %}
+        <h3 class="{{ field.heading_classes }}">{{- field.title|t|raw -}}</h3>
+    {% endif %}
+
+    {% if field.markdown %}
+        {{- field.text|t|markdown|raw -}}
+    {% else %}
+        {{- field.text|t|raw -}}
+    {% endif %}
+
+    {% if field.underline %}
+    <hr />
+    {% endif %}
+</div>
+
+{% if outerclasses %}
+</div>
+{% endif %}
+
+{% endblock %}

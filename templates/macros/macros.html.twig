@@ -1,3 +1,25 @@
 {% macro input(name, value, type, size) %}
     <input type="{{ type|default('text') }}" name="{{ name }}" value="{{ value|e }}" size="{{ size|default(20) }}" />
 {% endmacro %}
+
+{# MACRO FOR TOP MENU NAVIGATION #}
+
+{% macro nav_loop(page) %}
+{% import _self as nav_macros %}
+    {% for p in page.children %}
+        {% if p.visible %}
+            {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+            <li class="{{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+                {% if p.children.count > 0 %}
+                    <ul>
+                        {{ nav_macros.nav_loop(p) }}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

@@ -1,0 +1,60 @@
+.bullets {
+	margin: $leading-margin 0;
+	margin-left: math.div(-$leading-margin, 2);
+	margin-right: math.div(-$leading-margin, 2);
+	overflow: auto;
+}
+
+.bullet {
+	float: left;
+	padding: 0 math.div($leading-margin, 2);
+}
+
+.two-column-bullet {
+	@include columns(2);
+	@include breakpoint(mobile-only) {
+		@include columns(1);
+	}
+}
+
+.three-column-bullet {
+	@include columns(3);
+	@include breakpoint(mobile-only) {
+		@include columns(1);
+	}
+}
+
+.four-column-bullet {
+	@include columns(4);
+	@include breakpoint(mobile-only) {
+		@include columns(1);
+	}
+}
+
+.bullet-icon {
+	float: left;
+	background: $bullet-icon-color-1;
+	padding: math.div($bullet-icon-size, 4);
+	width: $bullet-icon-size;
+	height: $bullet-icon-size;
+	border-radius: 50%;
+	color: $white;
+	font-size: math.div($bullet-icon-size, 2);
+	text-align: center;
+}
+
+.bullet-icon-1 {
+	background: $bullet-icon-color-1;
+}
+
+.bullet-icon-2 {
+	background: $bullet-icon-color-2;
+}
+
+.bullet-icon-3 {
+	background: $bullet-icon-color-3;
+}
+
+.bullet-content {
+	margin-left: $bullet-icon-size * 1.3;
+}

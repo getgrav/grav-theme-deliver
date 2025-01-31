@@ -23,7 +23,7 @@
         {% for portfolio in page.header.portfolio %}
             <div class="notebook">
                 <a href="#portfolioModal{{ portfolio.modalid }}" class="portfolio-link" data-toggle="modal">
-                    <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
+                    <div class='screen'><div class="screen-content" style="background-image: url({{ page.media[portfolio.image].cropZoom(400,250).url }})" ></div><div class="screen-content-hover"><i class="fa fa-plus-square"></i></div></div>
                 </a>
                 <div class='keyboard'></div>
                 <h4>{{ portfolio.title }}</h4>

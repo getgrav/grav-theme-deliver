@@ -1,0 +1,28 @@
+form:
+  fields:
+
+    _configTitle:
+      type: section
+      title: DELIVER.ADMIN.BLOG.CONFIGURATION.LABEL
+      import@:
+        type: partials/blog-url
+        context: blueprints://pages
+        
+    header.show_breadcrumbs:
+      type: toggle
+      toggleable: true
+      label: DELIVER.ADMIN.BLOG.CONFIGURATION.SHOW_BREADCRUMBS
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    _configSidebar:
+      type: section
+      title: DELIVER.ADMIN.BLOG.CONFIGURATION.SIDEBAR_SETTINGS
+      import@:
+        type: partials/blog-sidebar
+        context: blueprints://pages
+    

@@ -1,29 +1,39 @@
+{% block showcase %}
 <div id="content-slide">
   <div class="slideme">
     {% for slide in page.header.slides %}
-       <div class="modular-row showcase flush-top" {% if page.media[slide.image] %}style="background-image: url({{ page.media[slide.image].url }});"{% endif %}>
+       <div class="modular-row showcase flush-top" {% if page.media[slide.image] %}style="background-image: url({{ page.media[slide.image].url }});background-blend-mode:{{slide.blend}};background-color: {{slide.backcolor}};"{% endif %}>
           <h1>{{ slide.heading|raw }}</h1>
-          <h2>{{ slide.subheading }}</h2>
-          <a class="button" href="{{ slide.button_url }}">{{ slide.button_text }}</a>
+          <h2>{{ slide.subheading|raw }}</h2>
+          {% if slide.button_text %}<a class="button" href="{{ slide.button_url }}">{{ slide.button_text }}</a>
+          
+          {% endif %}
       </div>
   {% endfor %}
 </div>
 </div>
 
-{{ content|raw }}
+{% block content %}
+<div class="content-wrapper {{ page.header.module_classes }}">
+  {{ page.content|raw }}
+</div>
+{% endblock %}
 
 <script type="text/javascript">
+
 $('#content-slide').slideme({
-  arrows: {{ site.header_options.arrows }},
-  autoslide: {{ site.header_options.autoslide }},
-  autoslideHoverStop: {{ site.header_options.autoslideHoverStop }},
-  interval: {{ site.header_options.interval }},
-  loop: {{ site.header_options.loop }},
+  arrows: {{ page.header.slide_settings.arrows}},
+  autoslide: {{ page.header.slide_settings.autoslide }},
+  autoslideHoverStop: {{ page.header.slide_settings.autoslideHoverStop}},
+  interval: {{ page.header.slide_settings.interval}},
+  loop: {{ page.header.slide_settings.loop }},
   pagination: "numbers",
-  transition : '{{ site.header_options.transition }}',
-  itemsForSlide: {{ site.header_options.itemsForSlide }},
-  touch: {{ site.header_options.touch }},
-  swipe: {{ site.header_options.swipe }},
+  transition : '{{ page.header.slide_settings.transition }}',
+  itemsForSlide: {{ page.header.slide_settings.itemsForSlide }},
+  touch: {{ page.header.slide_settings.touch}},
+  swipe: {{ page.header.slide_settings.swipe}}
 
 });
 </script>
+{% endblock %}
+

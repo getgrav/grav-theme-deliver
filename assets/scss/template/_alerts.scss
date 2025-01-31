@@ -1,0 +1,33 @@
+// Alerts boxes
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+  
+    &.alert-primary {
+      background-color: lighten($core-accent, 40%);
+      color: darken($core-accent, 20%);
+      border-color: $core-accent;
+    }
+  
+    &.alert-secondary {
+      background-color: lighten($secondary-link, 40%);
+      color: darken($secondary-link, 20%);
+      border-color: $secondary-link;
+    }
+  
+    &.alert-warning {
+      background-color: lighten($core-warning, 40%);
+      color: darken($core-warning, 20%);
+      border-color: $core-warning;
+    }
+  
+    &.alert-info {
+      background-color: lighten($core-info, 40%);
+      color: darken($core-info, 20%);
+      border-color: $core-info;
+    }
+  }

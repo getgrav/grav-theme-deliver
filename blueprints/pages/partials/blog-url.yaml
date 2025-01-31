@@ -1,0 +1,11 @@
+form:
+  fields:
+  
+    header.blog_url:
+      type: text
+      toggleable: true
+      label: DELIVER.ADMIN.BLOG.CONFIGURATION.BLOG_ROUTE
+      help: DELIVER.ADMIN.BLOG.CONFIGURATION.BLOG_ROUTE_HELP
+      default: '/blog'
+      placeholder: '/blog'
+      size: medium
