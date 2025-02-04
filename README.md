@@ -78,9 +78,54 @@ If you want to set Deliver as the default theme, you can do so by following thes
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **deliver** folder.
 
+# Default Options
+
+Deliver comes with a variety of configuration options that can be set site-wide. These options are organized into sections for easier management:
+
+```yaml
+enabled:                      # Enable or disable the theme.
+dropdown.enabled:             # Enable or disable the dropdown menu.
+sticky_menu.enabled:          # Enable or disable the sticky menu.
+production-mode:              # Enable production mode to use minified CSS.
+custom_css:                   # Enable or disable custom CSS.
+custom_js:                    # Enable or disable custom JavaScript.
+social_enabled:               # Enable or disable social media icons.
+social:                       # Add social media icons with name, URL, target, and icon options.
+footer.copyright_text:        # Add custom copyright text in the footer.
+footer.contact_section_label: # Label for the "Contact" section in the footer.
+footer.quick_links_label:     # Label for the "Quick Links" section in the footer.
+footer.about.description:     # Add a description for the "About" section in the footer.
+footer.gps:                   # Add GPS coordinates for the contact section.
+footer.address:               # Add address lines for the contact section.
+footer.quick_links_items:     # Add quick links with text, URL, and target options.
+footer.other_menu:            # Add other menu items with text, URL, and target options.
+custommenus.enabled:          # Enable or disable custom menus.
+custommenu:                   # Add custom menu items with text, icon, URL, and target options.
+theme_logo_enabled:           # Enable or disable the custom logo.
+type_logo_header:             # Choose the type of logo header. Values: "image", "text", "both".
+theme_logo:                   # Upload a custom logo for desktop view. Accepts image files (e.g., .png, .jpg, .svg).
+theme_logo_mobile:            # Upload a custom logo for mobile view. Accepts image files (e.g., .png, .jpg, .svg).
+favicon:                      # Upload a custom favicon. Accepts image files (e.g., .png, .ico).
+back_to_top_button.enabled:   # Enable or disable the back-to-top button.
+```
+To make modifications, you can copy the `user/themes/deliver/deliver.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
+
+> NOTE: Do not modify the `user/themes/deliver/deliver.yaml` file directly or your changes will be lost with any updates
+
+## Custom Logos
+
+To add a custom logo, you should put the logo into the `user/themes/deliver/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
+
+```yaml
+custom_logo:
+    - name: 'my-custom-logo.png'
+custom_logo_mobile:
+    - name: 'my-custom-mobile-logo.png'    
+```
+Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Deliver theme options.
+
 # To do
 
-- [ ] Expand the theme documentation in the README file
 - [ ] Create an Image Gallery template with Glightbox or another similar library
 - [ ] Add the featured articles module to the sidebar
 - [ ] Add the article categories module to the sidebar.
