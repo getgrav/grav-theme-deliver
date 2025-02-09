@@ -2,6 +2,10 @@
 #header #navbar .panel-activation, #header #navbar ul.navigation, #header .search-box, #header .logo ul.social-icons, #header .logo h3 {
   position: relative;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -90,6 +94,8 @@ b, strong, th, label {
   font-style: normal;
 }
 .default-animation, .notebook .screen .screen-content-hover, .logo ul.social-icons li a, .logo ul.social-icons li, .logo h3, .team .members .social-icons li a, .team .members .social-icons li, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item, .contact input, .contact textarea, .modular .slideme_container .pagination .numbers li, .modular .slideme_container .arrow, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modal, .button-outline-info, .button-outline-warning, .button-outline-secondary, .button-outline, .button-info, .button-warning, .button-secondary, .button, .contact button, .archive-list button, #body {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -170,6 +176,13 @@ b, strong, th, label {
   float: left;
   margin-top: 0.5em;
 }
+#header .logo svg {
+  padding: 0.25em 0 !important;
+  vertical-align: middle;
+  max-height: 5em;
+  float: left;
+  margin-top: 0.5em;
+}
 #header .search-box {
   display: block;
   float: right;
@@ -202,6 +215,8 @@ b, strong, th, label {
   height: 1.3rem;
   margin-bottom: 0;
   font-size: 0.9rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
 #header .search-box input[type=search]:focus {
@@ -222,6 +237,10 @@ b, strong, th, label {
     position: absolute;
     right: 10px;
     top: 50%;
+    -webkit-transform: translateY(1rem);
+    -moz-transform: translateY(1rem);
+    -ms-transform: translateY(1rem);
+    -o-transform: translateY(1rem);
     transform: translateY(1rem);
   }
   #header .search-box i {
@@ -237,12 +256,20 @@ b, strong, th, label {
 @media only all and (max-width: 59.938em) {
   #header .fixed .search-box {
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
 @media only all and (max-width: 59.938em) {
   #header .fixed .panel-activation {
     top: 50% !important;
+    -webkit-transform: translateY(-50%) !important;
+    -moz-transform: translateY(-50%) !important;
+    -ms-transform: translateY(-50%) !important;
+    -o-transform: translateY(-50%) !important;
     transform: translateY(-50%) !important;
   }
 }
@@ -350,12 +377,18 @@ b, strong, th, label {
     position: absolute;
     left: 0;
     top: 50%;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
 .modular.header-image #header .fixed {
   background: #666;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
 
@@ -1666,6 +1699,8 @@ ul.pagination {
   bottom: 5%;
 }
 .modular .slideme_container .pagination .numbers li {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
   background: #fff;
   width: 0.5rem;
@@ -1990,6 +2025,10 @@ ul.pagination {
   }
 }
 .callout .pricing-container .pricing-item:hover {
+  -webkit-transform: scale(1, 1.08);
+  -moz-transform: scale(1, 1.08);
+  -ms-transform: scale(1, 1.08);
+  -o-transform: scale(1, 1.08);
   transform: scale(1, 1.08);
 }
 .callout .pricing-container .pricing-item div {
