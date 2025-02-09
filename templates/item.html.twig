@@ -35,7 +35,7 @@
 		<div class="blog-content-item g-grid pure-g-r">
 			<div id="item" class="g-block {% if show_sidebar %} pure-u-2-3 {% else %} pure-u-1{% endif %}">
                 {% set image = page.media[header.featured_image] ?: page.media.images|first %}
-				{% set showImage = page.header.show_featured_image|defined(true) %}
+				{% set showImage = page.header.show_featured_image|defined(false) %}
 			    {% include 'partials/blog_item.html.twig' with {showImage, image,'big_header':true, 'truncate':false} %}
 			</div>
             {% if show_sidebar %}

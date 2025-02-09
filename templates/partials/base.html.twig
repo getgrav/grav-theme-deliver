@@ -2,8 +2,6 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set logo_enabled = theme_var('theme_logo_enabled')|defined(false) %}
-{% set logo = theme_var('theme_logo_mobile') ?: theme_var('theme_logo') %}
-{% set logoImageHeader = theme_var('type_logo_header')|defined('text') %}
 
 {# Canonical URL #}
 {% set canonical_url = page.url(true, true) %}
@@ -27,7 +25,7 @@
 {% endif %}
 
 {# Featured Image #}
-{% set show_featured_image = header_var('show_featured_image')|defined(true) %}
+{% set show_featured_image = header_var('show_featured_image')|defined(false) %}
 {% set featured_image = page.media[header.featured_image] ?: page.media.images|first %}
 {% set big_header = header_var('big_header')|defined(true) %}
 
@@ -52,25 +50,7 @@
         {% block header %}
         <header id="header">
             {% if logo_enabled %}
-            <div class="logo">
-                {% set logo_file = (logo|first).name %}
-               
-                <a href="{{ base_url == '' ? '/' : base_url }}">
-                {% if logoImageHeader == 'image' %}
-                    {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
-                {% elseif logoImageHeader == 'both' %}
-                {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
-                    <h3>{{ site.title }}</h3>
-                {% else %}
-                    <h3>{{ site.title }}</h3>
-                {% endif %}
-                </a>
-                {% if social %}
-                    {% block social %}
-                        {% include 'partials/social.html.twig' %}
-                    {% endblock %}
-                {% endif %}
-            </div>
+                {% include 'partials/logo.html.twig' %}
             {% endif %}
             <div id="navbar">
                 {% block header_extra %}{% endblock %}

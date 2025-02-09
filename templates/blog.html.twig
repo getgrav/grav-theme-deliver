@@ -35,7 +35,7 @@
 		<div id="listing" class="g-block pure-u-2-3">
 			{% for child in collection %}
 				{% set image = child.media[header.featured_image] ?: child.media.images|first %}
-				{% set showImage = child.header.show_featured_image|defined(true) %}
+				{% set showImage = child.header.show_featured_image|defined(false) %}
 				{% include 'partials/blog_item.html.twig' with  { page: child, showImage, image, 'page_title': child.title, big_header, 'truncate':true } %}
 			{% endfor %}
 
