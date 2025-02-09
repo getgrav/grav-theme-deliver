@@ -1,8 +1,19 @@
+# v2.0.0-beta.2
+## 02/09/2025
+
+1. [](#new)
+   * Spanish translation added
+   * New blueprint for `text` modular template
+   * New `logo.html.twig` partial template
+2. [](#improved)
+   * Updated code for load default `favicon`
+   * Set to false the default option to display the featured image
+
 # v2.0.0-beta.1
 ## 01/31/2025
 
 1. [](#new)
-   * Added translations for English and Spanish.
+   * Added translations for English.
    * Customization of styles and templates in the theme admin panel
    * Automatic loading of `custom.css` and `custom.js` files if they exist
    * New blueprints for all theme templates
@@ -20,7 +31,7 @@
    * Option to add custom social media icons in the Team template
    * Removed asset support for Internet Explorer
    * `singlePageNav.js` library replaced by `simple-scrollspy.js`
-   * Updated taxonomylist template according to the latest plugin version
+   * Updated `parials/taxonomylist.html.twig` to support latest updates in that plugin
    * Removed code for Feedburner-based Newsletter
 
 # v1.7.2
