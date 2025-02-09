@@ -1,0 +1,144 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            _Heading_Section:
+              unset@: true
+            _Heading:
+              unset@: true
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              ordering@: 1
+              label: PLUGIN_ADMIN.TITLE
+            _ContentOptions:
+              type: column
+              fields:
+                content:
+                  type: markdown
+                  validate:
+                    type: textarea
+            _Media_Section:
+              unset@: true
+            _MediaOptions:
+              fields:
+                _ImageOptions:
+                  unset@: true
+            service_columns:
+              type: columns
+              fields:
+                column1:
+                  type: column
+                  fields:
+                    header.portfolio:
+                      name: portfolio
+                      type: list
+                      label: DELIVER.ADMIN.MODULAR.PORTFOLIO.LABEL
+                      labelclasses: list-title
+                      description: DELIVER.ADMIN.MODULAR.PORTFOLIO.DESCRIPTION
+                      style: vertical
+                      collapsed: true
+                      fields:
+                        .image:
+                          type: pagemediaselect
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.IMAGE_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.IMAGE_DESCRIPTION
+                          labelclasses: list-item
+                        .title:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.TITLE_LABEL
+                          labelclasses: list-item
+                        .desc:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.DESC_LABEL
+                          labelclasses: list-item
+                          rows: 3
+                        .modalid:
+                          type: number
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.MODALID_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.MODALID_DESCRIPTION
+                          labelclasses: list-item
+                          size: small
+                        .client:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.CLIENT_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.CLIENT_DESCRIPTION
+                          labelclasses: list-item
+                        .url:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.URL_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.URL_DESCRIPTION
+                          labelclasses: list-item
+                        .date:
+                          type: date
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.DATE_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.DATE_DESCRIPTION
+                          labelclasses: list-item
+                          format: 'YYYY-MM-DD'
+                        .category:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.CATEGORY_LABEL
+                          description: DELIVER.ADMIN.MODULAR.PORTFOLIO.ITEMS.CATEGORY_DESCRIPTION
+                          labelclasses: list-item
+                column2:
+                  type: column
+                  fields:
+                    header.pricing:
+                      name: pricing
+                      type: list
+                      label: DELIVER.ADMIN.MODULAR.PRICING.LABEL
+                      labelclasses: list-title
+                      description: DELIVER.ADMIN.MODULAR.PRICING.DESCRIPTION
+                      style: vertical
+                      collapsed: true
+                      fields:
+                        .name:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.NAME_LABEL
+                          labelclasses: list-item
+                        .price:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.PRICE_LABEL
+                          labelclasses: list-item
+                        .options:
+                          type: list
+                          label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.OPTIONS_LABEL
+                          labelclasses: list-item
+                          collapsed: true
+                          style: vertical
+                          fields:
+                            .line:
+                              type: text
+                              label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.OPTIONS.LINE_LABEL
+                              labelclasses: list-item
+                        .button_text:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.BUTTON_TEXT_LABEL
+                          labelclasses: list-item
+                        .button_url:
+                          type: text
+                          label: DELIVER.ADMIN.MODULAR.PRICING.ITEMS.BUTTON_URL_LABEL
+                          labelclasses: list-item
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    _body_classes_help:
+                      unset@: true
+                    header.module_classes:
+                      type: text
+                      markdown: true
+                      label: DELIVER.ADMIN.COMMON.MODULE_CLASSES
+                      help: DELIVER.ADMIN.COMMON.MODULE_CLASSES_HELP
