@@ -1,0 +1,21 @@
+{% set logo = theme_var('theme_logo_mobile') ?: theme_var('theme_logo') %}
+{% set logoImageHeader = theme_var('type_logo_header')|defined('text') %}
+{% set logo_file = (logo|first).name %}
+
+<div class="logo">
+    <a href="{{ home_url }}">
+    {% if logoImageHeader == 'image' %}
+        {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+    {% elseif logoImageHeader == 'both' %}
+    {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+        <h3>{{ site.title }}</h3>
+    {% else %}
+        <h3>{{ site.title }}</h3>
+    {% endif %}
+    </a>
+    {% if social %}
+        {% block social %}
+            {% include 'partials/social.html.twig' %}
+        {% endblock %}
+    {% endif %}
+</div>
