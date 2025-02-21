@@ -130,3 +130,4 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Delive
 - [ ] Create an Image Gallery template with Glightbox or another similar library
 - [ ] Add the featured articles module to the sidebar
 - [ ] Add the article categories module to the sidebar
+- [ ] Add latest Fontawesome icons
