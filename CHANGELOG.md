@@ -1,29 +1,12 @@
-# v2.0.0-beta.3
+# v2.0.0
 ## 02/21/2025
 
-1. [](#improved)
-   * Uploading minified assets to SlideMe library
-   * Updated line-height for arrows in slideme library
-
-# v2.0.0-beta.2
-## 02/09/2025
-
 1. [](#new)
-   * Spanish translation added
-   * New blueprint for `text` modular template
+   * New blueprints for all theme templates
    * New `logo.html.twig` partial template
-2. [](#improved)
-   * Updated code for load default `favicon`
-   * Set to false the default option to display the featured image
-
-# v2.0.0-beta.1
-## 01/31/2025
-
-1. [](#new)
-   * Added translations for English.
+   * English and Spanish translation added
    * Customization of styles and templates in the theme admin panel
    * Automatic loading of `custom.css` and `custom.js` files if they exist
-   * New blueprints for all theme templates
    * Added new button types and colors
    * Added colored alert boxes
    * Added option to choose the type of title on the page
@@ -33,6 +16,10 @@
    * New options to improve the SEO
    * Support for displaying the date of the posts with the `translate-date` and `twig-extensions` plugins
 2. [](#improved)
+   * Uploading minified assets to SlideMe library
+   * Updated line-height for arrows in slideme library
+   * Updated code for load default `favicon`
+   * Set to false the default option to display the featured image
    * Restructured the theme styles folders.
    * Updated Fontawesome to version 4.7
    * Option to add custom social media icons in the Team template
