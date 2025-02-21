@@ -1,3 +1,10 @@
+# v2.0.0-beta.3
+## 02/21/2025
+
+1. [](#improved)
+   * Uploading minified assets to SlideMe library
+   * Updated line-height for arrows in slideme library
+
 # v2.0.0-beta.2
 ## 02/09/2025
 
