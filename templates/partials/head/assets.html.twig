@@ -4,7 +4,7 @@
     {% do assets.addCss('theme://assets/css/template' ~ compress,101) %}
     {% do assets.addCss('theme://assets/css/font-awesome.min.css',100) %}
     {% do assets.addCss('theme://assets/css/slidebars.min.css') %}
-    {% do assets.addCss('theme://assets/css/slideme.css') %}
+    {% do assets.addCss('theme://assets/css/slideme.min.css') %}
 {% endblock %}
 
 <!-- PAGE SCRIPTS -->
@@ -13,7 +13,7 @@
     {% do assets.addJs('theme://assets/js/modernizr.custom.71422.js', {group:'bottom'},100) %}
     {% do assets.addJs('theme://assets/js/deliver.js', {group:'bottom'}) %}
     {% do assets.addJs('theme://assets/js/slidebars.min.js', {group:'bottom'}) %}
-    {% do assets.addJs('theme://assets/js/jquery.slideme2.js') %}
+    {% do assets.addJs('theme://assets/js/jquery.slideme2.min.js') %}
     {% if theme_config.sticky_menu.enabled %}
         {% do assets.addJs('theme://assets/js/jquery-scrolltofixed-min.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://assets/js/fixed-header.js', {group:'bottom'}) %}
