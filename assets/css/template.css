@@ -406,6 +406,7 @@ b, strong, th, label {
 .header-image #body .flush-top {
   margin-top: -15.5rem;
   padding-top: 16rem;
+  height: 34.7rem;
 }
 .header-image #breadcrumbs {
   margin-top: 1rem;
@@ -1531,14 +1532,6 @@ ul.pagination {
   border-bottom: 1px solid #eee;
 }
 
-.grav-lightslider .lSSlideOuter .lSPager.lSpg > li a {
-  z-index: 1;
-}
-
-#body > script:first-child + .grav-lightslider {
-  margin-top: -3rem;
-}
-
 .modular.header-image #header {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none;
@@ -2476,4 +2469,12 @@ ul.pagination {
   background-color: #a7e9f4;
   color: #0c525d;
   border-color: #17a2b8;
+}
+
+.grav-lightslider .lSSlideOuter .lSPager.lSpg > li a {
+  z-index: 1;
+}
+
+#body > script:first-child + .grav-lightslider {
+  margin-top: -3rem;
 }
