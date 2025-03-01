@@ -1,5 +1,5 @@
 # v2.0.1
-## 02/24/2025
+## 03/01/2025
 
 1. [](#improved)
    * Changed position of custom SASS in template.scss ([https://github.com/getgrav/grav-theme-deliver/issues/18](https://github.com/getgrav/grav-theme-deliver/issues/18))
