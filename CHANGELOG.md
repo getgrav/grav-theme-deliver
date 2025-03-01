@@ -1,3 +1,10 @@
+# v2.0.1
+## 02/24/2025
+
+1. [](#improved)
+   * Changed position of custom SASS in template.scss ([https://github.com/getgrav/grav-theme-deliver/issues/18](https://github.com/getgrav/grav-theme-deliver/issues/18))
+   * Fixed the height of the slider container in the showcase template, when there is no button
+   
 # v2.0.0
 ## 02/21/2025
 
