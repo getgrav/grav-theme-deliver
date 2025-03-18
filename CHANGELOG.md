@@ -1,3 +1,11 @@
+# v1.7.3
+## 03/18/2025
+
+1. [](#new)
+    * IMPORTANT Deliver 2.x has been forked as DeliverNext: https://github.com/pmoreno-rodriguez/grav-theme-delivernext maintained by @pmoreno-rodriguez due to backwards compatibility issues.  
+1. [](#bugfix)
+    * Fixed `extends@` syntax in blog blueprint
+
 # v1.7.2
 ## 12/20/2021
 
